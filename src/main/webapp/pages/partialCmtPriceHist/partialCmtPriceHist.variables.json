@@ -1,0 +1,46 @@
+{
+  "statViewPrcOption" : {
+    "_id" : "wm-statViewPrcOption-wm.Variable-1504873813618",
+    "name" : "statViewPrcOption",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : "AIR"
+    }, {
+      "dataValue" : "SEA"
+    }, {
+      "dataValue" : "ALL"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "svGetCMTPriceChgHist" : {
+    "_id" : "wm-svGetCMTPriceChgHist-wm.ServiceVariable-1504771112872",
+    "name" : "svGetCMTPriceChgHist",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:pageParams.pOrdnum",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getCmtPriceChgHistoryResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0GetCmtPriceChgHistory",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0GetCmtPriceChgHistory",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svGetCMTPriceChgHistonBeforeUpdate($event, $scope)",
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

@@ -1,0 +1,46 @@
+<wm-partial data-ng-controller="partOrdYarnPageController" name="partial1"> 
+    <wm-table name="gridYarn" title="bind:'Yarn details for ' + Variables.statpOrdnum.dataSet.dataValue + ', Fab Seq ' + Variables.statpFabseq.dataSet.dataValue" dataset="bind:Variables.statTabOrt125.dataSet" navigation="None" spacing="condensed" gridfirstrowselect="true" editmode="quickedit" updatemessage="" show="false"> 
+        <wm-table-column binding="yrnseq" caption="Yrn</br>Seq" edit-widget-type="text" type="string" readonly="true" show="true"></wm-table-column> 
+        <wm-table-column binding="yrncnt" caption="Count" edit-widget-type="text" type="string" show="true" readonly="false" disabled="bind:(row.yrnseq==undefined)?true:false"></wm-table-column> 
+        <wm-table-column binding="yrncps" caption="Composition" edit-widget-type="text" type="string" show="true" readonly="false" disabled="bind:(row.yrnseq==undefined)?true:false"></wm-table-column> 
+        <wm-table-column binding="yrnori" caption="Origin" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="yrnclr" caption="Clr" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="oriclr" caption="Colour" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="clrref" caption="Lab Ref" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="wclrrefshadedes" caption="Lab Ref Shade" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="yrnqlty" caption="Qlty" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="yrnsubqltya" caption="SubQlty A" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="yrnsubqltyb" caption="SubQlty B" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="yrnffcod" caption="Sp Fibre &amp; Finish" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="wyrnffdesc" caption="Wyrnffdesc" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column-group name="group" caption="Base Yarn Construction"> 
+            <wm-table-column binding="baseYrnclr" caption="Clr Type" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+            <wm-table-column binding="baseYrncdes" caption="Shade" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+            <wm-table-column binding="baseClrref" caption="Code" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        </wm-table-column-group> 
+        <wm-table-column binding="yrnends" caption="End" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="tipping" caption="Tip" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="numrows" caption="Rows" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="totrows" caption="T.Rows" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="yrnfrac" caption="Fraction" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="wreqlabdipsts" caption="Wreqlabdipsts" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="labtoapp" caption="Labtoapp" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="wlabdipsts" caption="Wlabdipsts" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+        <wm-table-column binding="preclrref" caption="Pre-fix ref" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column> 
+    </wm-table> 
+    <wm-layoutgrid name="layoutgrid1"> 
+        <wm-gridrow name="gridrow1"> 
+            <wm-gridcolumn columnwidth="12" name="gridcolumn1"> 
+                <wm-label padding="0.5em" name="label2" caption="bind:&quot;Yarn Details for &quot; + Variables.statpOrdnum.dataSet.dataValue + &quot; Fab Seq &quot; + Variables.statpFabseq.dataSet.dataValue" class="col-md-12 label-info control-label h5"></wm-label> 
+            </wm-gridcolumn> 
+        </wm-gridrow> 
+        <wm-gridrow name="gridrow2"> 
+            <wm-gridcolumn columnwidth="12" name="gridcolumn3"> 
+                <wm-container name="containerYarn" id="tgridYarn" class="bordered"></wm-container> 
+            </wm-gridcolumn> 
+        </wm-gridrow> 
+    </wm-layoutgrid> 
+    <wm-view class="dialog-view" name="view1"> 
+        <wm-alertdialog name="notificationalertdialog" controller="NotificationDialogController" notificationdialog="alert" message="{{notification.text}}" title="{{notification.title}}" oktext="{{notification.okButtonText}}" alerttype="{{notification.alerttype}}" on-ok="variableOnOk()" on-close="variableOnClose()"></wm-alertdialog> 
+    </wm-view> 
+</wm-partial>

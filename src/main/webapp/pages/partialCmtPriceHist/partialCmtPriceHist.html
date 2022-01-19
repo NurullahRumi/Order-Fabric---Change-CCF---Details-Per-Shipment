@@ -1,0 +1,86 @@
+<wm-partial name="partial1" data-ng-controller="partialCmtPriceHistPageController"> 
+    <wm-panel class="panel-default" show="true" expanded="true" closable="false" height="775" enablefullscreen="false" name="panel1" iconclass="" autoclose="outsideClick" title=""> 
+        <wm-layoutgrid name="layoutgrid2"> 
+            <wm-gridrow name="gridrow3"> 
+                <wm-gridcolumn padding="10px unset" name="gridcolumn5" columnwidth="12"> 
+                    <wm-label textalign="center" padding="10px unset unset unset" caption="View Price" name="label9" class="col-md-1 control-label"></wm-label> 
+                    <wm-radioset on-change="Widgets.grid2.redraw();rdoViewPriceTypeChange($event, $scope, newVal, oldVal)" displayfield="dataValue" selectedvalue="ALL" datafield="dataValue" usekeys="false" layout="inline" dataset="bind:Variables.statViewPrcOption.dataSet" name="rdoViewPriceType"></wm-radioset> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+        </wm-layoutgrid> 
+        <wm-table nodatamessage="No price changes found" gridclass="table-bordered table-striped" gridfirstrowselect="true" height="475" pagesize="12" showrecordcount="true" spacing="condensed" filtermode="multicolumn" name="grid2" navigation="Classic" dataset="bind:Variables.svGetCMTPriceChgHist.dataSet.poutOrt207prcChgHist" title=""> 
+            <wm-table-column readonly="false" show="true" edit-widget-type="text" width="60px" type="string" caption="Pack</br>Code" binding="seqcod"></wm-table-column> 
+            <wm-table-column-group caption="Size" name="group10"> 
+                <wm-table-column readonly="false" show="true" edit-widget-type="number" width="70px" type="byte" caption="Seq" binding="szeseq"></wm-table-column> 
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" width="80px" type="string" caption="Desc" binding="wszedes"></wm-table-column> 
+            </wm-table-column-group> 
+            <wm-table-column show="true" edit-widget-type="text" readonly="true" width="100px" type="string" caption="Client </br>Order No" binding="clionum"></wm-table-column> 
+            <wm-table-column readonly="false" show="true" searchable="false" edit-widget-type="text" width="80px" type="string" caption="Reason" binding="chgreason"></wm-table-column> 
+            <wm-table-column-group accessroles="VIEW_UNITPRICE" caption="Unit Price Air" name="group4"> 
+                <wm-table-column readonly="false" show="bind:(Widgets.rdoViewPriceType.datavalue==&quot;SEA&quot;)?false:true" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="From" binding="olduntprcAir"></wm-table-column> 
+                <wm-table-column readonly="false" show="bind:(Widgets.rdoViewPriceType.datavalue==&quot;SEA&quot;)?false:true" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="To" binding="revuntprcAir"></wm-table-column> 
+            </wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_UNITPRICE" caption="Unit Price Sea" name="group5"> 
+                <wm-table-column readonly="false" show="bind:(Widgets.rdoViewPriceType.datavalue==&quot;AIR&quot;)?false:true" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="From" binding="olduntprcSea"></wm-table-column> 
+                <wm-table-column readonly="false" show="bind:(Widgets.rdoViewPriceType.datavalue==&quot;AIR&quot;)?false:true" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="To" binding="revuntprcSea"></wm-table-column> 
+            </wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_FLIPRICE" caption="FLI Price Air" name="group6"> 
+                <wm-table-column readonly="false" show="bind:((Variables.svGetCMTPriceChgHist.dataSet.poutShowFliprcInd==&quot;Y&quot;) &amp;&amp;((Widgets.rdoViewPriceType.datavalue==&quot;AIR&quot;)||(Widgets.rdoViewPriceType.datavalue==&quot;ALL&quot;)||(Widgets.rdoViewPriceType.datavalue==undefined)||(Widgets.rdoViewPriceType.datavalue==&quot;&quot;)))?true:false" searchable="false" edit-widget-type="number" textalignment="right" width="60px" widget-type="label" type="double" caption="From" binding="oldfliprcAir"> 
+                    <wm-label caption="{{row.getProperty('oldfliprcAir')}}" class="" data-ng-class="" show="{{row.showfliprc}}=='Y'"></wm-label> 
+                </wm-table-column> 
+                <wm-table-column readonly="false" show="bind:((Variables.svGetCMTPriceChgHist.dataSet.poutShowFliprcInd==&quot;Y&quot;) &amp;&amp;((Widgets.rdoViewPriceType.datavalue.indexOf(&quot;AIR&quot;) > 0) ||(Widgets.rdoViewPriceType.datavalue==undefined)||(Widgets.rdoViewPriceType.datavalue==&quot;&quot;)))?true:false" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="To" binding="revfliprcAir"></wm-table-column> 
+            </wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_FLIPRICE" caption="FLI Price Sea" name="group3"> 
+                <wm-table-column readonly="false" show="bind:((Variables.svGetCMTPriceChgHist.dataSet.poutShowFliprcInd==&quot;Y&quot;) &amp;&amp;((Widgets.rdoViewPriceType.datavalue.indexOf(&quot;SEA&quot;) > 0)||(Widgets.rdoViewPriceType.datavalue==undefined)||
+(Widgets.rdoViewPriceType.datavalue=&quot;&quot;)))?true:false" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="From" binding="oldfliprcSea"></wm-table-column> 
+                <wm-table-column readonly="false" show="bind:((Variables.svGetCMTPriceChgHist.dataSet.poutShowFliprcInd==&quot;Y&quot;) &amp;&amp;((Widgets.rdoViewPriceType.datavalue.indexOf(&quot;SEA&quot;) > 0)||(Widgets.rdoViewPriceType.datavalue==undefined)||
+(Widgets.rdoViewPriceType.datavalue=&quot;&quot;)))?true:false" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="To" binding="revfliprcSea"></wm-table-column> 
+            </wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_UNITPRICE" caption="Discount Air" name="group7"> 
+                <wm-table-column readonly="false" show="bind:(Widgets.rdoViewPriceType.datavalue==&quot;SEA&quot;)?false:true" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="From" binding="olddiscountprcAir"></wm-table-column> 
+                <wm-table-column readonly="false" show="bind:(Widgets.rdoViewPriceType.datavalue==&quot;SEA&quot;)?false:true" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="To" binding="revdiscountprcAir"></wm-table-column> 
+            </wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_UNITPRICE" caption="Discount Sea" name="group"> 
+                <wm-table-column readonly="false" show="bind:(Widgets.rdoViewPriceType.datavalue==&quot;AIR&quot;)?false:true" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="From" binding="olddiscountprcSea"></wm-table-column> 
+                <wm-table-column readonly="false" show="bind:(Widgets.rdoViewPriceType.datavalue==&quot;AIR&quot;)?false:true" searchable="false" edit-widget-type="number" textalignment="right" width="60px" type="double" caption="To" binding="revdiscountprcSea"></wm-table-column> 
+            </wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_RETAILPRICE" caption="Retail Price 1" name="group8"></wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_RETAILPRICE" caption="Retail Price 2" name="group9"></wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_RETAILPRICE" caption="Retail Price 3" name="group1"></wm-table-column-group> 
+            <wm-table-column-group accessroles="VIEW_RETAILPRICE" caption="Retail Price 4" name="group2"></wm-table-column-group> 
+            <wm-table-column-group caption="Modified" name="group11"> 
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" width="60px" type="string" caption="By" binding="usrid"></wm-table-column> 
+                <wm-table-column readonly="false" show="true" edit-widget-type="datetime" type="datetime" caption="On" binding="entdat"></wm-table-column> 
+            </wm-table-column-group> 
+        </wm-table> 
+        <wm-layoutgrid name="layoutgrid1"> 
+            <wm-gridrow name="gridrow1"> 
+                <wm-gridcolumn name="gridcolumn1" columnwidth="3"> 
+                    <wm-label textalign="left" width="80" class="displayPrompt" caption="Pack Desc :" name="label1" padding="unset 0.5em"></wm-label> 
+                    <wm-label caption="bind:Widgets.grid2.selecteditem.wpckdes" width="150" textalign="left" class="displayField" name="lblWPckdes" padding="unset 0.5em"></wm-label> 
+                </wm-gridcolumn> 
+                <wm-gridcolumn padding="5px unset unset unset" name="gridcolumn2" columnwidth="5"> 
+                    <wm-label class="displayPrompt" caption="Change Reason:" name="label11" padding="unset 0.5em"></wm-label> 
+                    <wm-label class="displayField" width="300" caption="bind:Widgets.grid2.selecteditem.chgreasondes" name="lblChgReasonDes" padding="unset 0.5em"></wm-label> 
+                </wm-gridcolumn> 
+                <wm-gridcolumn name="gridcolumn4" columnwidth="4"> 
+                    <wm-container name="container1"> 
+                        <wm-label class="displayPrompt" caption="Program ID:" name="label5" padding="unset 0.5em"></wm-label> 
+                        <wm-label caption="bind:Widgets.grid2.selecteditem.prgname" width="100" class="displayField" name="lblPrgname" padding="unset 0.5em"></wm-label> 
+                    </wm-container> 
+                </wm-gridcolumn> 
+            </wm-gridrow> 
+            <wm-gridrow name="gridrow3_1"> 
+                <wm-gridcolumn name="gridcolumn5_1" columnwidth="3"> 
+                    <wm-label textalign="left" class="displayPrompt" caption="Modified By :" name="label3" padding="unset 0.5em"></wm-label> 
+                    <wm-label width="150" caption="bind:Widgets.grid2.selecteditem.usrname" class="displayField" name="lblUsrname" padding="unset 0.5em"></wm-label> 
+                </wm-gridcolumn> 
+                <wm-gridcolumn name="gridcolumn6" columnwidth="5"> 
+                    <wm-label class="displayPrompt" caption="Remarks:" name="label7" padding="unset 0.5em"></wm-label> 
+                    <wm-label caption="bind:Widgets.grid2.selecteditem.remarks" width="300" class="displayField" name="lblRemarks" padding="unset 0.5em"></wm-label> 
+                </wm-gridcolumn> 
+                <wm-gridcolumn name="gridcolumn7" columnwidth="4"></wm-gridcolumn> 
+            </wm-gridrow> 
+        </wm-layoutgrid> 
+    </wm-panel> 
+</wm-partial>

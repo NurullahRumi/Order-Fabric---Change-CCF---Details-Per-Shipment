@@ -1,0 +1,729 @@
+<wm-page name="page1" data-ng-controller="DetailsPerShipmentPageController" pagetitle="Details Per Shipment">
+    <wm-header name="header1" content="header">
+        <wm-param name="pTitle" value="bind:Variables.statPrgName.dataSet.dataValue" type="string"></wm-param>
+    </wm-header>
+    <wm-content height="1200" name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-composite margin="unset unset unset 15px" name="composite1">
+                <wm-label textalign="left" caption="Search Order No:" name="label1" class="col-md-1 control-label"></wm-label>
+                <wm-container name="container1" class="col-md-1">
+                    <wm-text placeholder="Enter Order No" textalign="left" on-change="txtOrdnumChange($event, $scope, newVal, oldVal)" datavalue="bind:pageParams.pParam1" autofocus="true" name="txtOrdnum"></wm-text>
+                </wm-container>
+            </wm-composite>
+            <wm-panel badgetype="default" collapsible="false" content="partialOrderDetHeader" name="panelOr100Header" iconclass="" autoclose="outsideClick" title="">
+                <wm-param name="pOrdnum" value="bind:Widgets.txtOrdnum.datavalue" type="string"></wm-param>
+                <wm-param name="pShowPreReleases" value="Y" type="string"></wm-param>
+                <wm-param name="pShowPayTerms" value="N" type="string"></wm-param>
+            </wm-panel>
+            <wm-layoutgrid name="layoutgrid8">
+                <wm-gridrow name="gridrow14" height="25%">
+                    <wm-gridcolumn name="gridcolumn23_3" columnwidth="9" horizontalalign="center">
+                        <wm-table showrecordcount="true" filtermode="multicolumn" subheading="Shipments" height="100%" class="panel-primary" nodatamessage="Qty per Shipment not yet defined" showrowindex="false" gridfirstrowselect="true" pagesize="2" spacing="condensed"
+                            name="gridOrt205" navigation="Classic" dataset="bind:Variables.svOr207pk0GetOrt205.dataSet.poutShpDet" title="">
+                            <wm-table-column readonly="false" show="true" edit-widget-type="text" width="40px" type="string" caption="Shp No" binding="shpnum"></wm-table-column>
+                            <wm-table-column readonly="false" show="true" edit-widget-type="text" width="80px" type="string" caption="Shp Mode" binding="shpmoddesc"></wm-table-column>
+                            <wm-table-column readonly="false" show="true" edit-widget-type="text" width="100px" type="string" caption="Client Order No" binding="clionum"></wm-table-column>
+                            <wm-table-column readonly="false" show="true" searchable="false" edit-widget-type="text" width="100px" type="string" caption="Destination" binding="shpdst"></wm-table-column>
+                            <wm-table-column readonly="false" show="true" edit-widget-type="text" width="80px" type="string" caption="Client Pack Type" binding="clipcktyp"></wm-table-column>
+                            <wm-table-column readonly="false" show="true" searchable="false" edit-widget-type="number" width="90px" type="integer" caption="bind:&quot;Shp Qty &quot; + Widgets.panelOr100Header.Widgets.lblQtyord_uom_hidden.caption"
+                                binding="qtyord"></wm-table-column>
+                            <wm-table-column readonly="false" show="true" edit-widget-type="number" width="60px" type="integer" caption="Drop/Delivery No" binding="dropno"></wm-table-column>
+                            <wm-table-column readonly="false" show="true" searchable="false" edit-widget-type="text" width="230px" type="string" caption="Shipment Rem" binding="rem"></wm-table-column>
+                        </wm-table>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn24_1" columnwidth="3" horizontalalign="center">
+                        <wm-panel badgetype="default" on-actionsclick="panel6_1Actionsclick($item)" margin="unset unset unset 10px" class="bordered panel-default" collapsible="false" subheading="Releases" name="panel6_1" iconclass="" autoclose="outsideClick"
+                            title="">
+                            <wm-layoutgrid name="layoutgrid7">
+                                <wm-gridrow name="gridrow15">
+                                    <wm-gridcolumn class="condensed" name="gridcolumn25" columnwidth="12">
+                                        <wm-label textalign="left" class="displayPrompt" caption="Ref Release:" name="label10" padding="unset 0.5em"></wm-label>
+                                        <wm-label caption="bind:Variables.svOr207pk0GetRefPricereldat.dataSet.poutRelref" width="25" class="displayField" name="lblRelref" padding="unset 0.5em"></wm-label>
+                                        <wm-label caption="bind:(Variables.svOr207pk0GetRefPricereldat.dataSet.poutRelrefdat==undefined)? &quot; &quot;:Variables.svOr207pk0GetRefPricereldat.dataSet.poutRelrefdat | toDate: 'dd-MMM-yyyy'" margin="unset unset unset 10px"
+                                            class="displayField" name="lblRelrefdat" padding="unset 0.5em"></wm-label>
+                                        <wm-button hint="DETSHP_REL_REF" accessroles="DETSHP_REL_REF,DETSHP_REL_REF_AFT_POREL,DETSHP_REL_REF_ALLCLIENT" on-click="btnRelrefClick($event, $scope)" disabled="bind:(((Widgets.lblRelref.caption==undefined) || (Widgets.lblRelref.caption=='N'))&amp;&amp;(Widgets.panelOr100Header.Widgets.lblOrdnum.caption!==undefined))?false:true"
+                                            shortcutkey="3" name="btnRelref" class="btn-default" caption="3. Release Ref" type="button" margin="unset 0.5em"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow13_1">
+                                    <wm-gridcolumn class="condensed" name="gridcolumn23_1" columnwidth="12">
+                                        <wm-label width="150" textalign="left" class="displayPrompt" caption="Price Release [CP0313]:" name="label13" padding="unset 0.5em"></wm-label>
+                                        <wm-label caption="bind:Variables.svOr207pk0GetRefPricereldat.dataSet.poutRelprc" class="displayField" width="25" name="lblRelprc" padding="unset 0.5em"></wm-label>
+                                        <wm-label caption="bind:(Variables.svOr207pk0GetRefPricereldat.dataSet.poutRelprcdat==undefined)?&quot; &quot;: Variables.svOr207pk0GetRefPricereldat.dataSet.poutRelprcdat | toDate: 'dd-MMM-yyyy'" margin="unset unset unset 5px"
+                                            class="displayField" name="lblRelprcdat" padding="unset 0.5em"></wm-label>
+                                        <wm-button hint="REL_KDSPRICE_REPEAT , REL_KDSPRICE_INITIAL" on-click="btnRelKdsPrcClick($event, $scope)" accessroles="REL_KDSPRICE_INITIAL,REL_KDSPRICE_REPEAT" disabled="bind:(((Widgets.lblRelprc.caption==undefined)||(Widgets.lblRelprc.caption=='N'))&amp;&amp;(Widgets.panelOr100Header.Widgets.lblOrdnum.caption!==undefined))?false:true"
+                                            shortcutkey="4" name="btnRelKdsPrc" class="btn-default" caption="4. Release Price" type="button" margin="unset 0.5em"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-panel>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow37">
+                    <wm-gridcolumn name="gridcolumn66_1" columnwidth="5"></wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn67" columnwidth="7"></wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-layoutgrid name="layoutgrid15_2">
+                <wm-gridrow name="gridrow47">
+                    <wm-gridcolumn name="gridcolumn94_2" columnwidth="5">
+                        <wm-label margin="15px unset unset unset" caption="View Option" name="label22" class="col-md-2 control-label"></wm-label>
+                        <wm-container height="35" name="container9" class="col-md-9">
+                            <wm-radioset selectedvalue="ALL" displayfield="itemdes" datafield="itemcod" dataset="bind:Variables.statGridOrt209ViewOption.dataSet" layout="inline" name="rdoOrt209ViewOption" height="auto"></wm-radioset>
+                        </wm-container>
+                    </wm-gridcolumn>
+                    <wm-gridcolumn name="gridcolumn98" columnwidth="7"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow48_2">
+                    <wm-gridcolumn name="gridcolumn96" columnwidth="12">
+                        <wm-table on-datarender="gridOrt209Datarender($scope, $data)" on-setrecord="gridOrt209Setrecord($event, $data)" showrecordcount="true" pagesize="8" subheading="bind:(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==undefined)?&quot;Prices/Refs per shipment&quot;:
+&quot;Prices/Refs for shipment &quot; + Widgets.gridOrt205.selecteditem.shpnum" class="panel-info" spacing="condensed" filtermode="multicolumn" name="gridOrt209" navigation="Classic" dataset="bind:Variables.svOr207pk0GetOrt209.dataSet.poutDetShp" title="">
+                            <wm-table-column-group name="group" caption="Pack Details">
+                                <wm-table-column binding="seqcod" caption="Code" width="50px" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="wpckdes" caption="Desc" width="100px" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                            </wm-table-column-group>
+                            <wm-table-column binding="wlineno" caption="bind:Widgets.panelOr100Header.Widgets.lblRefdes1.caption" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                            <wm-table-column-group name="group1" caption="Size">
+                                <wm-table-column binding="szeseq" caption="Seq" width="60px" edit-widget-type="number" type="byte" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="wszedes" caption="Desc" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                            </wm-table-column-group>
+                            <wm-table-column binding="qtyord" caption="bind:&quot;Qty</br>&quot; + Widgets.panelOr100Header.Widgets.lblQtyord_uom_hidden.caption  " width="90px" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                            <wm-table-column-group name="group5" caption="Unit Price" col-class="blue-d2">
+                                <wm-table-column-group name="group7" caption="Approved">
+                                    <wm-table-column binding="intuntprc" caption="Price" width="80px" textalignment="right" edit-widget-type="text" type="string" accessroles="VIEW_UNITPRICE" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false"
+                                        readonly="false"></wm-table-column>
+                                    <wm-table-column binding="editIntUntprc" caption="Edit" widget-type="button" width="50px" textalignment="center" edit-widget-type="text" type="string" accessroles="UPD_INTERNALPRICE" searchable="false"
+                                        show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false" readonly="false">
+                                        <wm-button caption="{{row.getProperty('editIntUntprc')}}" show="true" class="btn-sm btn-primary" iconclass="wi wi-edit" on-click="editIntUntprcAction(selectedItemData)" data-ng-class="" hint="UPD_INTERNALPRICE"></wm-button>
+                                    </wm-table-column>
+                                </wm-table-column-group>
+                                <wm-table-column-group name="group8" caption="Client (upd by KDS PO)" accessroles="VIEW_UNITPRICE">
+                                    <wm-table-column binding="untprc" caption="bind:Widgets.panelOr100Header.Widgets.lblCcycod.caption" width="80px" textalignment="right" col-class="blue-l1" edit-widget-type="number" type="double" accessroles="VIEW_UNITPRICE"
+                                        show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="editUntprc" caption="Edit" widget-type="button" width="50px" textalignment="center" edit-widget-type="text" type="string" accessroles="DETSHP_UPD_UNITPRICE,DETSHP_UPD_UNITPRICE_AFTPOREL,DETSHP_UPD_UNITPRICE_AFTPRCREL,DETSHP_UPD_UNITPRICE_ALLCLIENT"
+                                        searchable="false" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?((Variables.statUpdUntprcAccess.dataSet.dataValue==&quot;Y&quot;)?true:false):false" readonly="false">
+                                        <wm-button caption="{{row.getProperty('editUntprc') }}" show="true" class="btn-sm btn-primary" iconclass="wi wi-edit" on-click="editUntprcAction(selectedItemData)" hint="DETSHP_UPD_UNITPRICE,DETSHP_UPD_UNITPRICE_AFTPOREL,DETSHP_UPD_UNITPRICE_AFTPRCREL,DETSHP_UPD_UNITPRICE_ALLCLIENT"
+                                            data-ng-class=""></wm-button>
+                                    </wm-table-column>
+                                </wm-table-column-group>
+                            </wm-table-column-group>
+                            <wm-table-column-group name="group6" caption="FLI Price" col-class="yellow-l3">
+                                <wm-table-column-group name="group9" caption="Approved">
+                                    <wm-table-column binding="intfliprc" caption="Price" width="80px" textalignment="right" edit-widget-type="text" type="string" accessroles="VIEW_FLIPRICE" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?((Widgets.panelOr100Header.Widgets.lblCliacc_hidden.caption==&quot;FLI&quot;) ? true:false):false
+" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="editIntFliprc" caption="Edit" widget-type="button" width="50px" textalignment="center" edit-widget-type="text" type="string" accessroles="UPD_INTERNALPRICE" searchable="false"
+                                        show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?((Widgets.panelOr100Header.Widgets.lblCliacc_hidden.caption==&quot;FLI&quot;) ? true:false):false" readonly="false">
+                                        <wm-button caption="{{row.getProperty('editIntFliprc')}}" show="true" class="btn-sm btn-primary" iconclass="wi wi-edit" on-click="editIntFliprcAction(selectedItemData)" data-ng-class=""></wm-button>
+                                    </wm-table-column>
+                                </wm-table-column-group>
+                                <wm-table-column-group name="group10" caption="Client">
+                                    <wm-table-column binding="fliprc" caption="Price" width="80px" textalignment="right" edit-widget-type="number" type="double" accessroles="VIEW_FLIPRICE" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?((Widgets.panelOr100Header.Widgets.lblCliacc_hidden.caption==&quot;FLI&quot;) ? true:false):false"
+                                        readonly="false"></wm-table-column>
+                                    <wm-table-column binding="editFliprc" caption="Edit" widget-type="button" width="50px" textalignment="center" edit-widget-type="text" type="string" accessroles="DETSHP_UPD_FLIPRICE_ALLCLIENT,DETSHP_UPD_FLIPRICE_AFTPOREL,DETSHP_UPD_FLIPRICE"
+                                        searchable="false" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?((Widgets.panelOr100Header.Widgets.lblCliacc_hidden.caption==&quot;FLI&quot;) ? true:false):false"
+                                        readonly="false">
+                                        <wm-button caption="{{row.getProperty('editFliprc')}}" show="true" class="btn-sm btn-primary" iconclass="wi wi-edit" on-click="editFliprcAction(selectedItemData)" hint="DETSHP_UPD_FLIPRICE_ALLCLIENT,DETSHP_UPD_FLIPRICE_AFTPOREL,DETSHP_UPD_FLIPRICE"
+                                            data-ng-class=""></wm-button>
+                                    </wm-table-column>
+                                </wm-table-column-group>
+                            </wm-table-column-group>
+                            <wm-table-column-group name="group2" caption="Discount" col-class="grey-l1">
+                                <wm-table-column binding="intdiscountprc" caption="Approved</br>Discount" width="80px" textalignment="right" edit-widget-type="text" type="string" accessroles="VIEW_UNITPRICE" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="discountprc" caption="Client</br>Discount" width="80px" textalignment="right" edit-widget-type="number" type="double" accessroles="VIEW_UNITPRICE" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="wdiscountreason" caption="Reason" edit-widget-type="text" type="string" accessroles="VIEW_UNITPRICE" searchable="false" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false"
+                                    readonly="false"></wm-table-column>
+                            </wm-table-column-group>
+                            <wm-table-column binding="wintfinprice" caption="Approved Final Price" width="80px" textalignment="right" edit-widget-type="number" type="double" accessroles="VIEW_UNITPRICE" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false"
+                                readonly="false"></wm-table-column>
+                            <wm-table-column binding="wfinprice" caption="Final Price" width="80px" textalignment="right" edit-widget-type="number" type="double" accessroles="VIEW_UNITPRICE" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false"
+                                readonly="false"></wm-table-column>
+                            <wm-table-column-group name="group3" caption="Retail Price" col-class="green-l1">
+                                <wm-table-column binding="retprc" caption="bind:Widgets.panelOr100Header.Widgets.lblCcyret.caption" width="80px" textalignment="right" edit-widget-type="number" type="double" accessroles="VIEW_RETAILPRICE" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="retprcb" caption="bind:Widgets.panelOr100Header.Widgets.lblCcyretb.caption" width="80px" textalignment="right" edit-widget-type="number" type="double" accessroles="VIEW_RETAILPRICE"
+                                    show="bind:(Widgets.panelOr100Header.Widgets.lblCcyretb.caption==undefined)?false:((Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false)" readonly="false"></wm-table-column>
+                                <wm-table-column binding="retprcc" caption="bind:Widgets.panelOr100Header.Widgets.lblCcyretc.caption" width="80px" textalignment="right" edit-widget-type="number" type="double" accessroles="VIEW_RETAILPRICE"
+                                    show="bind:(Widgets.panelOr100Header.Widgets.lblCcyretc.caption==undefined)?false:((Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false)" readonly="false"></wm-table-column>
+                                <wm-table-column binding="retprcd" caption="bind:Widgets.panelOr100Header.Widgets.lblCcyretd.caption" width="80px" textalignment="right" edit-widget-type="number" type="double" accessroles="VIEW_RETAILPRICE"
+                                    show="bind:(Widgets.panelOr100Header.Widgets.lblCcyretd.caption==undefined)?false:((Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false)" readonly="false"></wm-table-column>
+                                <wm-table-column binding="editRetailprc" caption="Edit Retail</br>Prc" widget-type="button" edit-widget-type="text" type="string" accessroles="UPD_RETAILPRICE" searchable="false" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='PRICE')?true:false"
+                                    readonly="false">
+                                    <wm-button caption="{{row.getProperty('editRetailprc') }}" show="true" class="btn-sm btn-primary" iconclass="wi wi-edit" on-click="editRetailprcAction(selectedItemData)" hint="UPD_RETAILPRICE" data-ng-class=""></wm-button>
+                                </wm-table-column>
+                            </wm-table-column-group>
+                            <wm-table-column-group name="group4" caption="Client References" col-class="grey-d1">
+                                <wm-table-column binding="editClirefs" caption="Edit</br>Refs" widget-type="button" width="50px" textalignment="center" edit-widget-type="text" type="string" accessroles="DETSHP_UPD_CLIREFS,DETSHP_UPD_CLIREFS_AFTPOREL,DETSHP_UPD_CLIREFS_ALLCLIENT"
+                                    searchable="false" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false" readonly="false">
+                                    <wm-button caption="{{row.getProperty('editClirefs')}}" show="true" class="btn-sm btn-primary" iconclass="wi wi-edit" on-click="editClirefsAction(selectedItemData)" hint="DETSHP_UPD_CLIREFS" data-ng-class=""></wm-button>
+                                </wm-table-column>
+                                <wm-table-column binding="ref" caption="bind:Widgets.panelOr100Header.Widgets.lblRefdes3.caption" width="120px" edit-widget-type="text" type="string" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="ref2" caption="bind:Widgets.panelOr100Header.Widgets.lblRefDes4.caption" width="120px" edit-widget-type="text" type="string" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="ref3" caption="bind:Widgets.panelOr100Header.Widgets.lblRefDes5.caption" width="120px" edit-widget-type="text" type="string" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="ref4" caption="bind:Widgets.panelOr100Header.Widgets.lblRefDes6.caption" width="120px" edit-widget-type="text" type="string" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="ref5" caption="bind:Widgets.panelOr100Header.Widgets.lblRefdes7.caption" width="120px" edit-widget-type="text" type="string" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="ref6" caption="bind:Widgets.panelOr100Header.Widgets.lblRefdes8.caption" width="120px" edit-widget-type="text" type="string" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="ref7" caption="bind:Widgets.panelOr100Header.Widgets.lblRefDes9.caption" width="120px" edit-widget-type="text" type="string" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false"
+                                    readonly="false"></wm-table-column>
+                                <wm-table-column binding="ref8" caption="bind:Widgets.panelOr100Header.Widgets.lblRefdes10.caption" width="120px" edit-widget-type="text" type="string" show="bind:(Widgets.rdoOrt209ViewOption.datavalue=='ALL'||Widgets.rdoOrt209ViewOption.datavalue=='CLIREF')?true:false"
+                                    readonly="false"></wm-table-column>
+                            </wm-table-column-group>
+                        </wm-table>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+            <wm-label show="false" caption="bind:&quot;Air</br>&quot; + Widgets.panelOr100Header.Widgets.lblCcycod.caption" name="lblColHeaderAir_hidden" padding="unset 0.5em"></wm-label>
+            <wm-label show="false" caption="bind:&quot;Sea</br>&quot; + Widgets.panelOr100Header.Widgets.lblCcycod.caption" name="lblColHeaderSea_hidden" padding="unset 0.5em"></wm-label>
+            <wm-layoutgrid name="layoutgrid6">
+                <wm-gridrow name="gridrow11_1">
+                    <wm-gridcolumn name="gridcolumn18_1" columnwidth="12">
+                        <wm-buttongroup padding="unset 5px" horizontalalign="left" vertical="false" name="buttongroup2">
+                            <wm-button accessroles="DETSHP_UPD_UNITPRICE,DETSHP_UPD_UNITPRICE_AFTPOREL,DETSHP_UPD_UNITPRICE_AFTPRCREL,DETSHP_UPD_UNITPRICE_ALLCLIENT,DETSHP_UPD_CLIREFS_ALLCLIENT,DETSHP_UPD_CLIREFS_AFTPOREL,DETSHP_UPD_CLIREFS" show="bind:(Variables.svQryCL565pk0FuncIsExtnetClient.dataSet[$i].isextranetclient==&quot;Y&quot;)?true:false"
+                                disabled="bind:((Widgets.panelOr100Header.Widgets.lblOrdnum.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==null)||(Widgets.panelOr100Header.Widgets.lblOrdsts.caption=='CAN')||(Widgets.panelOr100Header.Widgets.lblOrdsts.caption=='END'))?true:false"
+                                onclick="Variables.svQryShpnumLov.invoke();No Event" on-click="Variables.svQryShpnumLov.invoke();Widgets.dialogFetchExtranetDet.open()" shortcutkey="1" margin="unset 10px unset unset" name="btnFetchExtranet" class="btn-default"
+                                type="button" caption="1. Fetch Extranet Details"></wm-button>
+                            <wm-button accessroles="UPD_RETAILPRICE,DETSHP_UPD_FLIPRICE,DETSHP_UPD_FLIPRICE_AFTPOREL,DETSHP_UPD_FLIPRICE_ALLCLIENT,DETSHP_UPD_CLIREFS,DETSHP_UPD_CLIREFS_AFTPOREL,DETSHP_UPD_CLIREFS_ALLCLIENT" disabled="bind:((Widgets.panelOr100Header.Widgets.lblOrdnum.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==null))?true:false"
+                                on-click="Widgets.dialogCopyRef.open()" shortcutkey="2" margin="unset 10px unset unset" hint="Copy refs from an existing order to this order" name="button6" class="btn-default" type="button" caption="2. Copy reference"></wm-button>
+                            <wm-button on-click="Widgets.dialogSearchOrdRef.open()" hint="Search Orders having matching references" margin="unset 10px unset unset" shortcutkey="5" name="button14" class="btn-default" type="button" caption="5. Search matching refs"></wm-button>
+                            <wm-button disabled="bind:((Widgets.panelOr100Header.Widgets.lblOrdnum.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==null))?true:false"
+                                margin="unset 10px unset unset" on-click="Widgets.dialogHistKDSPrice.open()" shortcutkey="6" name="button15" class="btn-default" type="button" caption="6. View Client Price Change"></wm-button>
+                            <wm-button on-click="btnViewUpchargeClick($event, $scope)" margin="unset 10px unset unset" shortcutkey="7" name="btnViewUpcharge" class="btn-default" type="button" caption="7. View Upcharges"></wm-button>
+                            <wm-button disabled="bind:((Widgets.panelOr100Header.Widgets.lblOrdnum.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblOrdnum.caption==null))?true:false"
+                                on-click="Widgets.dialogHistInternalPrice.open()" shortcutkey="8" hint="CMT Stream Price Change History" name="button17" class="btn-default" caption="8. View Approved Price Change" type="button"></wm-button>
+                        </wm-buttongroup>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow29_1"></wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer name="footer1" content="footer"></wm-footer>
+    <wm-view name="view2" class="dialog-view">
+        <wm-dialog showheader="true" width="800" name="dialogUpdPrice" dialogtype="design-dialog" modal="true" title="Update CMT Approved Price" iconclass="wi wi-pencil">
+            <wm-form postmessage="" on-beforesubmit="frmDialogUpdPrcBeforesubmit($event, $scope, $data)" name="frmDialogUpdPrc" captionalign="left" dataset="bind:Variables.svOr207pk0UpdprcOrt207.dataSet" method="get" errormessage="" captionposition="top"
+                title="" enctype="application/x-www-form-urlencoded">
+                <wm-layoutgrid name="layoutgrid1" columns="3">
+                    <wm-gridrow name="gridrow1">
+                        <wm-gridcolumn horizontalalign="left" name="gridcolumn1" columnwidth="3">
+                            <wm-form-field defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].ordnum" placeholder="Enter value" inputtype="text" readonly="true" displayname="Order No" key="pOrdnum" type="string" show="true" widget="text" name="pOrdnum"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn2" columnwidth="9">
+                            <wm-form-field width="110" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].clionum" placeholder="Enter value" inputtype="text" readonly="true" displayname="Client Order No" key="pClionum" type="string" show="true"
+                                widget="text" name="pClionum"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow46_2">
+                        <wm-gridcolumn name="gridcolumn92" columnwidth="2">
+                            <wm-form-field width="80" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].szeseq" placeholder="Enter value" inputtype="number" readonly="true" displayname="SizeSeq" key="pSzeseq" type="integer" show="true" widget="number"
+                                name="pSzeseq"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn93_1" columnwidth="4">
+                            <wm-container name="container7">
+                                <wm-label class="displayPrompt" caption="SizeDesc" name="label16_1" padding="unset 0.5em"></wm-label>
+                            </wm-container>
+                            <wm-label class="displayField" caption="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].szedes" name="label17" padding="unset 0.5em"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn94_1" columnwidth="2">
+                            <wm-form-field defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].seqcod" width="50" placeholder="Enter value" inputtype="text" readonly="true" displayname="Pack" key="pSeqcod" type="string" show="true" widget="text"
+                                name="pSeqcod"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn95_1" columnwidth="4">
+                            <wm-container name="container8_1">
+                                <wm-label caption="Pack Desc" name="label20_1" padding="unset 0.5em"></wm-label>
+                            </wm-container>
+                            <wm-label class="displayField" caption="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].pckdes" name="label21" padding="unset 0.5em"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow2">
+                        <wm-gridcolumn name="gridcolumn4" columnwidth="4"></wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn86_2" columnwidth="8"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow5">
+                        <wm-gridcolumn name="gridcolumn13" columnwidth="12">
+                            <wm-form-field placeholder="Select value" key="pChangereason" displayexpression="bind:$[reasoncategory] + &quot; - &quot; + $[reasonsubcategory] + &quot; - &quot; + $[reasoncode]" displayfield="reasonsubcategory" datafield="reasoncode"
+                                dataset="bind:Variables.svOr207pk0GetPriceChgReason.dataSet.poutLovChgReason" displayname="Reason for Price Change" widget="select" show="bind:((Variables.statChgReasonCategory.dataSet.dataValue==&quot;INTERNAL_UNITPRICE&quot;)||(Variables.statChgReasonCategory.dataSet.dataValue==&quot;INTERNAL_RETAILPRICE&quot;))?true:false"
+                                type="custom" name="pChangereason"></wm-form-field>
+                            <wm-form-field inputtype="text" placeholder="Enter value" readonly="false" displayname="Remarks" key="pUserRemarks" type="string" show="true" widget="text" name="pUserRemarks"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow9">
+                        <wm-gridcolumn name="gridcolumn24" columnwidth="12">
+                            <wm-layoutgrid name="layoutgrid2"></wm-layoutgrid>
+                            <wm-panel badgetype="default" show="bind:(Variables.statChgReasonCategory.dataSet.dataValue==&quot;INTERNAL_UNITPRICE&quot;)? true:false" margin="unset 5px unset unset" class="panel-default" name="UnitPrcpanel"
+                                subheading="Revised Price" iconclass="" autoclose="outsideClick" title="">
+                                <wm-layoutgrid name="layoutgrid4">
+                                    <wm-gridrow name="gridrow9_1">
+                                        <wm-gridcolumn name="gridcolumn14" columnwidth="6">
+                                            <wm-form-field margin="unset unset unset 80px" on-change="pUnitprcAirChange($event, $scope, newVal, oldVal)" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].untprcAir" width="80" required="false"
+                                                textalign="right" placeholder="Enter value" inputtype="number" readonly="false" displayname="Air" key="pUnitprcAir" type="number" show="true" widget="number" name="pUnitprcAir"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn name="gridcolumn15" columnwidth="6">
+                                            <wm-form-field on-change="pUnitprcSeaChange($event, $scope, newVal, oldVal)" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].untprcSea" width="80" required="false" textalign="right" placeholder="Enter value"
+                                                inputtype="number" readonly="false" displayname="Sea" key="pUnitprcSea" type="number" show="true" widget="number" name="pUnitprcSea"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-panel>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow3">
+                        <wm-gridcolumn name="gridcolumn7" columnwidth="12">
+                            <wm-panel class="panel-default" show="bind:((Widgets.panelOr100Header.Widgets.lblCliacc_hidden.caption==&quot;FLI&quot;)&amp;&amp;(Variables.statChgReasonCategory.dataSet.dataValue==&quot;INTERNAL_FLIPRICE&quot;))?true:false" name="FLIPrcpanel"
+                                subheading="Revised FLI Price charged to Client" iconclass="" autoclose="outsideClick" title="">
+                                <wm-layoutgrid name="layoutgrid5">
+                                    <wm-gridrow name="gridrow11">
+                                        <wm-gridcolumn name="gridcolumn18" columnwidth="6">
+                                            <wm-form-field on-change="pFliprcAirChange($event, $scope, newVal, oldVal)" margin="unset unset unset 80px" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].fliprcAir" width="80" placeholder="Enter value"
+                                                inputtype="number" readonly="false" displayname="Air" key="pFliprcAir" type="number" show="true" widget="number" name="pFliprcAir"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn name="gridcolumn19" columnwidth="6">
+                                            <wm-form-field on-change="pFliprcSeaChange($event, $scope, newVal, oldVal)" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].fliprcSea" width="80" placeholder="Enter value" inputtype="number" readonly="false"
+                                                displayname="Sea" key="pFliprcSea" type="number" show="true" widget="number" name="pFliprcSea"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-panel>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13">
+                        <wm-gridcolumn name="gridcolumn23_2" columnwidth="12">
+                            <wm-panel show="bind:(Variables.statChgReasonCategory.dataSet.dataValue==&quot;INTERNAL_RETAILPRICE&quot;)?true:false" subheading="Revised Retail Price" class="panel-default" name="Retprcpanel" iconclass="" autoclose="outsideClick"
+                                title="">
+                                <wm-layoutgrid name="layoutgrid3">
+                                    <wm-gridrow name="gridrow12">
+                                        <wm-gridcolumn name="gridcolumn32" columnwidth="3">
+                                            <wm-label textalign="center" caption="bind:Widgets.panelOr100Header.Widgets.lblCcyret.caption" name="lblCcyret" padding="unset 0.5em"></wm-label>
+                                            <wm-form-field on-change="pRetprcChange($event, $scope, newVal, oldVal)" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].retprc" placeholder="Enter value" inputtype="number" readonly="false"
+                                                key="pRetprcAir" type="number" show="true" widget="number" name="pRetprc"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn name="gridcolumn33" columnwidth="3">
+                                            <wm-label caption="bind:Widgets.panelOr100Header.Widgets.lblCcyretb.caption" name="lblCcyretb" padding="unset 0.5em"></wm-label>
+                                            <wm-form-field on-change="pRetprcbChange($event, $scope, newVal, oldVal)" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].retprcb" placeholder="Enter value" inputtype="number" readonly="false"
+                                                key="pRetprcbAir" type="number" show="bind:(Widgets.frmDialogUpdPrc.formWidgets.lblCcyretb.caption==undefined)?false:true" widget="number" name="pRetprcb"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn name="gridcolumn36" columnwidth="3">
+                                            <wm-label caption="bind:Widgets.panelOr100Header.Widgets.lblCcyretc.caption" name="lblCcyretc" padding="unset 0.5em"></wm-label>
+                                            <wm-form-field on-change="pRetprccChange($event, $scope, newVal, oldVal)" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].retprcc" placeholder="Enter value" inputtype="number" readonly="false"
+                                                key="pRetprccAir" type="number" show="bind:(Widgets.frmDialogUpdPrc.formWidgets.lblCcyretc.caption==undefined)?false:true" widget="number" name="pRetprcc"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn name="gridcolumn37" columnwidth="3">
+                                            <wm-label caption="bind:Widgets.panelOr100Header.Widgets.lblCcyretd.caption" name="lblCcyretd" padding="unset 0.5em"></wm-label>
+                                            <wm-form-field on-change="pRetprcdChange($event, $scope, newVal, oldVal)" defaultvalue="bind:Variables.svOrt207QryCurrentPrice.dataSet[$i].retprcd" placeholder="Enter value" inputtype="number" readonly="false"
+                                                key="pRetprcdAir" type="number" show="bind:(Widgets.frmDialogUpdPrc.formWidgets.lblCcyretd.caption==undefined)?false:true" widget="number" name="pRetprcd"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-panel>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow7">
+                        <wm-gridcolumn name="gridcolumn21" columnwidth="12">
+                            <wm-panel name="panel6" iconclass="" autoclose="outsideClick" title="">
+                                <wm-form-field caption="Apply to All sizes for this client order no" uncheckedvalue="N" checkedvalue="Y" placeholder="" required="false" readonly="false" key="pUpdAllSzeInd" type="string" show="true" widget="checkbox" name="pUpdAllSzeInd"></wm-form-field>
+                                <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="Apply to All Packs for this client order no" placeholder="" required="false" readonly="false" key="pUpdAllPackInd" type="string" show="true" widget="checkbox"
+                                    name="pUpdAllPackInd"></wm-form-field>
+                                <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="Apply to All Client Order Nos for this PFS Order No" placeholder="" required="false" readonly="false" key="pUpdAllClionumInd" type="string" show="true"
+                                    widget="checkbox" name="pUpdAllClionumInd"></wm-form-field>
+                            </wm-panel>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-field defaultvalue="CMT" readonly="true" placeholder="Enter value" inputtype="text" show="false" widget="text" displayname="Price Cat" type="string" key="pPricecat" name="pPricecat"></wm-form-field>
+                <wm-form-field placeholder="Enter value" inputtype="text" defaultvalue="bind:Variables.statAppUsrid.dataSet.dataValue" show="false" widget="text" displayname="P Usrid" type="string" key="pUsrid" name="pUsrid"></wm-form-field>
+                <wm-form-field placeholder="Enter value" inputtype="text" defaultvalue="bind:Variables.statPrgid.dataSet.dataValue" show="false" widget="text" displayname="P Progid" type="string" key="pProgid" name="pProgid"></wm-form-field>
+                <wm-buttongroup name="buttongroup1" horizontalalign="right" class="form-action col-md-12">
+                    <wm-button name="btnSaveInternalPrice" class="btn-primary" caption="Save" type="submit"></wm-button>
+                    <wm-button on-click="Widgets.dialogUpdPrice.close()" name="btnCancelEditIntPrice" caption="Cancel" type="button" class="btn-warning"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+        </wm-dialog>
+    </wm-view>
+    <wm-view name="view3" class="dialog-view">
+        <wm-pagedialog width="1200" showactions="false" closable="true" iconclass="wi wi-file" modal="true" height="850" title="Approved Price Change History" content="partialCmtPriceHist" name="dialogHistInternalPrice">
+            <wm-param name="pOrdnum" value="bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption" type="string"></wm-param>
+        </wm-pagedialog>
+    </wm-view>
+    <wm-view name="view3_1" class="dialog-view">
+        <wm-alertdialog on-close="variableOnClose()" on-ok="variableOnOk()" alerttype="{{notification.alerttype}}" oktext="{{notification.okButtonText}}" title="{{notification.title}}" message="{{notification.text}}" notificationdialog="alert" controller="NotificationDialogController"
+            name="notificationalertdialog"></wm-alertdialog>
+    </wm-view>
+    <wm-view name="view4" class="dialog-view">
+        <wm-pagedialog content="partialKDSPriceHist" title="Client Price Change History" width="90%" height="90%" modal="true" showactions="false" name="dialogHistKDSPrice">
+            <wm-param name="pOrdnum" value="bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption" type="string"></wm-param>
+        </wm-pagedialog>
+    </wm-view>
+    <wm-view name="view6" class="dialog-view">
+        <wm-dialog closable="true" width="800" name="dialogKdsUpdPriceRef" dialogtype="design-dialog" modal="true" title="bind:Variables.statDialogEditPriceTitle.dataSet.dataValue" iconclass="wi wi-edit">
+            <wm-form on-beforesubmit="formEditKDSPriceRefBeforesubmit($event, $scope, $data)" postmessage="" validationtype="default" name="formEditKDSPriceRef" captionalign="left" dataset="bind:Variables.svOr207pk0PrePostUpdOrt209.dataSet" method="post"
+                errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded">
+                <wm-layoutgrid name="layoutgrid10" columns="3">
+                    <wm-gridrow name="gridrow44">
+                        <wm-gridcolumn name="gridcolumn54" columnwidth="2">
+                            <wm-form-field placeholder="Enter value" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ordnum" width="150" readonly="true" displayname="Order No" key="pOrdnum" type="string" show="true" widget="text"
+                                name="pOrdnum"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn55" columnwidth="1">
+                            <wm-form-field textalign="center" placeholder="Enter value" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].shpnum" width="80" readonly="true" displayname="ShpNo" key="pShpnum" type="string" show="true"
+                                widget="text" name="pShpnum"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn85_2" columnwidth="1">
+                            <wm-form-field textalign="center" placeholder="Enter value" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].seqcod" width="80" readonly="true" displayname="Pack" key="pSeqcod" type="string" show="true"
+                                widget="text" name="pSeqcod"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn86_3" columnwidth="3">
+                            <wm-container name="container8">
+                                <wm-label caption="Pack Desc" name="label19" padding="unset 0.5em"></wm-label>
+                            </wm-container>
+                            <wm-label class="displayField" caption="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].pckdes" name="label20" padding="unset 0.5em"></wm-label>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn56" columnwidth="2">
+                            <wm-form-field textalign="center" placeholder="Enter value" inputtype="number" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].szeseq" width="80" readonly="true" displayname="SizeSeq" key="pSzeseq" type="integer"
+                                show="true" widget="number" name="pSzeseq"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn95" columnwidth="3">
+                            <wm-container name="container6">
+                                <wm-label class="displayPrompt" caption="Size Desc" name="label16" padding="unset 0.5em"></wm-label>
+                            </wm-container>
+                            <wm-label class="displayField" caption="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].szedes" name="label15" padding="unset 0.5em"></wm-label>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow45_2">
+                        <wm-gridcolumn name="gridcolumn94" columnwidth="2"></wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn93" columnwidth="3"></wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn87_2" columnwidth="1"></wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn88_1" columnwidth="6"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow45">
+                        <wm-gridcolumn name="gridcolumn58" columnwidth="12">
+                            <wm-container show="bind:((Variables.statChgReasonCategory.dataSet.dataValue=='KDS_UNITPRICE')||(Variables.statChgReasonCategory.dataSet.dataValue=='KDS_RETAILPRICE'))?true:false" name="container2">
+                                <wm-container show="bind:(((Variables.statChgReasonCategory.dataSet.dataValue=='KDS_UNITPRICE') &amp;&amp;(Variables.svOrt209QryCurrentPrice.dataSet[$i].untprc >0))
+||((Variables.statChgReasonCategory.dataSet.dataValue=='KDS_RETAILPRICE') &amp;&amp; (Variables.svOrt209QryCurrentPrice.dataSet[$i].retprc +Variables.svOrt209QryCurrentPrice.dataSet[$i].retprcb+Variables.svOrt209QryCurrentPrice.dataSet[$i].retprcc+Variables.svOrt209QryCurrentPrice.dataSet[$i].retprcd >0))
+)?true:false" name="containerChgReason">
+                                    <wm-form-field placeholder="Select value" key="pChangereason" orderby="reasoncategory:desc" displayexpression="bind:$[reasoncategory] + &quot; - &quot; + $[reasonsubcategory] + &quot; - &quot; + $[reasoncode] " displayfield="reasoncategory"
+                                        datafield="reasoncode" dataset="bind:Variables.svOr207pk0GetPriceChgReason.dataSet.poutLovChgReason" displayname="Reason for Change" widget="select" show="true" type="custom" name="pChangereason"></wm-form-field>
+                                    <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="Remarks" key="pUserRemarks" type="string" show="true" widget="text" name="pUserRemarks"></wm-form-field>
+                                </wm-container>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow46">
+                        <wm-gridcolumn name="gridcolumn60" columnwidth="3">
+                            <wm-form-field step="0.01" on-change="pUnitprcChange($event, $scope, newVal, oldVal)" placeholder="Enter value" inputtype="number" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].untprc" width="80" readonly="false"
+                                displayname="Unit Price" key="pUnitprc" type="number" show="bind:(Variables.statChgReasonCategory.dataSet.dataValue=='KDS_UNITPRICE')?true:false" widget="number" name="pKDSUnitprc"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn46_2" columnwidth="9">
+                            <wm-form-field step="0.01" on-change="pFliprcChange($event, $scope, newVal, oldVal)" placeholder="Enter value" inputtype="number" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].fliprc" width="80" readonly="false"
+                                displayname="FLI Price" key="pFliprc" type="number" show="bind:(Variables.statChgReasonCategory.dataSet.dataValue=='KDS_FLIPRICE')?true:false" widget="number" name="pFliprc"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow29">
+                        <wm-gridcolumn name="gridcolumn46" columnwidth="12">
+                            <wm-layoutgrid class="bordered" show="bind:(Variables.statChgReasonCategory.dataSet.dataValue=='KDS_RETAILPRICE')?true:false" name="layoutgrid10_1">
+                                <wm-gridrow name="gridrow30">
+                                    <wm-gridcolumn name="gridcolumn50" columnwidth="3">
+                                        <wm-form-field step="0.01" on-change="pKdsRetprcChange($event, $scope, newVal, oldVal)" placeholder="Enter value" inputtype="number" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].retprc" width="80"
+                                            readonly="false" displayname="bind:Widgets.panelOr100Header.Widgets.lblCcyret.caption" key="pRetprc" type="number" show="true" widget="number" name="pKdsRetprc"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn name="gridcolumn51" columnwidth="3">
+                                        <wm-form-field step="0.01" on-change="pKdsRetprcbChange($event, $scope, newVal, oldVal)" placeholder="Enter value" inputtype="number" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].retprcb" width="80"
+                                            readonly="false" displayname="bind:Widgets.panelOr100Header.Widgets.lblCcyretb.caption" key="pRetprcb" type="number" show="bind:((Widgets.panelOr100Header.Widgets.lblCcyretb.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblCcyretb.caption==null)||(Widgets.panelOr100Header.Widgets.lblCcyretb.caption==&quot;&quot;))?false:true"
+                                            widget="number" name="pKdsRetprcb"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn name="gridcolumn54_1" columnwidth="3">
+                                        <wm-form-field step="0.01" on-change="pKdsRetprccChange($event, $scope, newVal, oldVal)" placeholder="Enter value" inputtype="number" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].retprcc" width="80"
+                                            readonly="false" displayname="bind:Widgets.panelOr100Header.Widgets.lblCcyretc.caption" key="pRetprcc" type="number" show="bind:((Widgets.panelOr100Header.Widgets.lblCcyretc.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblCcyretc.caption==null)||(Widgets.panelOr100Header.Widgets.lblCcyretc.caption==&quot;&quot;))?false:true"
+                                            widget="number" name="pKdsRetprcc"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn name="gridcolumn55_1" columnwidth="3">
+                                        <wm-form-field step="0.01" on-change="pKdsRetprcdChange($event, $scope, newVal, oldVal)" placeholder="Enter value" inputtype="number" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].retprcd" width="80"
+                                            readonly="false" displayname="bind:Widgets.panelOr100Header.Widgets.lblCcyretd.caption" key="pRetprcd" type="number" show="bind:((Widgets.panelOr100Header.Widgets.lblCcyretd.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblCcyretd.caption==null)||(Widgets.panelOr100Header.Widgets.lblCcyretd.caption==&quot;&quot;))?false:true"
+                                            widget="number" name="pKdsRetprcd"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow48">
+                        <wm-gridcolumn name="gridcolumn66" columnwidth="12">
+                            <wm-layoutgrid show="bind:(Variables.statChgReasonCategory.dataSet.dataValue=='DETSHP_CLIREF')?true:false" name="layoutgrid11">
+                                <wm-gridrow name="gridrow32">
+                                    <wm-gridcolumn padding="unset 10px" class="bordered" name="gridcolumn56_1" columnwidth="6">
+                                        <wm-form-field on-change="pRefChange($event, $scope, newVal, oldVal)" disabled="bind:((Widgets.panelOr100Header.Widgets.lblRefdes3.caption==undefined) || (Widgets.panelOr100Header.Widgets.lblRefdes3.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblRefdes3.caption=='-'))?true:false"
+                                            placeholder="Enter Ref 1" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ref" readonly="false" displayname="bind:Widgets.panelOr100Header.Widgets.lblRefdes3.caption" key="pRef"
+                                            type="string" show="true" widget="text" name="pRef"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn padding="unset 10px" class="bordered" name="gridcolumn57" columnwidth="6">
+                                        <wm-form-field on-change="pRef2Change($event, $scope, newVal, oldVal)" disabled="bind:((Widgets.panelOr100Header.Widgets.lblRefDes4.caption==undefined) || (Widgets.panelOr100Header.Widgets.lblRefDes4.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblRefDes4.caption=='-'))?true:false"
+                                            placeholder="Enter Ref 2" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ref2" readonly="false" displayname="bind:Widgets.panelOr100Header.Widgets.lblRefDes4.caption" key="pRef2"
+                                            type="string" show="true" widget="text" name="pRef2"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow33">
+                                    <wm-gridcolumn padding="unset 10px" class="bordered" name="gridcolumn58_1" columnwidth="6">
+                                        <wm-form-field on-change="pRef3Change($event, $scope, newVal, oldVal)" disabled="bind:((Widgets.panelOr100Header.Widgets.lblRefDes5.caption==undefined) || (Widgets.panelOr100Header.Widgets.lblRefDes5.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblRefDes5.caption=='-'))?true:false"
+                                            placeholder="Enter Ref 3" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ref3" readonly="false" displayname="bind:Widgets.panelOr100Header.Widgets.lblRefDes5.caption" key="pRef3"
+                                            type="string" show="true" widget="text" name="pRef3"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn padding="unset 10px" class="bordered" name="gridcolumn59" columnwidth="6">
+                                        <wm-form-field on-change="pRef4Change($event, $scope, newVal, oldVal)" disabled="bind:((Widgets.panelOr100Header.Widgets.lblRefDes6.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblRefDes6.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblRefDes6.caption.caption=='-'))?true:false"
+                                            placeholder="Enter Ref 4" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ref4" readonly="false" displayname="bind:Widgets.panelOr100Header.Widgets.lblRefDes6.caption" key="pRef4"
+                                            type="string" show="true" widget="text" name="pRef4"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow34">
+                                    <wm-gridcolumn class="bordered" padding="unset 10px" name="gridcolumn60_1" columnwidth="6">
+                                        <wm-form-field on-change="pRef5Change($event, $scope, newVal, oldVal)" disabled="false" placeholder="Enter Ref 5" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ref5" readonly="false"
+                                            displayname="bind:Widgets.panelOr100Header.Widgets.lblRefdes7.caption" key="pRef5" type="string" show="bind:((Widgets.panelOr100Header.Widgets.lblRefdes7.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblRefdes7.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblRefdes7.caption=='-'))?false:true"
+                                            widget="text" name="pRef5"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn padding="unset 10px" class="bordered" name="gridcolumn61" columnwidth="6">
+                                        <wm-form-field on-change="pRef6Change($event, $scope, newVal, oldVal)" disabled="false" placeholder="Enter Ref 6" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ref6" readonly="false"
+                                            displayname="bind:Widgets.panelOr100Header.Widgets.lblRefdes8.caption" key="pRef6" type="string" show="bind:((Widgets.panelOr100Header.Widgets.lblRefdes8.caption==undefined)||(Widgets.panelOr100Header.Widgets.lblRefdes8.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblRefdes8.caption.caption=='-'))?false:true"
+                                            widget="text" name="pRef6"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow35">
+                                    <wm-gridcolumn padding="unset 10px" class="bordered" name="gridcolumn62" columnwidth="6">
+                                        <wm-form-field on-change="pRef7Change($event, $scope, newVal, oldVal)" disabled="false" placeholder="Enter Ref 7" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ref7" readonly="false"
+                                            displayname="bind:Widgets.panelOr100Header.Widgets.lblRefDes9.caption" key="pRef7" type="string" show="bind:((Widgets.panelOr100Header.Widgets.lblRefDes9.caption==undefined) || (Widgets.panelOr100Header.Widgets.lblRefDes9.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblRefDes9.caption=='-'))?false:true"
+                                            widget="text" name="pRef7"></wm-form-field>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn class="bordered" padding="unset 10px" name="gridcolumn63_1" columnwidth="6">
+                                        <wm-form-field on-change="pRef8Change($event, $scope, newVal, oldVal)" disabled="false" placeholder="Enter Ref 8" inputtype="text" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ref8" readonly="false"
+                                            displayname="bind:Widgets.panelOr100Header.Widgets.lblRefdes10.caption" key="pRef8" type="string" show="bind:((Widgets.panelOr100Header.Widgets.lblRefdes10.caption==undefined) || (Widgets.panelOr100Header.Widgets.lblRefdes10.caption==&quot;&quot;)||(Widgets.panelOr100Header.Widgets.lblRefdes10.caption=='-'))?false:true"
+                                            widget="text" name="pRef8"></wm-form-field>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow54">
+                        <wm-gridcolumn name="gridcolumn87" columnwidth="12">
+                            <wm-container name="container3">
+                                <wm-form-field placeholder="" key="pUpdAllShpNumInd" margin="unset unset unset 15px" uncheckedvalue="N" checkedvalue="Y" defaultvalue="N" caption="Update All Shipments for this Pack Only" widget="checkbox" show="true" type="custom"
+                                    name="pUpdAllShpNumInd"></wm-form-field>
+                                <wm-form-field placeholder="" key="pUpdAllPackInd" margin="unset unset unset 15px" uncheckedvalue="N" checkedvalue="Y" defaultvalue="N" caption="Update All Packs/Clrs for this shipment" widget="checkbox"
+                                    show="true" type="custom" name="pUpdAllPackInd"></wm-form-field>
+                                <wm-form-field placeholder="" key="pUpdAllSzeInd" margin="unset unset unset 15px" defaultvalue="N" uncheckedvalue="N" checkedvalue="Y" caption="Update All Sizes for this pack/shipment" widget="checkbox"
+                                    show="true" type="custom" name="pUpdAllSzeInd"></wm-form-field>
+                            </wm-container>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-form-field placeholder="Enter value" key="txtCcyrat" readonly="false" defaultvalue="bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ccyrat" inputtype="number" displayname="Ccyrat" widget="text" show="false" type="custom" name="txtCcyrat"></wm-form-field>
+                <wm-form-field placeholder="Enter value" inputtype="text" defaultvalue="bind:Variables.statPrgid.dataSet.dataValue" readonly="false" displayname="P Prgid" key="pPrgid" type="string" show="false" widget="text" name="pPrgid"></wm-form-field>
+                <wm-form-field placeholder="Enter value" inputtype="text" defaultvalue="bind:Variables.statAppUsrid.dataSet.dataValue" readonly="false" displayname="P Usrid" key="pUsrid" type="string" show="false" widget="text" name="pUsrid"></wm-form-field>
+                <wm-buttongroup name="buttongroup4_1" horizontalalign="right" class="form-action col-md-12">
+                    <wm-button name="btnSaveKDS" class="btn-primary" caption="Save" type="submit"></wm-button>
+                    <wm-button on-click="Widgets.dialogKdsUpdPriceRef.close()" name="btnCancelOrt209" caption="Cancel" type="button" class="btn-warning"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+        </wm-dialog>
+    </wm-view>
+    <wm-view name="view8" class="dialog-view">
+        <wm-dialog name="dialogFetchExtranetDet" dialogtype="design-dialog" modal="true" title="Fetch Extranet Details" iconclass="">
+            <wm-form on-success="formFetchExtranetSuccess($event, $scope, $data)" on-beforesubmit="formFetchExtranetBeforesubmit($event, $scope, $data)" name="formFetchExtranet" captionalign="left" dataset="bind:Variables.svOr207pk0FetchExtranetDet.dataSet"
+                method="get" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded">
+                <wm-layoutgrid name="layoutgrid15" columns="2">
+                    <wm-gridrow name="gridrow39">
+                        <wm-gridcolumn name="gridcolumn70" columnwidth="6">
+                            <wm-form-field displayfield="shpnum" datafield="shpnum" dataset="bind:Variables.svQryShpnumLov.dataSet" on-change="pFromShpnumChange($event, $scope, newVal, oldVal)" readonly="false" name="pFromShpnum" displayname="From Shp No"
+                                key="pFromShpnum" type="string" show="true" widget="select"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn71" columnwidth="6">
+                            <wm-form-field on-change="pToShpnumChange($event, $scope, newVal, oldVal)" readonly="false" name="pToShpnum" displayname="To Shp No" key="pToShpnum" type="string" show="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow40">
+                        <wm-gridcolumn name="gridcolumn72" columnwidth="6">
+                            <wm-form-field caption="Fetch Unit Price" uncheckedvalue="N" checkedvalue="Y" readonly="false" name="pFetchUnitprcInd" key="pFetchUnitprcInd" type="string" show="true" widget="checkbox"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn73" columnwidth="6">
+                            <wm-form-field caption="Fetch Retail Price" uncheckedvalue="N" checkedvalue="Y" readonly="false" name="pFetchRetPrcInd" key="pFetchRetPrcInd" type="string" show="true" widget="checkbox"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow41">
+                        <wm-gridcolumn name="gridcolumn74" columnwidth="6">
+                            <wm-form-field caption="Fetch Barcode" uncheckedvalue="N" checkedvalue="Y" readonly="false" name="pFetchBarcodeInd" key="pFetchBarcodeInd" type="string" show="true" widget="checkbox"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn75" columnwidth="6">
+                            <wm-form-field caption="Fetch Ratio Pack" uncheckedvalue="N" checkedvalue="Y" readonly="false" name="pFetchRatioPackInd" key="pFetchRatioPackInd" type="string" show="true" widget="checkbox"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow42">
+                        <wm-gridcolumn name="gridcolumn76" columnwidth="6">
+                            <wm-form-field caption="Fetch Style Description" uncheckedvalue="N" checkedvalue="Y" readonly="false" name="pFetchStyleInd" key="pFetchStyleInd" type="string" show="true" widget="checkbox"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-buttongroup name="buttongroup5" horizontalalign="right" class="form-action col-md-12">
+                    <wm-button name="btnFetch" caption="Fetch" type="submit" class="btn-primary"></wm-button>
+                    <wm-button on-click="Widgets.dialogFetchExtranetDet.close()" name="btnCancelFetch" caption="Cancel" type="button" class="btn-warning"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+        </wm-dialog>
+    </wm-view>
+    <wm-view name="view7" class="dialog-view">
+        <wm-dialog name="dialogCopyRef" dialogtype="design-dialog" modal="true" title="Copy References from an Order" iconclass="">
+            <wm-form on-beforesubmit="formCopyRefBeforesubmit($event, $scope, $data)" on-success="formCopyRefSuccess($event, $scope, $data)" name="formCopyRef" captionalign="left" dataset="bind:Variables.svOr207pk0CopyRef.dataSet" method="get" errormessage=""
+                captionposition="top" title="" enctype="application/x-www-form-urlencoded">
+                <wm-layoutgrid name="layoutgrid14" columns="3">
+                    <wm-gridrow name="gridrow37_1">
+                        <wm-gridcolumn name="gridcolumn61_1" columnwidth="4">
+                            <wm-form-field on-change="pSrcOrdnumChange($event, $scope, newVal, oldVal)" readonly="false" name="pSrcOrdnum" displayname="Source Order No" key="pSrcOrdnum" type="string" show="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn62_1" columnwidth="4">
+                            <wm-form-field disabled="true" defaultvalue="bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption" readonly="false" name="pDestOrdnum" displayname="Destination Order No" key="pDestOrdnum" type="string" show="true" widget="text"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn63_2" columnwidth="4"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow40_2">
+                        <wm-gridcolumn name="gridcolumn71_2" columnwidth="4">
+                            <wm-form-field orderby="shpnum:asc" displayfield="shpnum" datafield="shpnum" dataset="bind:Variables.svQryOrt205ShpnumLov.dataSet" readonly="false" name="pSrcShpnum" displayname="Source Shp No" key="pSrcShpnum" type="string" show="true"
+                                widget="select"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn72_2" columnwidth="4">
+                            <wm-form-field datafield="shpnum" dataset="bind:Variables.svOr207pk0GetOrt205.dataSet.poutShpDet[$i].shpnum" readonly="false" name="pDestShpnum" displayname="Destination Shp No" key="pDestShpnum" type="string" show="true" widget="select"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn73_2" columnwidth="4"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow38">
+                        <wm-gridcolumn name="gridcolumn64" columnwidth="4">
+                            <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="Copy Retail Price" name="pCopyRetPrcInd" widget="checkbox" show="true" type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn65" columnwidth="4">
+                            <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="Copy FLI Price" name="pCopyFliprcInd" widget="checkbox" show="true" type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn66_2" columnwidth="4"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow39_1">
+                        <wm-gridcolumn name="gridcolumn67_1" columnwidth="4">
+                            <wm-form-field deferload="false" disabled="bind:((Widgets.formCopyRef.formWidgets.pCopyrefInd.caption==undefined)||(Widgets.formCopyRef.formWidgets.pCopyrefInd.caption==null)||(Widgets.formCopyRef.formWidgets.pCopyrefInd.caption==&quot;&quot;))?true:false"
+                                uncheckedvalue="N" checkedvalue="Y" caption="bind:Variables.svQryOrt209RefColname.dataSet[$i].ref" name="pCopyrefInd" widget="checkbox" show="bind:((Widgets.formCopyRef.formWidgets.pCopyrefInd.caption=='-')||(Widgets.formCopyRef.formWidgets.pCopyrefInd.caption=='undefined'))?false:true"
+                                type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn68" columnwidth="4">
+                            <wm-form-field checkedvalue="Y" uncheckedvalue="N" caption="bind:Variables.svQryOrt209RefColname.dataSet[$i].ref2" name="pCopyref2Ind" widget="checkbox" show="true" type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn69" columnwidth="4">
+                            <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="bind:Variables.svQryOrt209RefColname.dataSet[$i].ref3" name="pCopyref3Ind" widget="checkbox" show="true" type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow40_1">
+                        <wm-gridcolumn name="gridcolumn70_1" columnwidth="4">
+                            <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="bind:Variables.svQryOrt209RefColname.dataSet[$i].ref4" name="pCopyref4Ind" widget="checkbox" show="true" type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn71_1" columnwidth="4">
+                            <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="bind:Variables.svQryOrt209RefColname.dataSet[$i].ref5" name="pCopyref5Ind" widget="checkbox" show="true" type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn72_1" columnwidth="4">
+                            <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="bind:Variables.svQryOrt209RefColname.dataSet[$i].ref6" name="pCopyref6Ind" widget="checkbox" show="true" type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow41_1">
+                        <wm-gridcolumn name="gridcolumn73_1" columnwidth="4">
+                            <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="bind:Variables.svQryOrt209RefColname.dataSet[$i].ref7" name="pCopyref7Ind" widget="checkbox" show="bind:((Widgets.formCopyRef.formWidgets.pCopyref7Ind.caption==undefined)||(Widgets.formCopyRef.formWidgets.pCopyref7Ind.caption=='')||(Widgets.formCopyRef.formWidgets.pCopyref7Ind.caption==null))?false:true"
+                                type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn74_1" columnwidth="4">
+                            <wm-form-field uncheckedvalue="N" checkedvalue="Y" caption="bind:Variables.svQryOrt209RefColname.dataSet[$i].ref8" name="pCopyref8Ind" widget="checkbox" show="bind:((Widgets.formCopyRef.formWidgets.pCopyref8Ind.caption==undefined)||(Widgets.formCopyRef.formWidgets.pCopyref8Ind.caption=='')||(Widgets.formCopyRef.formWidgets.pCopyref8Ind.caption==null))?false:true"
+                                type="custom"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-buttongroup name="buttongroup6" horizontalalign="right" class="form-action col-md-12">
+                    <wm-button name="btnCopy" caption="Copy" type="submit" class="btn-primary"></wm-button>
+                    <wm-button on-click="Widgets.dialogCopyRef.close()" name="button23" caption="Cancel" type="button" class="btn-warning"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+        </wm-dialog>
+    </wm-view>
+    <wm-view name="view8_1" class="dialog-view">
+        <wm-dialog height="90%" width="60%" name="dialogSearchOrdRef" dialogtype="design-dialog" modal="true" title="Search Orders with matching References" iconclass="">
+            <wm-form on-beforesubmit="formSearchOrdrefBeforesubmit($event, $scope, $data)" class="panel-info" postmessage="" name="formSearchOrdref" captionalign="left" dataset="bind:Variables.svOr1207pk0SearchOrdRef.dataSet" method="get" errormessage=""
+                captionposition="top" title="" enctype="application/x-www-form-urlencoded">
+                <wm-layoutgrid name="layoutgrid15_1" columns="2">
+                    <wm-gridrow name="gridrow43">
+                        <wm-gridcolumn name="gridcolumn78" columnwidth="4">
+                            <wm-form-field on-change="pClicodChange($event, $scope, newVal, oldVal)" placeholder="Enter client code" inputtype="text" readonly="false" displayname="Client Code" key="pClicod" type="string" show="true" widget="text" name="pClicod"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn79" columnwidth="4">
+                            <wm-form-field on-change="pSsnChange($event, $scope, newVal, oldVal)" placeholder="Enter season" inputtype="text" readonly="false" displayname="Season" key="pSsn" type="string" show="true" widget="text" name="pSsn"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn86_1" columnwidth="4">
+                            <wm-form-field on-change="pClionumChange($event, $scope, newVal, oldVal)" placeholder="Enter client order no" inputtype="text" readonly="false" displayname="Client Order No" key="pClionum" type="string" show="true" widget="text"
+                                name="pClionum"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow45_1">
+                        <wm-gridcolumn name="gridcolumn82" columnwidth="6">
+                            <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="bind:(Variables.svQryRft102DetShpRefColname.dataSet[$i].ref1==undefined)?'Ref 1':Variables.svQryRft102DetShpRefColname.dataSet[$i].ref1" key="pRef"
+                                type="string" show="true" widget="text" name="pRef"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn83" columnwidth="6">
+                            <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="bind:(Variables.svQryRft102DetShpRefColname.dataSet[$i].ref5==undefined)?'Ref 5':Variables.svQryRft102DetShpRefColname.dataSet[$i].ref5" key="pRef5"
+                                type="string" show="true" widget="text" name="pRef5"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow46_1">
+                        <wm-gridcolumn name="gridcolumn84" columnwidth="6">
+                            <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="bind:(Variables.svQryRft102DetShpRefColname.dataSet[$i].ref2==undefined)?'Ref 2':Variables.svQryRft102DetShpRefColname.dataSet[$i].ref2" key="pRef2"
+                                type="string" show="true" widget="text" name="pRef2"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn85" columnwidth="6">
+                            <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="bind:(Variables.svQryRft102DetShpRefColname.dataSet[$i].ref6==undefined)?'Ref 6':Variables.svQryRft102DetShpRefColname.dataSet[$i].ref6" key="pRef6"
+                                type="string" show="true" widget="text" name="pRef6"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow47_1">
+                        <wm-gridcolumn name="gridcolumn86" columnwidth="6">
+                            <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="bind:(Variables.svQryRft102DetShpRefColname.dataSet[$i].ref3==undefined)?'Ref 3':Variables.svQryRft102DetShpRefColname.dataSet[$i].ref3" key="pRef3"
+                                type="string" show="true" widget="text" name="pRef3"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn87_1" columnwidth="6">
+                            <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="bind:(Variables.svQryRft102DetShpRefColname.dataSet[$i].ref7==undefined)?'Ref 7':Variables.svQryRft102DetShpRefColname.dataSet[$i].ref7" key="pRef7"
+                                type="string" show="true" widget="text" name="pRef7"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow48_1">
+                        <wm-gridcolumn name="gridcolumn88" columnwidth="6">
+                            <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="bind:(Variables.svQryRft102DetShpRefColname.dataSet[$i].ref4==undefined)?'Ref 4':Variables.svQryRft102DetShpRefColname.dataSet[$i].ref4" key="pRef4"
+                                type="string" show="true" widget="text" name="pRef4"></wm-form-field>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn name="gridcolumn85_1" columnwidth="6">
+                            <wm-form-field placeholder="Enter value" inputtype="text" readonly="false" displayname="bind:(Variables.svQryRft102DetShpRefColname.dataSet[$i].ref8==undefined)?'Ref 8':Variables.svQryRft102DetShpRefColname.dataSet[$i].ref8" key="pRef8"
+                                type="string" show="true" widget="text" name="pRef8"></wm-form-field>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+                <wm-buttongroup name="buttongroup6_1" horizontalalign="right" class="form-action col-md-12">
+                    <wm-button name="btnSearchOrdref" caption="Search" type="submit" class="btn-primary"></wm-button>
+                </wm-buttongroup>
+            </wm-form>
+            <wm-table class="panel-primary" spacing="condensed" pagesize="5" name="gridMatchingOrdList" navigation="Classic" dataset="bind:Variables.svOr1207pk0SearchOrdRef.dataSet.poutOrderList" title="Orders matching search criteria">
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="PFS</br>Order No" binding="ordnum"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Client" binding="clicod"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Season" binding="ssn"></wm-table-column>
+                <wm-table-column-group caption="Client Purchase Order" name="group">
+                    <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Client Order" binding="ordclionum"></wm-table-column>
+                    <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Qty per Shp" binding="shpclionum"></wm-table-column>
+                </wm-table-column-group>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Ref" binding="ref"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Ref 2" binding="ref2"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Ref 3" binding="ref3"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Ref 4" binding="ref4"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Ref 5" binding="ref5"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Ref 6" binding="ref6"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Ref 7" binding="ref7"></wm-table-column>
+                <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Ref 8" binding="ref8"></wm-table-column>
+            </wm-table>
+        </wm-dialog>
+    </wm-view>
+</wm-page>

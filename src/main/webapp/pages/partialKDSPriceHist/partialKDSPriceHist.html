@@ -1,0 +1,41 @@
+<wm-partial name="partial1" data-ng-controller="partialKDSPriceHistPageController"> 
+    <wm-table subheading="bind:&quot;Shipments for Order &quot;+pageParams.pOrdnum" class="panel-primary" pagesize="3" spacing="condensed" showrecordcount="true" gridfirstrowselect="true" name="gridShpnum" navigation="Classic" dataset="bind:Variables.svOrt205Record.dataSet.poutShpDet" title=""> 
+        <wm-table-column readonly="false" show="true" edit-widget-type="text" width="50px" type="string" caption="Shp No" binding="shpnum"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" edit-widget-type="text" width="80px" type="string" caption="Shp Mode" binding="shpmoddesc"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" edit-widget-type="text" width="100px" type="string" caption="Destination" binding="shpdst"></wm-table-column> 
+    </wm-table> 
+    <wm-table subheading="bind:&quot;History for shipment &quot; + Widgets.gridShpnum.selecteditem.shpnum" showrecordcount="true" showrowindex="false" nodatamessage="No price change done" gridfirstrowselect="true" filtermode="multicolumn" class="panel-info" pagesize="15" spacing="condensed" name="gridKDSPrcHist" navigation="Classic" dataset="bind:Variables.svOrt215Record.dataSet.poutOrt215hist" title=""> 
+        <wm-table-column readonly="false" show="true" edit-widget-type="text" width="90px" type="string" caption="Column" binding="fieldname"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" searchable="false" edit-widget-type="number" textalignment="right" width="40px" type="byte" caption="Seq" binding="seq"></wm-table-column> 
+        <wm-table-column-group caption="Pack Details" name="group"> 
+            <wm-table-column readonly="false" show="true" edit-widget-type="text" width="50px" type="string" caption="Code" binding="seqcod"></wm-table-column> 
+            <wm-table-column readonly="false" show="true" searchable="false" edit-widget-type="text" type="string" caption="Desc" binding="wpckdes"></wm-table-column> 
+        </wm-table-column-group> 
+        <wm-table-column-group caption="Size" name="group1"> 
+            <wm-table-column readonly="false" show="true" edit-widget-type="number" textalignment="right" width="80px" type="byte" caption="Seq" binding="szeseq"></wm-table-column> 
+            <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Desc" binding="wszedes"></wm-table-column> 
+        </wm-table-column-group> 
+        <wm-table-column readonly="false" show="true" edit-widget-type="text" type="string" caption="Reason" binding="reasondes"></wm-table-column> 
+        <wm-table-column-group caption="Price Change" name="group4"> 
+            <wm-table-column readonly="false" show="true" edit-widget-type="number" textalignment="right" width="70px" type="double" caption="From" binding="oldprice"></wm-table-column> 
+            <wm-table-column readonly="false" show="true" edit-widget-type="number" textalignment="right" width="70px" type="double" caption="To" binding="revprice"></wm-table-column> 
+        </wm-table-column-group> 
+        <wm-table-column readonly="false" show="true" edit-widget-type="text" width="70px" type="string" caption="Currency" binding="pricecurr"></wm-table-column> 
+        <wm-table-column-group caption="Modified" name="group3"> 
+            <wm-table-column readonly="false" show="true" edit-widget-type="text" width="80px" type="string" caption="By" binding="modby"></wm-table-column> 
+            <wm-table-column readonly="false" filterwidget="date" show="true" edit-widget-type="datetime" type="datetime" caption="On" binding="moddate"></wm-table-column> 
+        </wm-table-column-group> 
+    </wm-table> 
+    <wm-layoutgrid name="layoutgrid1"> 
+        <wm-gridrow name="gridrow1"> 
+            <wm-gridcolumn name="gridcolumn1" columnwidth="4"> 
+                <wm-label class="displayPrompt" caption="Modified By:" name="label2" padding="unset 0.5em"></wm-label> 
+                <wm-label width="200" class="displayField" caption="bind:Widgets.gridKDSPrcHist.selecteditem.modbyname" name="lblModbyname" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn2" columnwidth="8"> 
+                <wm-label class="displayPrompt" caption="Remarks:" name="label3" padding="unset 0.5em"></wm-label> 
+                <wm-label caption="bind:Widgets.gridKDSPrcHist.selecteditem.remarks" width="300" class="displayField" name="lblRemarks" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+        </wm-gridrow> 
+    </wm-layoutgrid> 
+</wm-partial>

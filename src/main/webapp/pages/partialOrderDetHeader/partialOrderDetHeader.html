@@ -1,0 +1,135 @@
+<wm-partial name="partial1" data-ng-controller="partialOrderDetHeaderPageController"> 
+    <wm-layoutgrid class="bordered condensed" name="layoutgrid1"> 
+        <wm-gridrow name="gridrow8"> 
+            <wm-gridcolumn name="gridcolumn24" columnwidth="12"> 
+                <wm-label fontweight="bold" caption="Order Details" name="label61" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+        </wm-gridrow> 
+        <wm-gridrow name="gridrow1"> 
+            <wm-gridcolumn name="gridcolumn1" columnwidth="2"> 
+                <wm-label class="displayPrompt" caption="Order No:" name="label20" padding="unset 0.5em"></wm-label> 
+                <wm-label width="120" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ordnum" class="displayField" name="lblOrdnum" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn2" columnwidth="2"> 
+                <wm-label textalign="left" width="75" class="displayPrompt" caption="Client:" name="label5" padding="unset 0.5em"></wm-label> 
+                <wm-label width="90" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].clicod" name="lblClicod" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn5" columnwidth="2"> 
+                <wm-label textalign="left" class="displayPrompt" caption="Shipment Date:" name="label16" padding="unset 0.5em"></wm-label> 
+                <wm-label width="100" caption="bind:Variables.lvOrderDet.dataSet.data[$i].sshpdat | toDate: 'dd-MMM-yyyy'" class="displayField" name="lblSshpdat" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn6" columnwidth="2"> 
+                <wm-label textalign="left" class="displayPrompt" caption="Merchandiser:" name="label3" padding="unset 0.5em"></wm-label> 
+                <wm-label width="80" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].mrcid" name="lblMrcid" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn9_1" columnwidth="2"> 
+                <wm-label textalign="left" width="85" class="displayPrompt" caption="Season:" name="label7" padding="unset 0.5em"></wm-label> 
+                <wm-label width="80" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ssn" class="displayField" name="lblSsn" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn23_1" columnwidth="2"> 
+                <wm-label caption="bind:Variables.lvOrderDet.dataSet.data[$i].ctycod" show="false" name="lblCtycod_hidden" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].cligrp" name="lblCligrp_hidden" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].cliacc" name="lblCliacc_hidden" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes1" name="lblRefdes1" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes2" name="lblRefdes2" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes3" name="lblRefdes3" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes4" name="lblRefDes4" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes5" name="lblRefDes5" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes6" name="lblRefDes6" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes7" name="lblRefdes7" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes8" name="lblRefdes8" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes9" name="lblRefDes9" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].refdes10" name="lblRefdes10" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].gmtrefdesa" name="lblGmtrefdesa" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].gmtrefdesb" name="lblGmtrefdesb" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].gmtrefdesc" name="lblGmtrefdesc" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].gmtrefdesd" name="lblGmtrefdesd" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].wqtyordUom" name="lblQtyord_uom_hidden" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ccyrat" name="lblCcyrat_hidden" padding="unset 0.5em"></wm-label> 
+                <wm-label show="false" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ordnumInitial" name="lblOrdnumInitial_hidden" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+        </wm-gridrow> 
+        <wm-gridrow name="gridrow2"> 
+            <wm-gridcolumn name="gridcolumn3" columnwidth="2"> 
+                <wm-label textalign="left" caption="Order Qty:" name="label11" padding="unset 0.5em"></wm-label> 
+                <wm-label width="80" textalign="left" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].qtyord" name="lblQtyOrd" padding="unset 0.5em"></wm-label> 
+                <wm-label show="bind:(Variables.lvOrderDet.dataSet.data[$i].qtyord > 0) ? true : false" textalign="left" width="50" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].wqtyordUom" name="label62" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn8" columnwidth="2"> 
+                <wm-label width="75" textalign="left" class="displayPrompt" caption="Pack Unit:" name="label11_1" padding="unset 0.5em"></wm-label> 
+                <wm-label width="50" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].pckunt" name="lblPckUnt" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn9" columnwidth="2"> 
+                <wm-label width="100" textalign="left" class="displayPrompt" caption="Release PO:" name="label13" padding="unset 0.5em"></wm-label> 
+                <wm-label width="20" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].relpof" name="lblRelpof" padding="unset 0.5em"></wm-label> 
+                <wm-label caption="bind:Variables.lvOrderDet.dataSet.data[$i].relpdat | toDate: 'dd-MMM-yyyy HH:mm:ss'" class="displayField" name="lblRelpdat" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn4" columnwidth="2"> 
+                <wm-label textalign="left" width="95" class="displayPrompt" caption="Order Date:" name="label9" padding="unset 0.5em"></wm-label> 
+                <wm-label class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].orddat | toDate: 'dd-MMM-yyyy'" name="lblOrddat" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+            <wm-gridcolumn name="gridcolumn10" columnwidth="4"> 
+                <wm-label class="displayPrompt" caption="Order Status:" name="label18" padding="unset 0.5em"></wm-label> 
+                <wm-label width="80" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ordsts" class="displayField" name="lblOrdsts" padding="unset 0.5em"></wm-label> 
+            </wm-gridcolumn> 
+        </wm-gridrow> 
+        <wm-gridrow name="gridrow3"> 
+            <wm-gridcolumn name="gridcolumn11" columnwidth="12"> 
+                <wm-layoutgrid show="bind:(pageParams.pShowPreReleases==&quot;Y&quot;)? true:false" name="layoutgrid2"> 
+                    <wm-gridrow name="gridrow5"> 
+                        <wm-gridcolumn name="gridcolumn21" columnwidth="2"> 
+                            <wm-label textalign="left" class="displayPrompt" caption="Pre-rel Knt:" name="label22" padding="unset 0.5em"></wm-label> 
+                            <wm-label width="20" caption="bind:Variables.lvOrderDet.dataSet.data[$i].prerelknt" class="displayField" name="lblPreRelKnt" padding="unset 0.5em"></wm-label> 
+                            <wm-label class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].prerelkdat | toDate: 'dd-MMM-yyyy HH:mm:ss'" name="lblPreRelkdat" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn25" columnwidth="2"> 
+                            <wm-label textalign="left" class="displayPrompt" caption="Pre-rel Dye:" name="label25" padding="unset 0.5em"></wm-label> 
+                            <wm-label width="20" caption="bind:Variables.lvOrderDet.dataSet.data[$i].prereldye" class="displayField" name="lblPreRelDye" padding="unset 0.5em"></wm-label> 
+                            <wm-label class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].prerelddat | toDate: 'dd-MMM-yyyy HH:mm:ss'" name="lblPreRelddat" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn26" columnwidth="2"> 
+                            <wm-label width="100" textalign="left" class="displayPrompt" caption="Rel Knt:" name="label28" padding="unset 0.5em"></wm-label> 
+                            <wm-label class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].relknt" width="20" name="lblRelKnt" padding="unset 0.5em"></wm-label> 
+                            <wm-label class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].relkdat | toDate: 'dd-MMM-yyyy HH:mm:ss'" name="lblRelkdat" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn27" columnwidth="3"> 
+                            <wm-label textalign="left" width="95" class="displayPrompt" caption="Rel Dye:" name="label31" padding="unset 0.5em"></wm-label> 
+                            <wm-label width="20" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].reldye" name="lblRelDye" padding="unset 0.5em"></wm-label> 
+                            <wm-label class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].relddat | toDate: 'dd-MMM-yyyy HH:mm:ss'" name="lblRelddat" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn22" columnwidth="3"></wm-gridcolumn> 
+                    </wm-gridrow> 
+                </wm-layoutgrid> 
+            </wm-gridcolumn> 
+        </wm-gridrow> 
+        <wm-gridrow name="gridrow4"> 
+            <wm-gridcolumn name="gridcolumn16" columnwidth="12"> 
+                <wm-layoutgrid show="bind:(pageParams.pShowPayTerms==&quot;Y&quot;)?true:false" name="layoutgrid3"> 
+                    <wm-gridrow name="gridrow6"> 
+                        <wm-gridcolumn name="gridcolumn22_1" columnwidth="2"> 
+                            <wm-label class="displayPrompt" textalign="left" caption="Unit Price Cur:" name="label34" padding="unset 0.5em"></wm-label> 
+                            <wm-label width="60" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ccycod" name="lblCcycod" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn23" columnwidth="2"> 
+                            <wm-label width="115" class="displayPrompt" textalign="left" caption="Retail Price Cur 1:" name="label36" padding="unset 0.5em"></wm-label> 
+                            <wm-label width="60" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ccyret" class="displayField" name="lblCcyret" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn26_1" columnwidth="2"> 
+                            <wm-label width="115" class="displayPrompt" textalign="left" caption="Retail Price Cur 2:" name="label38" padding="unset 0.5em"></wm-label> 
+                            <wm-label width="60" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ccyretb" name="lblCcyretb" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn27_1" columnwidth="2"> 
+                            <wm-label width="115" caption="Retail Price Cur 3:" textalign="left" class="displayPrompt" name="label40" padding="unset 0.5em"></wm-label> 
+                            <wm-label width="60" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ccyretc" name="lblCcyretc" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                        <wm-gridcolumn name="gridcolumn28" columnwidth="2"> 
+                            <wm-label width="115" caption="Retail Price Cur 4:" textalign="left" class="displayPrompt" name="label42" padding="unset 0.5em"></wm-label> 
+                            <wm-label width="60" class="displayField" caption="bind:Variables.lvOrderDet.dataSet.data[$i].ccyretd" name="lblCcyretd" padding="unset 0.5em"></wm-label> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow7"></wm-gridrow> 
+                </wm-layoutgrid> 
+            </wm-gridcolumn> 
+        </wm-gridrow> 
+    </wm-layoutgrid> 
+</wm-partial>

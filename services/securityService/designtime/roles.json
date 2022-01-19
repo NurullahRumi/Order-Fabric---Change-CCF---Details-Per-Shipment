@@ -1,0 +1,157 @@
+[ {
+  "name" : "admin",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "Main"
+  }
+}, {
+  "name" : "user",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "Main"
+  }
+}, {
+  "name" : "VIEW_UNITPRICE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "VIEW_RETAILPRICE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "UPD_RETAILPRICE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "VIEW_FLIPRICE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "UPD_INTERNALPRICE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_REL_REF",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "REL_KDSPRICE_INITIAL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "REL_KDSPRICE_REPEAT",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_UNITPRICE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_UNITPRICE_AFTPOREL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_UNITPRICE_ALLCLIENT",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_UNITPRICE_AFTPRCREL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_FLIPRICE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_FLIPRICE_AFTPOREL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_FLIPRICE_ALLCLIENT",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_CLIREFS",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_CLIREFS_AFTPOREL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_UPD_CLIREFS_ALLCLIENT",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_REL_REF_AFT_POREL",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_REL_REF_ALLCLIENT",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "DETSHP_VIEWPAGE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "VIEW_INTERNALPRICE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "DetailsPerShipment"
+  }
+}, {
+  "name" : "VIEW_COPYFAB",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "OrderFabric"
+  }
+}, {
+  "name" : "CHANGECCF_VIEWPAGE",
+  "description" : null,
+  "roleConfig" : {
+    "landingPage" : "Main"
+  }
+} ]

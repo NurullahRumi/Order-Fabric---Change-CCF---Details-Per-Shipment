@@ -1,0 +1,273 @@
+{
+  "notifMsg" : {
+    "_id" : "wm-notifMsg-wm.NotificationVariable-1549452763105",
+    "name" : "notifMsg",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "title",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue +\" - \"+ Variables.statPrgName.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "statPrgid" : {
+    "_id" : "wm-statPrgid-wm.Variable-1548481177452",
+    "name" : "statPrgid",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgName" : {
+    "_id" : "wm-statPrgName-wm.Variable-1548833011236",
+    "name" : "statPrgName",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statSourceType" : {
+    "_id" : "wm-statSourceType-wm.Variable-1551863902491",
+    "name" : "statSourceType",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : "CCF",
+      "datafield" : "Fab Certificate No"
+    }, {
+      "dataValue" : "ORDER",
+      "datafield" : "Order"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "svOR105PK0_CPYFABGetCpyFab" : {
+    "_id" : "wm-svOR105PK0_CPYFABGetCpyFab-wm.ServiceVariable-1549686816214",
+    "name" : "svOR105PK0_CPYFABGetCpyFab",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formCopyFabric.formWidgets.txtSrcOrderNo.caption",
+      "type" : "string"
+    }, {
+      "target" : "pFabSeq",
+      "value" : "bind:Widgets.formCopyFabric.formWidgets.txtSrcFabSeq.caption",
+      "type" : "integer"
+    }, {
+      "target" : "pDestOrdnum",
+      "value" : "bind:pageParams.pDestOrdnum",
+      "type" : "string"
+    }, {
+      "target" : "pPrgId",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetCpyFabResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcOR105PK0_CPYFABGetCpyFab",
+    "operationId" : "ProcedureExecutionController_executeProcOR105PK0_CPYFABGetCpyFab",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svOR105PK0_CPYFABGetCpyFabonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOR105PK0_CPYFABGetFabDetails" : {
+    "_id" : "wm-svOR105PK0_CPYFABGetFabDetails-wm.ServiceVariable-1549693638375",
+    "name" : "svOR105PK0_CPYFABGetFabDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formFabDetails.formWidgets.txtTypeOrderNo.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pFabSeq",
+      "value" : "bind:Widgets.formFabDetails.formWidgets.txtTypeFabSeq.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "pCCF",
+      "value" : "bind:Widgets.formFabDetails.formWidgets.txtTypeCCF.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pOption",
+      "value" : "bind:Widgets.formFabDetails.formWidgets.radiosetSourceType.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFabDetailsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcOR105PK0_CPYFABGetFabDetails",
+    "operationId" : "ProcedureExecutionController_executeProcOR105PK0_CPYFABGetFabDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svOR105PK0_CPYFABGetFabDetailsonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOR105PK0_CPYFABGetFaborienLOV" : {
+    "_id" : "wm-svOR105PK0_CPYFABGetFaborienLOV-wm.ServiceVariable-1549523205941",
+    "name" : "svOR105PK0_CPYFABGetFaborienLOV",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgId",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFaborienLovResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcOR105PK0_CPYFABGetFaborienLOV",
+    "operationId" : "ProcedureExecutionController_executeProcOR105PK0_CPYFABGetFaborienLOV",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOR105PK0_CPYFABGetFabSeqLOV" : {
+    "_id" : "wm-svOR105PK0_CPYFABGetCopyFabLOV-wm.ServiceVariable-1548481111311",
+    "name" : "svOR105PK0_CPYFABGetFabSeqLOV",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formFabDetails.formWidgets.txtTypeOrderNo.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pPrgId",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFabSeqLovResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcOR105PK0_CPYFABGetFabSeqLOV",
+    "operationId" : "ProcedureExecutionController_executeProcOR105PK0_CPYFABGetFabSeqLOV",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svOR105PK0_CPYFABGetFabSeqLOVonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOR105PK0_CPYFABGetMarkertypeLOV" : {
+    "_id" : "wm-svOR105PK0_CPYFABGetMarkertypeLOV-wm.ServiceVariable-1549523232227",
+    "name" : "svOR105PK0_CPYFABGetMarkertypeLOV",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgId",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetMarkertypeLovResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcOR105PK0_CPYFABGetMarkertypeLOV",
+    "operationId" : "ProcedureExecutionController_executeProcOR105PK0_CPYFABGetMarkertypeLOV",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOR105PK0_CPYFABGetShadeOptionLOV" : {
+    "_id" : "wm-svOR105PK0_CPYFABGetShadeOptionLOV-wm.ServiceVariable-1549080362938",
+    "name" : "svOR105PK0_CPYFABGetShadeOptionLOV",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pPrgId",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pIntreftno",
+      "value" : "bind:Widgets.formCopyFabric.formWidgets.txtIntrefno.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetShadeOptionLovResponse",
+    "service" : "pfsdb",
+    "operation" : "executeProcOR105PK0_CPYFABGetShadeOptionLOV",
+    "operationId" : "ProcedureExecutionController_executeProcOR105PK0_CPYFABGetShadeOptionLOV",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svOR105PK0_CPYFABGetShadeOptionLOVonBeforeUpdate($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOR105PK0_CPYFABInsCpyFab" : {
+    "_id" : "wm-svOR105PK0_CPYFABInsCpyFab-wm.ServiceVariable-1549448116665",
+    "name" : "svOR105PK0_CPYFABInsCpyFab",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.CreateProcOr105pk0CpyfabinsCpyFabResponse",
+    "service" : "pfsdb",
+    "operation" : "executeCreateProcOR105PK0_CPYFABInsCpyFab",
+    "operationId" : "ProcedureExecutionController_executeCreateProcOR105PK0_CPYFABInsCpyFab",
+    "operationType" : "post",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svOR105PK0_CPYFABInsCpyFabonSuccess($event, $scope)",
+    "onError" : "svOR105PK0_CPYFABInsCpyFabonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

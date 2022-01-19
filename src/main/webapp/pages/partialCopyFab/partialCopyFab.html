@@ -1,0 +1,382 @@
+<wm-partial name="partial1" data-ng-controller="partialCopyFabPageController"> 
+    <wm-panel class="panel-priamry" name="panelCopyFab" iconclass="" autoclose="outsideClick" title=""> 
+        <wm-layoutgrid name="layoutgrid12_2"> 
+            <wm-gridrow name="gridrow27"> 
+                <wm-gridcolumn name="gridcolumn44" columnwidth="1"></wm-gridcolumn> 
+                <wm-gridcolumn name="gridcolumn45_1" columnwidth="10"> 
+                    <wm-panel class="panel-info" name="panelForm" iconclass="fa fa-copy" autoclose="outsideClick" title="bind:&quot; Copy Fabric Sequence For Order Number : &quot; + pageParams.pDestOrdnum"> 
+                        <wm-layoutgrid name="layoutgrid13"> 
+                            <wm-gridrow name="gridrow28_1"> 
+                                <wm-gridcolumn padding="5px" name="gridcolumn47" columnwidth="12"> 
+                                    <wm-form dataset="bind:Variables.svOR105PK0_CPYFABGetFabDetails.dataSet" class="theme-c4" name="formFabDetails" captionalign="left" method="get" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded"> 
+                                        <wm-layoutgrid name="layoutgrid10" columns="1"> 
+                                            <wm-gridrow name="gridrow22_1"> 
+                                                <wm-gridcolumn name="gridcolumn52" columnwidth="10"> 
+                                                    <wm-composite width="100%" padding="5px unset" name="composite18"> 
+                                                        <wm-label width="auto" fontweight="bold" padding="12px unset unset unset" caption="Choose Source Type :" name="lblChoose" class="col-md-3 control-label"></wm-label> 
+                                                        <wm-container width="auto" name="container25" class="col-md-9"> 
+                                                            <wm-radioset selectedvalue="CCF" displayfield="datafield" on-change="radiosetSourceTypeChange($event, $scope, newVal, oldVal)" layout="inline" datafield="dataValue" dataset="bind:Variables.statSourceType.dataSet" name="radiosetSourceType" height="auto"></wm-radioset> 
+                                                        </wm-container> 
+                                                    </wm-composite> 
+                                                    <wm-layoutgrid name="layoutgrid12_1"> 
+                                                        <wm-gridrow name="gridrow23"> 
+                                                            <wm-gridcolumn name="gridcolumn54_2" columnwidth="6"> 
+                                                                <wm-container show="bind:(Widgets.formFabDetails.formWidgets.radiosetSourceType.datavalue == 'CCF')?true:false" name="containerHideCCF"> 
+                                                                    <wm-composite padding="5px unset unset 5px" width="100%" name="composite14"> 
+                                                                        <wm-label fontweight="bold" width="auto" name="lblCCF" caption="CCF :" class="col-md-3 control-label"></wm-label> 
+                                                                        <wm-container name="container14" width="auto" class="col-md-9"> 
+                                                                            <wm-text on-change="txtTypeCCFChange($event, $scope, newVal, oldVal)" name="txtTypeCCF" width="150" height="25" placeholder=""></wm-text> 
+                                                                        </wm-container> 
+                                                                    </wm-composite> 
+                                                                </wm-container> 
+                                                            </wm-gridcolumn> 
+                                                            <wm-gridcolumn name="gridcolumn79" columnwidth="6"></wm-gridcolumn> 
+                                                        </wm-gridrow> 
+                                                        <wm-gridrow name="gridrow24_1"> 
+                                                            <wm-gridcolumn name="gridcolumn56_1" columnwidth="10"> 
+                                                                <wm-container show="bind:(Widgets.formFabDetails.formWidgets.radiosetSourceType.datavalue == 'ORDER')?true:false" name="containerHideOrderno"> 
+                                                                    <wm-layoutgrid name="layoutgrid12"> 
+                                                                        <wm-gridrow name="gridrow24"> 
+                                                                            <wm-gridcolumn padding="2px unset unset unset" name="gridcolumn55" columnwidth="6"> 
+                                                                                <wm-composite padding="5px unset unset 5px" width="100%" name="composite15"> 
+                                                                                    <wm-label fontweight="bold" width="auto" name="lblOrderno" caption="Order Number:" class="col-md-3 control-label"></wm-label> 
+                                                                                    <wm-container name="container15" width="auto" class="col-md-9"> 
+                                                                                        <wm-text name="txtTypeOrderNo" height="25" on-change="txtTypeOrderNoChange($event, $scope, newVal, oldVal)" width="100" placeholder=""></wm-text> 
+                                                                                    </wm-container> 
+                                                                                </wm-composite> 
+                                                                            </wm-gridcolumn> 
+                                                                            <wm-gridcolumn name="gridcolumn56" columnwidth="6"> 
+                                                                                <wm-composite padding="5px unset unset 5px" width="100%" name="composite16"> 
+                                                                                    <wm-label fontweight="bold" name="lblFabSeq" width="auto" caption="Fab Seq :" class="col-md-3 control-label"></wm-label> 
+                                                                                    <wm-container name="container16" width="auto" class="col-md-9"> 
+                                                                                        <wm-text textalign="right" on-click="txtTypeFabSeqClick($event, $scope)" on-change="txtTypeFabSeqChange($event, $scope, newVal, oldVal)" name="txtTypeFabSeq" height="25" margin="unset 5px unset unset" datavalue="bind:Widgets.gridListFabLOV.selecteditem.fabseq" width="45" placeholder=""></wm-text> 
+                                                                                    </wm-container> 
+                                                                                </wm-composite> 
+                                                                            </wm-gridcolumn> 
+                                                                        </wm-gridrow> 
+                                                                    </wm-layoutgrid> 
+                                                                </wm-container> 
+                                                            </wm-gridcolumn> 
+                                                            <wm-gridcolumn name="gridcolumn80" columnwidth="2"></wm-gridcolumn> 
+                                                        </wm-gridrow> 
+                                                    </wm-layoutgrid> 
+                                                </wm-gridcolumn> 
+                                                <wm-gridcolumn name="gridcolumn78" columnwidth="2"></wm-gridcolumn> 
+                                            </wm-gridrow> 
+                                        </wm-layoutgrid> 
+                                    </wm-form> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                            <wm-gridrow name="gridrow29_2"> 
+                                <wm-gridcolumn name="gridcolumn50" columnwidth="12"> 
+                                    <wm-form name="formCopyFabric" captionalign="left" dataset="bind:Variables.svOR105PK0_CPYFABInsCpyFab.dataSet" method="post" errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded"> 
+                                        <wm-layoutgrid name="layoutgrid14" columns="1"> 
+                                            <wm-gridrow name="gridrow31"> 
+                                                <wm-gridcolumn name="gridcolumn52_1" columnwidth="12"> 
+                                                    <wm-layoutgrid name="layoutgrid2"> 
+                                                        <wm-gridrow name="gridrow13"> 
+                                                            <wm-gridcolumn padding="5px" name="gridcolumn28_1" columnwidth="12"> 
+                                                                <wm-layoutgrid class="theme-b4 panel-info bordered" name="layoutgrid5"> 
+                                                                    <wm-gridrow name="gridrow25"> 
+                                                                        <wm-gridcolumn name="gridcolumn57" columnwidth="12"> 
+                                                                            <wm-label margin="-2px unset unset unset" name="lblCopySourcefrom" width="100%" class="col-md-3 control-label h4 label-info" caption="Copy source From  :" padding="0.5em"></wm-label> 
+                                                                        </wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                    <wm-gridrow name="gridrow14"> 
+                                                                        <wm-gridcolumn name="gridcolumn36" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite3"> 
+                                                                                <wm-label width="153" fontweight="bold" caption="Source CCF :" name="lblSourceCCF" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container3" class="col-md-9"> 
+                                                                                    <wm-label width="auto" height="25" backgroundcolor="white" class="displayField" caption="bind:Widgets.gridFabDetails.selecteditem.intfabcertno" name="txtSrcCCF" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn39" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite1"> 
+                                                                                <wm-label width="153" fontweight="bold" caption="Source Order Number :" name="lblOrderNo" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container1" class="col-md-9"> 
+                                                                                    <wm-label height="25" width="auto" backgroundcolor="white" class="displayField" caption="bind:Widgets.gridFabDetails.selecteditem.ordnum" name="txtSrcOrderNo" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn40" columnwidth="6"> 
+                                                                            <wm-composite width="100%" name="composite2"> 
+                                                                                <wm-label width="153" fontweight="bold" caption="Source Fab Seq :" name="lblsrcFabSeq" class="displayPrompt  col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container2" class="col-md-9"> 
+                                                                                    <wm-label backgroundcolor="white" class="displayField" height="25" width="30" caption="bind:Widgets.gridFabDetails.selecteditem.fabseq" name="txtSrcFabSeq" padding="unset 0.5em"></wm-label> 
+                                                                                    <wm-label width="auto" backgroundcolor="white" name="txtSrcFabDes" height="25" class="displayField" caption="bind:Widgets.gridFabCpy.selecteditem.fabdes" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                    <wm-gridrow name="gridrow26"> 
+                                                                        <wm-gridcolumn name="gridcolumn75" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite5"> 
+                                                                                <wm-label width="153" fontweight="bold" padding="unset unset unset 0.5px" caption="Lib Ref No :" name="lblIntrefno" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container5" class="col-md-9"> 
+                                                                                    <wm-label backgroundcolor="white" height="25" width="auto" class="displayField" caption="bind:Widgets.gridFabCpy.selecteditem.intrefno" name="txtIntrefno" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn61" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite6"> 
+                                                                                <wm-label width="153" fontweight="bold" padding="unset unset unset 0.5px" caption="Fabrics copied from :" name="lblSrcCopy" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container6" class="col-md-9"> 
+                                                                                    <wm-label backgroundcolor="white" height="25" width="auto" class="displayField" caption="bind:Widgets.gridFabCpy.selecteditem.srcCopy" name="txtSrcCopy" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn62" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite7"> 
+                                                                                <wm-label width="153" fontweight="bold" padding="unset unset unset 0.5px" caption="Fabric Type :" name="lblExpFabtyp" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container7" class="col-md-9"> 
+                                                                                    <wm-label backgroundcolor="white" height="25" width="auto" class="displayField" caption="bind:Widgets.gridFabCpy.selecteditem.fabtyp" name="txtExpFabtyp" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn63" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite8"> 
+                                                                                <wm-label width="153" fontweight="bold" padding="unset unset unset 0.5px" caption="Ind :" name="lblExtFabind" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container8" class="col-md-9"> 
+                                                                                    <wm-label backgroundcolor="white" height="25" width="auto" class="displayField" caption="bind:Widgets.gridFabCpy.selecteditem.fabind" name="txtExtFabind" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                    <wm-gridrow name="gridrow27_2"> 
+                                                                        <wm-gridcolumn name="gridcolumn76" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite10"> 
+                                                                                <wm-label width="153" fontweight="bold" padding="unset unset unset 0.5px" caption="Cut As STR :" name="lblExpCutStr" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container10" class="col-md-9"> 
+                                                                                    <wm-label backgroundcolor="white" height="25" width="auto" class="displayField" caption="bind:Widgets.gridFabCpy.selecteditem.cutstr" name="txtExpCutStr" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn65" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite12"> 
+                                                                                <wm-label width="153" fontweight="bold" padding="unset unset unset 0.5px" caption="Stripe :" name="lblExpStr" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container12" class="col-md-9"> 
+                                                                                    <wm-label backgroundcolor="white" width="auto" height="25" class="displayField" caption="bind:Widgets.gridFabCpy.selecteditem.str" name="txtExpStr" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn66" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite13"> 
+                                                                                <wm-label width="153" fontweight="bold" padding="unset unset unset 0.5px" caption="Stripe Id :" name="lblExpStripeId" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container13" class="col-md-9"> 
+                                                                                    <wm-label backgroundcolor="white" height="25" width="auto" class="displayField" caption="bind:Widgets.gridFabCpy.selecteditem.stripeid" name="txtExpStripeId" padding="unset 0.5em"></wm-label> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn67" columnwidth="1"></wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn68" columnwidth="2"></wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                </wm-layoutgrid> 
+                                                            </wm-gridcolumn> 
+                                                        </wm-gridrow> 
+                                                        <wm-gridrow name="gridrow19"> 
+                                                            <wm-gridcolumn padding="5px" name="gridcolumn45" columnwidth="12"> 
+                                                                <wm-layoutgrid class="theme-a2 bordered panel-primary" name="layoutgrid6"> 
+                                                                    <wm-gridrow name="gridrow28"> 
+                                                                        <wm-gridcolumn name="gridcolumn69" columnwidth="12"> 
+                                                                            <wm-label margin="-2px unset unset unset" name="lblFabDetails" width="100%" class="col-md-3 control-label h4 label-primary" caption="Enter New Fabric Details :" padding="0.5em"></wm-label> 
+                                                                        </wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                    <wm-gridrow padding="5px unset" name="gridrow16"> 
+                                                                        <wm-gridcolumn padding="unset unset unset 3px" name="gridcolumn41" columnwidth="3"> 
+                                                                            <wm-composite width="100%" name="composite4"> 
+                                                                                <wm-label fontweight="bold" padding="unset unset unset 0.5px" width="auto" caption="Shade Option :" name="lblShadeOption" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container4" class="col-md-9"> 
+                                                                                    <wm-select placeholder="%" width="auto" height="25" displayfield="shadedesc" datafield="shadeopt" dataset="bind:Variables.svOR105PK0_CPYFABGetShadeOptionLOV.dataSet.poutListSahdeOption" name="selectShadeOpt"></wm-select> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn padding="unset unset unset 3px" name="gridcolumn39_2" columnwidth="4"> 
+                                                                            <wm-composite width="100%" name="composite9" conditionalclass="bind:(Widgets.gridFabCpy.selecteditem.expFaborienReq == 'Y')?'theme-a4':false"> 
+                                                                                <wm-label fontweight="bold" conditionalclass="bind:(Widgets.gridFabCpy.selecteditem.expFaborienReq == 'Y')?'theme-a4':false" padding="3px unset 3px 0.5px" width="auto" caption="Fab Orientation :" name="lblExpFabOrien" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container9" class="col-md-9"></wm-container> 
+                                                                                <wm-container width="auto" name="container21" class="col-md-9"> 
+                                                                                    <wm-select placeholder="%" width="auto" height="25" displayfield="faboreiendes" datafield="itemcod" dataset="bind:Variables.svOR105PK0_CPYFABGetFaborienLOV.dataSet.poutListFabOrient" datavalue="bind:Widgets.gridFabCpy.selecteditem.faborien" name="selectExpFabOrien"></wm-select> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn padding="unset unset unset 3px" name="gridcolumn42" columnwidth="5"> 
+                                                                            <wm-composite width="100%" name="composite11" conditionalclass="bind:(Widgets.gridFabCpy.selecteditem.expMarkertypReq =='Y')?'theme-a4':false"> 
+                                                                                <wm-label fontweight="bold" conditionalclass="bind:(Widgets.gridFabCpy.selecteditem.expMarkertypReq =='Y')?'theme-a4':false" padding="3px unset 3px 0.5px" width="auto" caption="Marker Type :" name="lblExpMarkerTyp" class="displayPrompt col-md-3 control-label"></wm-label> 
+                                                                                <wm-container width="auto" name="container22" class="col-md-9"> 
+                                                                                    <wm-select placeholder="%" width="auto" height="25" displayfield="markertypdes" datafield="itemcod" dataset="bind:Variables.svOR105PK0_CPYFABGetMarkertypeLOV.dataSet.poutListMarkertyp" datavalue="bind:Widgets.gridFabCpy.selecteditem.markertyp" name="selectExpMarkerTyp"></wm-select> 
+                                                                                </wm-container> 
+                                                                            </wm-composite> 
+                                                                        </wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                </wm-layoutgrid> 
+                                                            </wm-gridcolumn> 
+                                                        </wm-gridrow> 
+                                                        <wm-gridrow name="gridrow29"> 
+                                                            <wm-gridcolumn padding="5px" name="gridcolumn50_1" columnwidth="12"> 
+                                                                <wm-layoutgrid class="theme-a2 bordered panel-primary" name="layoutgrid7"> 
+                                                                    <wm-gridrow name="gridrow29_1"> 
+                                                                        <wm-gridcolumn name="gridcolumn77" columnwidth="12"> 
+                                                                            <wm-label margin="-2px unset unset unset" name="lblChooseGarment" width="100%" class="col-md-3 control-label h4 label-primary" caption="Choose technical side to use for Garment :" padding="0.5em"></wm-label> 
+                                                                        </wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                    <wm-gridrow name="gridrow27_1"> 
+                                                                        <wm-gridcolumn horizontalalign="center" name="gridcolumn48_1" columnwidth="12"> 
+                                                                            <wm-container name="containerHideFaceSide"> 
+                                                                                <wm-label caption="Face Side" class="displayField" name="txtFaceSide" padding="unset 0.5em"></wm-label> 
+                                                                            </wm-container> 
+                                                                        </wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                    <wm-gridrow name="gridrow13_2"> 
+                                                                        <wm-gridcolumn name="gridcolumn29_1" columnwidth="6"> 
+                                                                            <wm-container horizontalalign="center" padding="10px" name="container17"> 
+                                                                                <wm-layoutgrid name="layoutgrid8"> 
+                                                                                    <wm-gridrow name="gridrow13_1"> 
+                                                                                        <wm-gridcolumn padding="unset unset unset 10px" horizontalalign="center" name="gridcolumn28" columnwidth="12"> 
+                                                                                            <wm-label name="lblRightSide" caption="Technical Right" class="displayField theme-a1" padding="unset 0.5em"></wm-label> 
+                                                                                        </wm-gridcolumn> 
+                                                                                    </wm-gridrow> 
+                                                                                    <wm-gridrow name="gridrow14_1"> 
+                                                                                        <wm-gridcolumn name="gridcolumn30_2" columnwidth="12"> 
+                                                                                            <wm-picture hint="Right Side" picturesource="bind:&quot;services/pfsdb/procedureExecutor/procedure/execute/ProcOR105PK0_CPYFABGetFabBlob?pPrgId=&quot;+Variables.statPrgid.dataSet.dataValue+&quot;&amp;pLibRefNo=&quot;+Widgets.formCopyFabric.formWidgets.txtIntrefno.caption+&quot;&amp;pFaceSide=R&amp;downloadAsAttachment=true&quot;" pictureaspect="None" shape="thumbnail" name="pictureRightSide"></wm-picture> 
+                                                                                        </wm-gridcolumn> 
+                                                                                    </wm-gridrow> 
+                                                                                    <wm-gridrow name="gridrow19_1"> 
+                                                                                        <wm-gridcolumn name="gridcolumn40_2" columnwidth="4"></wm-gridcolumn> 
+                                                                                        <wm-gridcolumn name="gridcolumn46" columnwidth="4"> 
+                                                                                            <wm-layoutgrid name="layoutgrid14_1"> 
+                                                                                                <wm-gridrow name="gridrow28_2"> 
+                                                                                                    <wm-gridcolumn horizontalalign="center" name="gridcolumn49" columnwidth="12"> 
+                                                                                                        <wm-label caption="Right Side" name="lblRight" padding="unset 0.5em"></wm-label> 
+                                                                                                    </wm-gridcolumn> 
+                                                                                                </wm-gridrow> 
+                                                                                                <wm-gridrow name="gridrow29_3"> 
+                                                                                                    <wm-gridcolumn name="gridcolumn55_2" columnwidth="5"></wm-gridcolumn> 
+                                                                                                    <wm-gridcolumn horizontalalign="center" name="gridcolumn51" columnwidth="2"> 
+                                                                                                        <wm-checkbox uncheckedvalue="N" checkedvalue="Y" on-click="chkRightSideClick($event, $scope)" name="chkRightSide" caption=""></wm-checkbox> 
+                                                                                                    </wm-gridcolumn> 
+                                                                                                    <wm-gridcolumn name="gridcolumn54_1" columnwidth="5"></wm-gridcolumn> 
+                                                                                                </wm-gridrow> 
+                                                                                            </wm-layoutgrid> 
+                                                                                        </wm-gridcolumn> 
+                                                                                        <wm-gridcolumn name="gridcolumn47_1" columnwidth="4"></wm-gridcolumn> 
+                                                                                    </wm-gridrow> 
+                                                                                </wm-layoutgrid> 
+                                                                            </wm-container> 
+                                                                        </wm-gridcolumn> 
+                                                                        <wm-gridcolumn name="gridcolumn30_1" columnwidth="6"> 
+                                                                            <wm-container horizontalalign="center" padding="10px" name="container18"> 
+                                                                                <wm-layoutgrid name="layoutgrid9"> 
+                                                                                    <wm-gridrow name="gridrow15_1"> 
+                                                                                        <wm-gridcolumn padding="unset unset unset 10px" horizontalalign="center" name="gridcolumn32" columnwidth="12"> 
+                                                                                            <wm-label name="lblWorngSide" caption="Technical Wrong" class="displayField theme-a1" padding="unset 0.5em"></wm-label> 
+                                                                                        </wm-gridcolumn> 
+                                                                                    </wm-gridrow> 
+                                                                                    <wm-gridrow name="gridrow16_1"> 
+                                                                                        <wm-gridcolumn name="gridcolumn34_1" columnwidth="12"> 
+                                                                                            <wm-picture on-click="pictureWrongSideClick($event, $scope)" hint="Wrong Side" picturesource="bind:&quot;services/pfsdb/procedureExecutor/procedure/execute/ProcOR105PK0_CPYFABGetFabBlob?pPrgId=&quot;+Variables.statPrgid.dataSet.dataValue+&quot;&amp;pLibRefNo=&quot;+Widgets.formCopyFabric.formWidgets.txtIntrefno.caption+&quot;&amp;pFaceSide=W&amp;downloadAsAttachment=true&quot;" shape="thumbnail" name="pictureWrongSide"></wm-picture> 
+                                                                                        </wm-gridcolumn> 
+                                                                                    </wm-gridrow> 
+                                                                                    <wm-gridrow name="gridrow20"> 
+                                                                                        <wm-gridcolumn name="gridcolumn43_2" columnwidth="4"></wm-gridcolumn> 
+                                                                                        <wm-gridcolumn name="gridcolumn55_1" columnwidth="4"> 
+                                                                                            <wm-layoutgrid name="layoutgrid15"> 
+                                                                                                <wm-gridrow name="gridrow30"> 
+                                                                                                    <wm-gridcolumn name="gridcolumn53" columnwidth="12"> 
+                                                                                                        <wm-label name="lblWrong" caption="Wrong Side" padding="unset 0.5em"></wm-label> 
+                                                                                                    </wm-gridcolumn> 
+                                                                                                </wm-gridrow> 
+                                                                                                <wm-gridrow name="gridrow31_1"> 
+                                                                                                    <wm-gridcolumn name="gridcolumn56_2" columnwidth="5"></wm-gridcolumn> 
+                                                                                                    <wm-gridcolumn name="gridcolumn54" columnwidth="2"> 
+                                                                                                        <wm-checkbox uncheckedvalue="N" checkedvalue="Y" on-click="chkWrongSideClick($event, $scope)" name="chkWrongSide" caption=""></wm-checkbox> 
+                                                                                                    </wm-gridcolumn> 
+                                                                                                    <wm-gridcolumn name="gridcolumn57_1" columnwidth="5"></wm-gridcolumn> 
+                                                                                                </wm-gridrow> 
+                                                                                            </wm-layoutgrid> 
+                                                                                        </wm-gridcolumn> 
+                                                                                        <wm-gridcolumn name="gridcolumn52_2" columnwidth="4"></wm-gridcolumn> 
+                                                                                    </wm-gridrow> 
+                                                                                </wm-layoutgrid> 
+                                                                            </wm-container> 
+                                                                        </wm-gridcolumn> 
+                                                                    </wm-gridrow> 
+                                                                </wm-layoutgrid> 
+                                                            </wm-gridcolumn> 
+                                                        </wm-gridrow> 
+                                                    </wm-layoutgrid> 
+                                                </wm-gridcolumn> 
+                                            </wm-gridrow> 
+                                        </wm-layoutgrid> 
+                                        <wm-buttongroup name="buttongroup3" padding="unset unset 5px unset" horizontalalign="right" class="form-action col-md-12"> 
+                                            <wm-button name="btnCopyFab" iconclass="fa fa-copy" on-click="btnCopyFabClick($event, $scope)" width="100" caption="Copy" type="button" class="btn-info"></wm-button> 
+                                            <wm-button name="btnExit" on-click="btnExitClick($event, $scope)" width="100" iconclass="wi wi-exit-to-app" caption="Exit" type="button" class="btn-default"></wm-button> 
+                                        </wm-buttongroup> 
+                                    </wm-form> 
+                                </wm-gridcolumn> 
+                            </wm-gridrow> 
+                        </wm-layoutgrid> 
+                    </wm-panel> 
+                </wm-gridcolumn> 
+                <wm-gridcolumn name="gridcolumn48" columnwidth="1"></wm-gridcolumn> 
+            </wm-gridrow> 
+        </wm-layoutgrid> 
+    </wm-panel> 
+    <wm-view name="view1" class="dialog-view"> 
+        <wm-dialog width="900" name="dialogListFab" dialogtype="design-dialog" modal="true" title="List of Fabrics" iconclass="fa fa-copy"> 
+            <wm-layoutgrid name="layoutgrid3"> 
+                <wm-gridrow name="gridrow15"> 
+                    <wm-gridcolumn name="gridcolumn38" columnwidth="12"> 
+                        <wm-table on-select="gridListFabLOVSelect($event, $scope, $rowData)" showrecordcount="true" navigationalign="center" class="panel-primary" spacing="condensed" name="gridListFabLOV" navigation="Classic" dataset="bind:Variables.svOR105PK0_CPYFABGetFabSeqLOV.dataSet.poutListCpyFabLov" title=""> 
+                            <wm-table-column readonly="false" show="true" type="byte" edit-widget-type="number" textalignment="right" width="40px" caption="Fab <br> Seq" binding="fabseq"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="70px" caption="Fab <br> Typ" binding="fabtyp"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="40px" caption="Fab <br> Ind" binding="fabind"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="50px" caption="Fab <br> Sts" binding="fabsts"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="50px" caption="Cal <br> Stn" binding="calstn"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="float" edit-widget-type="number" width="100px" caption="Fab <br> Wid" binding="fabwid"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="integer" edit-widget-type="number" textalignment="right" width="50px" caption="Fab <br> Wgt" binding="fabwgt"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="40px" caption="Stripe" binding="stripe"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="40px" caption="Aop" binding="aop"></wm-table-column> 
+                            <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" width="80px" caption="Pat <br> Cod" binding="patcod"></wm-table-column> 
+                        </wm-table> 
+                    </wm-gridcolumn> 
+                </wm-gridrow> 
+            </wm-layoutgrid> 
+            <wm-dialogactions name="dialogactions1"> 
+                <wm-button name="btnClose" class="btn-primary" caption="Close" on-click="closeDialog()"></wm-button> 
+            </wm-dialogactions> 
+        </wm-dialog> 
+    </wm-view> 
+    <wm-view name="view2" class="dialog-view"> 
+        <wm-alertdialog on-close="variableOnClose()" on-ok="variableOnOk()" alerttype="{{notification.alerttype}}" oktext="{{notification.okButtonText}}" title="{{notification.title}}" message="{{notification.text}}" notificationdialog="alert" controller="NotificationDialogController" name="notificationalertdialog"></wm-alertdialog> 
+    </wm-view> 
+    <wm-table show="false" gridfirstrowselect="true" spacing="condensed" name="gridFabDetails" navigation="Basic" dataset="bind:Variables.svOR105PK0_CPYFABGetFabDetails.dataSet.poutDetails" title=""> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Ordnum" binding="ordnum"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Intfabcertno" binding="intfabcertno"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="byte" edit-widget-type="number" caption="Fabseq" binding="fabseq"></wm-table-column> 
+    </wm-table> 
+    <wm-table show="false" gridfirstrowselect="true" multiselect="false" spacing="condensed" name="gridFabCpy" navigation="Basic" dataset="bind:Variables.svOR105PK0_CPYFABGetCpyFab.dataSet.poutListCpyFab" title=""> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Marketdes" binding="marketdes"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Chk Fablib Mat" binding="chkFablibMat"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Markertyp" binding="markertyp"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Ccf" binding="ccf"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" caption="Faborien" binding="faborien"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Copysrcmsg" binding="copysrcmsg"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Ordcat" binding="ordcat"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Fabind" binding="fabind"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Inside" binding="inside"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Str" binding="str"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Chk Ordfab" binding="chkOrdfab"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Cutstr" binding="cutstr"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Enablesahde" binding="enablesahde"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Fabdcodelist" binding="fabdcodelist"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Fabdes" binding="fabdes"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Fabtyp" binding="fabtyp"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Intrefno" binding="intrefno"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="long" edit-widget-type="number" caption="Intrefno Ver" binding="intrefnoVer"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Ordertype" binding="ordertype"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Outside" binding="outside"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Src Copy" binding="srcCopy"></wm-table-column> 
+        <wm-table-column readonly="false" show="true" type="string" edit-widget-type="text" caption="Stripeid" binding="stripeid"></wm-table-column> 
+    </wm-table> 
+</wm-partial>

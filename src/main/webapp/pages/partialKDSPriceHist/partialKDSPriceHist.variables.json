@@ -1,0 +1,63 @@
+{
+  "svOrt205Record" : {
+    "_id" : "wm-svOrt205Record-wm.ServiceVariable-1505475832332",
+    "name" : "svOrt205Record",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:pageParams.pOrdnum",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getOrt205recordResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0GetOrt205Record",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0GetOrt205Record",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svOrt205RecordonBeforeUpdate($event, $scope)",
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOrt215Record" : {
+    "_id" : "wm-svOrt215Record-wm.ServiceVariable-1505476323570",
+    "name" : "svOrt215Record",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.gridShpnum.selecteditem.ordnum",
+      "type" : "string"
+    }, {
+      "target" : "pShpnum",
+      "value" : "bind:Widgets.gridShpnum.selecteditem.shpnum",
+      "type" : "string"
+    }, {
+      "target" : "pUsrid",
+      "value" : "bind:Variables.statAppUsrid.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getKdspriceChgHistoryResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0GetKDSPriceChgHistory",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0GetKDSPriceChgHistory",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  }
+}

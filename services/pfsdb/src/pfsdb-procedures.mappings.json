@@ -1,0 +1,2150 @@
+{
+  "or207pk0ReleaseKDSPrice" : {
+    "procedureString" : "CALL or207pk0.sproc_detshp_release_price(?,?,?,?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "a",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "s",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "s",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserAppRoleList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "sd",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "or207pk0SearchOrdRef" : {
+    "procedureString" : "CALL or207pk0.sproc_search_orders_with_ref(?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+    "parameters" : [ {
+      "name" : "pClicod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "TMSSCAS",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSsn",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "SS/13",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClionum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef2",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef3",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef4",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef5",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef6",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef7",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef8",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "D004",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgname",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "XX",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutOrderList",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105wpk0yrn_getYrnclr" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnclr_list(?,upper(?), ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pBaseyrnUseind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnclr",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0FetchPackSze" : {
+    "procedureString" : "CALL or207pk0.sproc_ins_ort207_without_price(?, ?,upper(?))",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1800502A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPricecat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CLI",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    } ]
+  },
+  "or207pk0GetOrt205Record" : {
+    "procedureString" : "CALL or207pk0.sproc_get_or196_ort205det(?, ?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1702581A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutShpDet",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105wpk0yrn_getyrncps" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrncps_list(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrncps",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0ReleaseRef" : {
+    "procedureString" : "CALL or207pk0.sproc_detshp_release_ref(?,?,?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "zz",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "D004",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "ff",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "or105wpk0yrn_getyrncnt" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrncnt_list(?, upper(?),?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrncnt",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0CopyRef" : {
+    "procedureString" : "CALL or207pk0.sproc_copy_ref(?,?, ?,?,\n                         ?, ?, \n                         ?,?,?,?,\n                         ?,?,?,?,?,?)",
+    "parameters" : [ {
+      "name" : "pSrcOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "AA",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDestOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "ZZ",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDestShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyFliprcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyRetPrcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyrefInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref2Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref3Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref4Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref5Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref6Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref7Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref8Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgname",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "or207pk0GetOrt209Record" : {
+    "procedureString" : "CALL or207pk0.sproc_get_detshp_ort209(?,?, ?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1605816A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutDetShp",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105wpk0yrn_getYrnffcod" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnffcod_list(?, upper(?),?, ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W05",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnffcod",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1902671A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "or105wpk0Yrn_getYrnsubqltyB" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnsubqltyb_list(?, upper(?), ?,?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnqlty",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "RING",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnsubqltyb",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105wpk0yrn_getYrnsubqlty" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnsubqlty_list(?, upper(?), ?, ?,?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W05",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnqlty",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "RING",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSubqltytyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnsubqlty",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOR105PK0_CPYFABGetFabBlob" : {
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_fabpic(?, upper(?), ?, ?, \n                                      ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pLibRefNo",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0000094366",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFaceSide",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "R",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFabBlob",
+      "type" : "blob",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0FetchExtranetDetails" : {
+    "procedureString" : "CALL or207pk0.sproc_fetch_extranet_details(?,?,?,?,?,?,?,?,?,?,?,?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1702581A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFromShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pToShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchUnitprcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchRetPrcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchBarcodeInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchRatioPackInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchStyleInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "XX",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgname",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "YY",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserAppRoleList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "UPD_RETAILPRICE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutWarningMsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "CreateProcOR105PK0_CPYFABInsCpyFab" : {
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_copy_fab(?, upper(?), ?, ?, ?,                                 ?, ?, ?, \n                                    ?, ?, ?,\n                                    ?, ?, ?, \n                                    ?, ?,\n                                    ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDestordnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1900013A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "SD180972",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcFabseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pChkFablibMat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pChkOrdfab",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpFaborienReq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpFaborien",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpMarkertypReq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpMarkertyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "03",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcintrefno",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0000094366",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcintrefnoVer",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcshadeopt",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "null",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpFaborienCondmsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "testint",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpMarkertypCondmsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "testin3",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFaceside",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "W",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutNewfabseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOR105PK0_CPYFABGetMarkertypeLOV" : {
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_rft850_markertyp(?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutListMarkertyp",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105wpk0_yrnValRecordORT125" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_valrecord_yarn(?, upper(?), ?, ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnrow",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "{\"ordnum\":\"1701246A\",\"fabseq\":1,\"yrnseq\":\"1\",\"yrnsubqltya\":\"COMPACT\"}",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutNewrow",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pWarnmsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0GetKDSPriceChgHistory" : {
+    "procedureString" : "CALL or207pk0.sproc_get_kdspricechg_history(?, ?,upper(?),?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1201077A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "6",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutOrt215Hist",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0GetRefreldates" : {
+    "procedureString" : "CALL or207pk0.sproc_get_refprc_reldates(?, ? , ? ,?, ?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1202111A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutRelref",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutRelrefdat",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutRelprc",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutRelprcdat",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105pk0RepSameYarn_UpdCCF" : {
+    "procedureString" : "CALL or105pk0_repsameyarn.sproc_upd_ccf_sameyarn(?,upper(?),?,?,      ?, ?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1701246A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnpropvalList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "{1:YRNSUBQLTYA=NEPPY;}{2:YRNSUBQLTYA=MPL;YRNCLR=SD;YRNFFCOD=FF00036;BASEYRNCLR=RW;}",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutMsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0UpdPriceOrt207" : {
+    "procedureString" : "CALL or207pk0.sproc_postupd_price_ort207(? ,?,?, ?, ?,\n?,?,?,?,\n?,? ,?, ?,\n?, ?, ?,?,\n?, ?,?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1702581",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPricecat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSeqcod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSzeseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClionum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "a",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUnitprcAir",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUnitprcSea",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFliprcAir",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFliprcSea",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRetprc",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRetprcb",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRetprcc",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRetprcd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "sw",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pProgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "X",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pChangereason",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "hh",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserRemarks",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "bb",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllSzeInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllPackInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllClionumInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  },
+  "ProcOR105PK0_CPYFABGetCpyFab" : {
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_cpyfab(?, upper(?), upper(?), ?, \n                                      upper(?), ?, \n                                      ?,?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "SD180972",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabSeq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDestOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1900001A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFaboriencolor",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutMrkertypColor",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutListCpyFab",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOR105PK0_CPYFABGetFabSeqLOV" : {
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_ort120_faseqLOV(?, upper(?), upper(?),\n                                               ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "sd180972",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutListCpyFabLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105wpk0yrn_getYrnqlty" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnqlty_list(?, upper(?),?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnqlty",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOR105PK0_CPYFABGetFaborienLOV" : {
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_rft850_faborien(?, upper(?), ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutListFabOrient",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105wpk0_yrn_getOriclr" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_oriclr_list(?, upper(?), ?,?,?,?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnclr",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GN",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrncnt",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "30/2 NE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrncps",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "100CV",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutOriclr",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or105wpk0QryOrt125" : {
+    "procedureString" : "CALL or105wpk0_yrn.sproc_qry_ort125(?, upper(?), ?,?,?)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W05",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1300108C",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnlist",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOR105PK0_CPYFABGetFabDetails" : {
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_main_details(?, upper(?), ?, ?, ?, ?,                                       ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "SD180972",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabSeq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCCF",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CF1801400",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOption",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ORDER",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutDetails",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0GetChgReason" : {
+    "procedureString" : "CALL or207pk0.sproc_get_pricechg_reason(?,?)",
+    "parameters" : [ {
+      "name" : "pChangeCategory",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "UNITPRICE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutLovChgReason",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0GetCmtPriceChgHistory" : {
+    "procedureString" : "CALL or207pk0.sproc_get_ort207_audit(?,upper(?),?,\n?, ?,?,?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1702581A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutOrt207PrcChgHist",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutShowFliprcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutShowRetprcbInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutShowRetprccInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutShowRetprcdInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "ProcOR105PK0_CPYFABGetShadeOptionLOV" : {
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_rft850_shadeoption(?, upper(?), ?,                                                             ?)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pIntreftno",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0000078463",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutListSahdeOption",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ]
+  },
+  "or207pk0PrePostUpdOrt209" : {
+    "procedureString" : "CALL or207pk0.sproc_prepost_upd_ort209(? ,?,?,?,?,\n                                   ?,?, \n                                   ?,?,?,?,\n                                   ?,?,?,?,\n                                   ?, ?, ?, ?,\n                                   ?, ?, ?, ?,\n                                   ?,?,?,?)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "XX",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSeqcod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSzeseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFieldToUpdate",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "KDS_UNITPRICE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKDSUnitprc",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.11",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFliprc",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKdsRetprc",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKdsRetprcb",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKdsRetprcc",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKdsRetprcd",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "F",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "F",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pChangereason",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "F",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserRemarks",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "F",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef2",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef3",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef4",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef5",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef6",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef7",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef8",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllSzeInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllPackInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllShpNumInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserAppRoleList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "DETSHP_UPD_UNITPRICE",
+      "required" : false,
+      "parameterType" : "IN"
+    } ]
+  }
+}

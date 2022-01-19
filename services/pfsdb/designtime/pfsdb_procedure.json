@@ -1,0 +1,5030 @@
+{
+  "CreateProcOR105PK0_CPYFABInsCpyFab" : {
+    "name" : "CreateProcOR105PK0_CPYFABInsCpyFab",
+    "description" : "To insert and copy fabric",
+    "version" : "V2",
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_copy_fab(:pPrgId, upper(:pUsrid), :pDestordnum, :pSrcOrdnum, :pSrcFabseq,                                 :pChkFablibMat, :pChkOrdfab, :pExpFaborienReq, \n                                    :pExpFaborien, :pExpMarkertypReq, :pExpMarkertyp,\n                                    :pSrcintrefno, :pSrcintrefnoVer, :pSrcshadeopt, \n                                    :pExpFaborienCondmsg, :pExpMarkertypCondmsg,\n                                    :pFaceside, :pOutNewfabseq)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDestordnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1900013A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "SD180972",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcFabseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "2",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pChkFablibMat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pChkOrdfab",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpFaborienReq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpFaborien",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpMarkertypReq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpMarkertyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "03",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcintrefno",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0000094366",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcintrefnoVer",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcshadeopt",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "null",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpFaborienCondmsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "testint",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pExpMarkertypCondmsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "testin3",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFaceside",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "W",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutNewfabseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : true,
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.CreateProcOr105pk0CpyfabinsCpyFabRequest",
+      "method" : "POST"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.CreateProcOr105pk0CpyfabinsCpyFabResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutNewfabseq",
+        "fieldName" : "poutNewfabseq",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Integer",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "ProcOR105PK0_CPYFABGetCpyFab" : {
+    "name" : "ProcOR105PK0_CPYFABGetCpyFab",
+    "description" : "To fetch data to be copied from source",
+    "version" : "V2",
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_cpyfab(:pPrgId, upper(:pUsrid), upper(:pOrdnum), :pFabSeq, \n                                      upper(:pDestOrdnum), :pOutFaboriencolor, \n                                      :pOutMrkertypColor,:pOutListCpyFab)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "SD180972",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabSeq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDestOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1900001A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFaboriencolor",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutMrkertypColor",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutListCpyFab",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetCpyFabResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutFaboriencolor",
+        "fieldName" : "poutFaboriencolor",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "pOutMrkertypColor",
+        "fieldName" : "poutMrkertypColor",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "pOutListCpyFab",
+        "fieldName" : "poutListCpyFab",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetCpyFabResponsePoutListCpyFab",
+          "list" : true,
+          "properties" : [ {
+            "name" : "FABDES",
+            "fieldName" : "fabdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABORIEN",
+            "fieldName" : "faborien",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "MARKERTYP",
+            "fieldName" : "markertyp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABTYP",
+            "fieldName" : "fabtyp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STR",
+            "fieldName" : "str",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "STRIPEID",
+            "fieldName" : "stripeid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "INSIDE",
+            "fieldName" : "inside",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "OUTSIDE",
+            "fieldName" : "outside",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABDCODELIST",
+            "fieldName" : "fabdcodelist",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABIND",
+            "fieldName" : "fabind",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CUTSTR",
+            "fieldName" : "cutstr",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "INTREFNO",
+            "fieldName" : "intrefno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "INTREFNO_VER",
+            "fieldName" : "intrefnoVer",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigInteger",
+              "list" : false
+            }
+          }, {
+            "name" : "ENABLESAHDE",
+            "fieldName" : "enablesahde",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SRC_COPY",
+            "fieldName" : "srcCopy",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ORDCAT",
+            "fieldName" : "ordcat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ORDERTYPE",
+            "fieldName" : "ordertype",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "COPYSRCMSG",
+            "fieldName" : "copysrcmsg",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CHK_FABLIB_MAT",
+            "fieldName" : "chkFablibMat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CHK_ORDFAB",
+            "fieldName" : "chkOrdfab",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "EXP_FABORIEN_REQ",
+            "fieldName" : "expFaborienReq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "EXP_MARKERTYP_REQ",
+            "fieldName" : "expMarkertypReq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "EXP_FABORIEN_CONDMSG",
+            "fieldName" : "expFaborienCondmsg",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "EXP_MARKERTYP_CONDMSG",
+            "fieldName" : "expMarkertypCondmsg",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOR105PK0_CPYFABGetFabBlob" : {
+    "name" : "ProcOR105PK0_CPYFABGetFabBlob",
+    "description" : "To get fabric picture",
+    "version" : "V2",
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_fabpic(:pPrgId, upper(:pUsrid), :pLibRefNo, :pFaceSide, \n                                      :pOutFabBlob)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pLibRefNo",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0000094366",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFaceSide",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "R",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutFabBlob",
+      "type" : "blob",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFabBlobResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutFabBlob",
+        "fieldName" : "poutFabBlob",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "byte[]",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "ProcOR105PK0_CPYFABGetFabDetails" : {
+    "name" : "ProcOR105PK0_CPYFABGetFabDetails",
+    "description" : "To fetch orderno, fabseq and ccf",
+    "version" : "V2",
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_main_details(:pPrgId, upper(:pUsrid), :pOrdnum, :pFabSeq, :pCCF, :pOption,                                       :pOutDetails)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "SD180972",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabSeq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCCF",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CF1801400",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOption",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "ORDER",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutDetails",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFabDetailsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutDetails",
+        "fieldName" : "poutDetails",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFabDetailsResponsePoutDetails",
+          "list" : true,
+          "properties" : [ {
+            "name" : "INTFABCERTNO",
+            "fieldName" : "intfabcertno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ORDNUM",
+            "fieldName" : "ordnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABSEQ",
+            "fieldName" : "fabseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOR105PK0_CPYFABGetFabSeqLOV" : {
+    "name" : "ProcOR105PK0_CPYFABGetFabSeqLOV",
+    "description" : "To get fabric seq LOV from ort120",
+    "version" : "V2",
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_ort120_faseqLOV(:pPrgId, upper(:pUsrid), upper(:pOrdnum),\n                                               :pOutListCpyFabLOV)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "sd180972",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutListCpyFabLOV",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFabSeqLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutListCpyFabLOV",
+        "fieldName" : "poutListCpyFabLov",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFabSeqLovResponsePoutListCpyFabLov",
+          "list" : true,
+          "properties" : [ {
+            "name" : "FABSEQ",
+            "fieldName" : "fabseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          }, {
+            "name" : "FABTYP",
+            "fieldName" : "fabtyp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABIND",
+            "fieldName" : "fabind",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABSTS",
+            "fieldName" : "fabsts",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CALSTN",
+            "fieldName" : "calstn",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABWID",
+            "fieldName" : "fabwid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Float",
+              "list" : false
+            }
+          }, {
+            "name" : "FABWGT",
+            "fieldName" : "fabwgt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "STRIPE",
+            "fieldName" : "stripe",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "AOP",
+            "fieldName" : "aop",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "PATCOD",
+            "fieldName" : "patcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOR105PK0_CPYFABGetFaborienLOV" : {
+    "name" : "ProcOR105PK0_CPYFABGetFaborienLOV",
+    "description" : "To fetch Fabric orientation LOV",
+    "version" : "V2",
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_rft850_faborien(:pPrgId, upper(:pUsrid), :pOutListFabOrient)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutListFabOrient",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFaborienLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutListFabOrient",
+        "fieldName" : "poutListFabOrient",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetFaborienLovResponsePoutListFabOrient",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABOREIENDES",
+            "fieldName" : "faboreiendes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOR105PK0_CPYFABGetMarkertypeLOV" : {
+    "name" : "ProcOR105PK0_CPYFABGetMarkertypeLOV",
+    "description" : "To fetch Marker Type LOV",
+    "version" : "V2",
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_rft850_markertyp(:pPrgId, :pUsrid, :pOutListMarkertyp)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutListMarkertyp",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetMarkertypeLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutListMarkertyp",
+        "fieldName" : "poutListMarkertyp",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetMarkertypeLovResponsePoutListMarkertyp",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "MARKERTYPDES",
+            "fieldName" : "markertypdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "ProcOR105PK0_CPYFABGetShadeOptionLOV" : {
+    "name" : "ProcOR105PK0_CPYFABGetShadeOptionLOV",
+    "description" : "To fetch shade option List of value",
+    "version" : "V2",
+    "procedureString" : "CALL OR105PK0_CPYFAB.sproc_get_rft850_shadeoption(:pPrgId, upper(:pUsrid), :pIntreftno,                                                             :pOutListSahdeOption)",
+    "parameters" : [ {
+      "name" : "pPrgId",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W08",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "D00030",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pIntreftno",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "0000078463",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutListSahdeOption",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetShadeOptionLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutListSahdeOption",
+        "fieldName" : "poutListSahdeOption",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.ProcOr105pk0CpyfabgetShadeOptionLovResponsePoutListSahdeOption",
+          "list" : true,
+          "properties" : [ {
+            "name" : "SHADEOPT",
+            "fieldName" : "shadeopt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHADEDESC",
+            "fieldName" : "shadedesc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105pk0RepSameYarn_UpdCCF" : {
+    "name" : "or105pk0RepSameYarn_UpdCCF",
+    "description" : "update CCF",
+    "version" : "V2",
+    "procedureString" : "CALL or105pk0_repsameyarn.sproc_upd_ccf_sameyarn(:pPrgid,upper(:pUsrid),:pOrdnum,:pFabseq,      :pYrnpropvalList, :poutMsg)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1701246A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnpropvalList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "{1:YRNSUBQLTYA=NEPPY;}{2:YRNSUBQLTYA=MPL;YRNCLR=SD;YRNFFCOD=FF00036;BASEYRNCLR=RW;}",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutMsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105pk0repSameYarnUpdCcfResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutMsg",
+        "fieldName" : "poutMsg",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "or105wpk0QryOrt125" : {
+    "name" : "or105wpk0QryOrt125",
+    "description" : "query ort125",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_qry_ort125(:pPrgid, upper(:pUsrid), :pOrdnum,:pFabseq,:poutYrnlist)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W05",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1300108C",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnlist",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0qryOrt125Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutYrnlist",
+        "fieldName" : "poutYrnlist",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0qryOrt125ResponsePoutYrnlist",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ORDNUM",
+            "fieldName" : "ordnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FABSEQ",
+            "fieldName" : "fabseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNSEQ",
+            "fieldName" : "yrnseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNCNT",
+            "fieldName" : "yrncnt",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNCPS",
+            "fieldName" : "yrncps",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNCLR",
+            "fieldName" : "yrnclr",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ORICLR",
+            "fieldName" : "oriclr",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLRREF",
+            "fieldName" : "clrref",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WCLRREFSHADEDES",
+            "fieldName" : "wclrrefshadedes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNORI",
+            "fieldName" : "yrnori",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNQLTY",
+            "fieldName" : "yrnqlty",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNSUBQLTYA",
+            "fieldName" : "yrnsubqltya",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNSUBQLTYB",
+            "fieldName" : "yrnsubqltyb",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNFFCOD",
+            "fieldName" : "yrnffcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WYRNFFDESC",
+            "fieldName" : "wyrnffdesc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "NUMROWS",
+            "fieldName" : "numrows",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "TOTROWS",
+            "fieldName" : "totrows",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNFRAC",
+            "fieldName" : "yrnfrac",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Float",
+              "list" : false
+            }
+          }, {
+            "name" : "TIPPING",
+            "fieldName" : "tipping",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNENDS",
+            "fieldName" : "yrnends",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "PRECLRREF",
+            "fieldName" : "preclrref",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "INILABDIPNO",
+            "fieldName" : "inilabdipno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "INILABREVNO",
+            "fieldName" : "inilabrevno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "INILABADDNO",
+            "fieldName" : "inilabaddno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "INILABAPPRVDATE",
+            "fieldName" : "inilabapprvdate",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "LABAPPRVDATE",
+            "fieldName" : "labapprvdate",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "LABAPPRVID",
+            "fieldName" : "labapprvid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "RELATED_LABDIPNO",
+            "fieldName" : "relatedLabdipno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "RELATED_LABDIPREM",
+            "fieldName" : "relatedLabdiprem",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "RELATED_LABDIP_LSTID",
+            "fieldName" : "relatedLabdipLstid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "RELATED_LABDIP_LSTDATE",
+            "fieldName" : "relatedLabdipLstdate",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "BASE_YRNCLR",
+            "fieldName" : "baseYrnclr",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "BASE_CLRREF",
+            "fieldName" : "baseClrref",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "BASE_YRNCDES",
+            "fieldName" : "baseYrncdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "LABTOAPP",
+            "fieldName" : "labtoapp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WREQLABDIPSTS",
+            "fieldName" : "wreqlabdipsts",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WLABDIPSTS",
+            "fieldName" : "wlabdipsts",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WLABDIPNO",
+            "fieldName" : "wlabdipno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WREVNO",
+            "fieldName" : "wrevno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WADDNO",
+            "fieldName" : "waddno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WPRECLRREF",
+            "fieldName" : "wpreclrref",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WYRNCDESLOV",
+            "fieldName" : "wyrncdeslov",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WREQLABDIP",
+            "fieldName" : "wreqlabdip",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WAPPRVLABDIP",
+            "fieldName" : "wapprvlabdip",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNCNTEDITACS",
+            "fieldName" : "yrncnteditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNCPSEDITACS",
+            "fieldName" : "yrncpseditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNQLTYEDITACS",
+            "fieldName" : "yrnqltyeditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNSUBQLTYAEDITACS",
+            "fieldName" : "yrnsubqltyaeditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNSUBQLTYBEDITACS",
+            "fieldName" : "yrnsubqltybeditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNCLREDITACS",
+            "fieldName" : "yrnclreditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNFFCODEDITACS",
+            "fieldName" : "yrnffcodeditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "BASEYRNCLREDITACS",
+            "fieldName" : "baseyrnclreditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "YRNFRACEDITACS",
+            "fieldName" : "yrnfraceditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLRREFEDITACS",
+            "fieldName" : "clrrefeditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ORICLREDITACS",
+            "fieldName" : "oriclreditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "PRECLRREFEDITACS",
+            "fieldName" : "preclrrefeditacs",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105wpk0Yrn_getYrnsubqltyB" : {
+    "name" : "or105wpk0Yrn_getYrnsubqltyB",
+    "description" : "get yrnsubqlty B",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnsubqltyb_list(:pPrgid, upper(:pUsrid), :pYrnqlty,:poutYrnsubqltyb)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnqlty",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "RING",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnsubqltyb",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnsubqltyBResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutYrnsubqltyb",
+        "fieldName" : "poutYrnsubqltyb",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnsubqltyBResponsePoutYrnsubqltyb",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105wpk0_yrnValRecordORT125" : {
+    "name" : "or105wpk0_yrnValRecordORT125",
+    "description" : "validate record ort125",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_valrecord_yarn(:pPrgid, upper(:pUsrid), :pYrnrow, :poutNewrow, :pWarnmsg)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnrow",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "{\"ordnum\":\"1701246A\",\"fabseq\":1,\"yrnseq\":\"1\",\"yrnsubqltya\":\"COMPACT\"}",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutNewrow",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pWarnmsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0YrnValRecordOrt125Response",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutNewrow",
+        "fieldName" : "poutNewrow",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "pWarnmsg",
+        "fieldName" : "pwarnmsg",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "or105wpk0_yrn_getOriclr" : {
+    "name" : "or105wpk0_yrn_getOriclr",
+    "description" : "get oriclr",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_oriclr_list(:pPrgid, upper(:pUsrid), :pYrnclr,:pYrncnt,:pYrncps,:poutOriclr)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnclr",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "GN",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrncnt",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "30/2 NE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrncps",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "100CV",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutOriclr",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0YrnGetOriclrResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutOriclr",
+        "fieldName" : "poutOriclr",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0YrnGetOriclrResponsePoutOriclr",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105wpk0yrn_getYrnclr" : {
+    "name" : "or105wpk0yrn_getYrnclr",
+    "description" : "get yarn clr",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnclr_list(:pPrgid,upper(:pUsrid), :pBaseyrnUseind, :poutYrnclr)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pBaseyrnUseind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnclr",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnclrResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutYrnclr",
+        "fieldName" : "poutYrnclr",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnclrResponsePoutYrnclr",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105wpk0yrn_getYrnffcod" : {
+    "name" : "or105wpk0yrn_getYrnffcod",
+    "description" : "get Yarn FFcode",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnffcod_list(:pPrgid, upper(:pUsrid),:poutYrnffcod, :pOrdnum, :pFabseq, :pYrnseq)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W05",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnffcod",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1902671A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFabseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnffcodResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutYrnffcod",
+        "fieldName" : "poutYrnffcod",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnffcodResponsePoutYrnffcod",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105wpk0yrn_getYrnqlty" : {
+    "name" : "or105wpk0yrn_getYrnqlty",
+    "description" : "get yarn quality",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnqlty_list(:pPrgid, upper(:pUsrid),:poutYrnqlty)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnqlty",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnqltyResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutYrnqlty",
+        "fieldName" : "poutYrnqlty",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnqltyResponsePoutYrnqlty",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105wpk0yrn_getYrnsubqlty" : {
+    "name" : "or105wpk0yrn_getYrnsubqlty",
+    "description" : "get list of yarn subquality",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrnsubqlty_list(:pPrgid, upper(:pUsrid), :pYrnqlty, :pSubqltytyp,:poutYrnsubqlty)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W05",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pYrnqlty",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "RING",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSubqltytyp",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrnsubqlty",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnsubqltyResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutYrnsubqlty",
+        "fieldName" : "poutYrnsubqlty",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetYrnsubqltyResponsePoutYrnsubqlty",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105wpk0yrn_getyrncnt" : {
+    "name" : "or105wpk0yrn_getyrncnt",
+    "description" : "get yarn count",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrncnt_list(:pPrgid, upper(:pUsrid),:poutYrncnt)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrncnt",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetyrncntResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutYrncnt",
+        "fieldName" : "poutYrncnt",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetyrncntResponsePoutYrncnt",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or105wpk0yrn_getyrncps" : {
+    "name" : "or105wpk0yrn_getyrncps",
+    "description" : "get Yarn Cps",
+    "version" : "V2",
+    "procedureString" : "CALL or105wpk0_yrn.sproc_get_yrncps_list(:pPrgid, upper(:pUsrid), :poutYrncps)",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutYrncps",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetyrncpsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutYrncps",
+        "fieldName" : "poutYrncps",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or105wpk0yrnGetyrncpsResponsePoutYrncps",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ITEMCOD",
+            "fieldName" : "itemcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ITEMDES",
+            "fieldName" : "itemdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or207pk0CopyRef" : {
+    "name" : "or207pk0CopyRef",
+    "description" : "copy retail price and refs from one order to another",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_copy_ref(:pSrcOrdnum,:pDestOrdnum, :pSrcShpnum,:pDestShpnum,\n                         :pCopyFliprcInd, :pCopyRetPrcInd, \n                         :pCopyrefInd,:pCopyref2Ind,:pCopyref3Ind,:pCopyref4Ind,\n                         :pCopyref5Ind,:pCopyref6Ind,:pCopyref7Ind,:pCopyref8Ind,:pUsrid,:pPrgname)",
+    "parameters" : [ {
+      "name" : "pSrcOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "AA",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDestOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "ZZ",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSrcShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pDestShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyFliprcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyRetPrcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyrefInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref2Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref3Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref4Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref5Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref6Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref7Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pCopyref8Ind",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgname",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "or207pk0FetchExtranetDetails" : {
+    "name" : "or207pk0FetchExtranetDetails",
+    "description" : "fetch details from Extranet for Arcadia clients",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_fetch_extranet_details(:pOrdnum,:pFromShpnum,:pToShpnum,:pFetchUnitprcInd,:pFetchRetPrcInd,:pFetchBarcodeInd,:pFetchRatioPackInd,:pFetchStyleInd,:pUsrid,:pPrgname,:pUserAppRoleList,:pOutWarningMsg)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1702581A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFromShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pToShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchUnitprcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "Y",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchRetPrcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchBarcodeInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchRatioPackInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFetchStyleInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "XX",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgname",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "YY",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserAppRoleList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "UPD_RETAILPRICE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutWarningMsg",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0fetchExtranetDetailsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutWarningMsg",
+        "fieldName" : "poutWarningMsg",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "or207pk0FetchPackSze" : {
+    "name" : "or207pk0FetchPackSze",
+    "description" : "fetch packs and sizes",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_ins_ort207_without_price(:pOrdnum, :pPricecat,upper(:pUsrid))",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1800502A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPricecat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CLI",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "or207pk0GetChgReason" : {
+    "name" : "or207pk0GetChgReason",
+    "description" : "get list of price change reasons",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_get_pricechg_reason(:pChangeCategory,:pOutLovChgReason)",
+    "parameters" : [ {
+      "name" : "pChangeCategory",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "UNITPRICE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutLovChgReason",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getChgReasonResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutLovChgReason",
+        "fieldName" : "poutLovChgReason",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getChgReasonResponsePoutLovChgReason",
+          "list" : true,
+          "properties" : [ {
+            "name" : "REASONCODE",
+            "fieldName" : "reasoncode",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REASONCATEGORY",
+            "fieldName" : "reasoncategory",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REASONSUBCATEGORY",
+            "fieldName" : "reasonsubcategory",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or207pk0GetCmtPriceChgHistory" : {
+    "name" : "or207pk0GetCmtPriceChgHistory",
+    "description" : "get CMT price change audit",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_get_ort207_audit(:pOrdnum,upper(:pUsrid),:pOutOrt207PrcChgHist,\n:pOutShowFliprcInd, :pOutShowRetprcbInd,:pOutShowRetprccInd,:pOutShowRetprcdInd)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1702581A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutOrt207PrcChgHist",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutShowFliprcInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutShowRetprcbInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutShowRetprccInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutShowRetprcdInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getCmtPriceChgHistoryResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutOrt207PrcChgHist",
+        "fieldName" : "poutOrt207prcChgHist",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getCmtPriceChgHistoryResponsePoutOrt207prcChgHist",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ORDNUM",
+            "fieldName" : "ordnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SEQCOD",
+            "fieldName" : "seqcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WPCKDES",
+            "fieldName" : "wpckdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SZESEQ",
+            "fieldName" : "szeseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          }, {
+            "name" : "WSZEDES",
+            "fieldName" : "wszedes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLIONUM",
+            "fieldName" : "clionum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "PRICECAT",
+            "fieldName" : "pricecat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "AUDSEQ",
+            "fieldName" : "audseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "CHGREASON",
+            "fieldName" : "chgreason",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CHGREASONDES",
+            "fieldName" : "chgreasondes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDUNTPRC_AIR",
+            "fieldName" : "olduntprcAir",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVUNTPRC_AIR",
+            "fieldName" : "revuntprcAir",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDUNTPRC_SEA",
+            "fieldName" : "olduntprcSea",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVUNTPRC_SEA",
+            "fieldName" : "revuntprcSea",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDDISCOUNTPRC_AIR",
+            "fieldName" : "olddiscountprcAir",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVDISCOUNTPRC_AIR",
+            "fieldName" : "revdiscountprcAir",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDDISCOUNTPRC_SEA",
+            "fieldName" : "olddiscountprcSea",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVDISCOUNTPRC_SEA",
+            "fieldName" : "revdiscountprcSea",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDDISCOUNTCODE",
+            "fieldName" : "olddiscountcode",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REVDISCOUNTCODE",
+            "fieldName" : "revdiscountcode",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDFLIPRC_AIR",
+            "fieldName" : "oldfliprcAir",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVFLIPRC_AIR",
+            "fieldName" : "revfliprcAir",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDFLIPRC_SEA",
+            "fieldName" : "oldfliprcSea",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVFLIPRC_SEA",
+            "fieldName" : "revfliprcSea",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDRETPRC",
+            "fieldName" : "oldretprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVRETPRC",
+            "fieldName" : "revretprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDRETPRCB",
+            "fieldName" : "oldretprcb",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVRETPRCB",
+            "fieldName" : "revretprcb",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDRETPRCC",
+            "fieldName" : "oldretprcc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVRETPRCC",
+            "fieldName" : "revretprcc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDRETPRCD",
+            "fieldName" : "oldretprcd",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVRETPRCD",
+            "fieldName" : "revretprcd",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "PRGNAME",
+            "fieldName" : "prgname",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "USRID",
+            "fieldName" : "usrid",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "USRNAME",
+            "fieldName" : "usrname",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ENTDAT",
+            "fieldName" : "entdat",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "REMARKS",
+            "fieldName" : "remarks",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      }, {
+        "name" : "pOutShowFliprcInd",
+        "fieldName" : "poutShowFliprcInd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "pOutShowRetprcbInd",
+        "fieldName" : "poutShowRetprcbInd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "pOutShowRetprccInd",
+        "fieldName" : "poutShowRetprccInd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "pOutShowRetprcdInd",
+        "fieldName" : "poutShowRetprcdInd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "or207pk0GetKDSPriceChgHistory" : {
+    "name" : "or207pk0GetKDSPriceChgHistory",
+    "description" : "get KDS price change history",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_get_kdspricechg_history(:pOrdnum, :pShpnum,upper(:pUsrid),:pOutOrt215Hist)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1201077A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "6",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutOrt215Hist",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getKdspriceChgHistoryResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutOrt215Hist",
+        "fieldName" : "poutOrt215hist",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getKdspriceChgHistoryResponsePoutOrt215hist",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ORDNUM",
+            "fieldName" : "ordnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPNUM",
+            "fieldName" : "shpnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SEQCOD",
+            "fieldName" : "seqcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "FIELDNAME",
+            "fieldName" : "fieldname",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SZESEQ",
+            "fieldName" : "szeseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          }, {
+            "name" : "SEQ",
+            "fieldName" : "seq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          }, {
+            "name" : "WPCKDES",
+            "fieldName" : "wpckdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WSZEDES",
+            "fieldName" : "wszedes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REASON",
+            "fieldName" : "reason",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REASONDES",
+            "fieldName" : "reasondes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "OLDPRICE",
+            "fieldName" : "oldprice",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "REVPRICE",
+            "fieldName" : "revprice",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "MODBY",
+            "fieldName" : "modby",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "MODBYNAME",
+            "fieldName" : "modbyname",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "MODDATE",
+            "fieldName" : "moddate",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.time.LocalDateTime",
+              "list" : false
+            }
+          }, {
+            "name" : "REMARKS",
+            "fieldName" : "remarks",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "PRICECURR",
+            "fieldName" : "pricecurr",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or207pk0GetOrt205Record" : {
+    "name" : "or207pk0GetOrt205Record",
+    "description" : "get rows from ort205",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_get_or196_ort205det(:pOrdnum, :pOutShpDet)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1702581A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutShpDet",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getOrt205recordResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutShpDet",
+        "fieldName" : "poutShpDet",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getOrt205recordResponsePoutShpDet",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ORDNUM",
+            "fieldName" : "ordnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPNUM",
+            "fieldName" : "shpnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLIONUM",
+            "fieldName" : "clionum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "DROPNO",
+            "fieldName" : "dropno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Short",
+              "list" : false
+            }
+          }, {
+            "name" : "CLIPCKTYP",
+            "fieldName" : "clipcktyp",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPDST",
+            "fieldName" : "shpdst",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "QTYORD",
+            "fieldName" : "qtyord",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPMOD",
+            "fieldName" : "shpmod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPMODDESC",
+            "fieldName" : "shpmoddesc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REM",
+            "fieldName" : "rem",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or207pk0GetOrt209Record" : {
+    "name" : "or207pk0GetOrt209Record",
+    "description" : "get records from ort209 for an order, shpnum",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_get_detshp_ort209(:pOrdnum,:pShpnum, :pOutDetShp)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1605816A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutDetShp",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getOrt209recordResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutDetShp",
+        "fieldName" : "poutDetShp",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getOrt209recordResponsePoutDetShp",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ORDNUM",
+            "fieldName" : "ordnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SEQCOD",
+            "fieldName" : "seqcod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPNUM",
+            "fieldName" : "shpnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SZESEQ",
+            "fieldName" : "szeseq",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Byte",
+              "list" : false
+            }
+          }, {
+            "name" : "UNTPRC",
+            "fieldName" : "untprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "QTYORD",
+            "fieldName" : "qtyord",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Integer",
+              "list" : false
+            }
+          }, {
+            "name" : "INTUNTPRC",
+            "fieldName" : "intuntprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "FLIPRC",
+            "fieldName" : "fliprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "INTFLIPRC",
+            "fieldName" : "intfliprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "RETPRC",
+            "fieldName" : "retprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "RETPRCB",
+            "fieldName" : "retprcb",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "RETPRCC",
+            "fieldName" : "retprcc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "RETPRCD",
+            "fieldName" : "retprcd",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "DISCOUNTPRC",
+            "fieldName" : "discountprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.Double",
+              "list" : false
+            }
+          }, {
+            "name" : "DISCOUNTCODE",
+            "fieldName" : "discountcode",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "INTDISCOUNTPRC",
+            "fieldName" : "intdiscountprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "INTRETPRC",
+            "fieldName" : "intretprc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "INTRETPRCB",
+            "fieldName" : "intretprcb",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "INTRETPRCC",
+            "fieldName" : "intretprcc",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "INTRETPRCD",
+            "fieldName" : "intretprcd",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "WPCKDES",
+            "fieldName" : "wpckdes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WSZEDES",
+            "fieldName" : "wszedes",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WDISCOUNTREASON",
+            "fieldName" : "wdiscountreason",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WLINENO",
+            "fieldName" : "wlineno",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "WFINPRICE",
+            "fieldName" : "wfinprice",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "WINTFINPRICE",
+            "fieldName" : "wintfinprice",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.math.BigDecimal",
+              "list" : false
+            }
+          }, {
+            "name" : "WCLIONUM",
+            "fieldName" : "wclionum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF",
+            "fieldName" : "ref",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF2",
+            "fieldName" : "ref2",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF3",
+            "fieldName" : "ref3",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF4",
+            "fieldName" : "ref4",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF5",
+            "fieldName" : "ref5",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF6",
+            "fieldName" : "ref6",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF7",
+            "fieldName" : "ref7",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF8",
+            "fieldName" : "ref8",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or207pk0GetRefreldates" : {
+    "name" : "or207pk0GetRefreldates",
+    "description" : "get ref and price release dates",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_get_refprc_reldates(:pOrdnum, :pOutRelref , :pOutRelrefdat ,:pOutRelprc, :pOutRelprcdat)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1202111A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pOutRelref",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutRelrefdat",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutRelprc",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    }, {
+      "name" : "pOutRelprcdat",
+      "type" : "datetime",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : false,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getRefreldatesResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "pOutRelref",
+        "fieldName" : "poutRelref",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "pOutRelrefdat",
+        "fieldName" : "poutRelrefdat",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.time.LocalDateTime",
+          "list" : false
+        }
+      }, {
+        "name" : "pOutRelprc",
+        "fieldName" : "poutRelprc",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "pOutRelprcdat",
+        "fieldName" : "poutRelprcdat",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.time.LocalDateTime",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "or207pk0PrePostUpdOrt209" : {
+    "name" : "or207pk0PrePostUpdOrt209",
+    "description" : "pre/on/post updates ort209",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_prepost_upd_ort209(:pOrdnum ,:pSeqcod,:pSzeseq,:pShpnum,:pFieldToUpdate,\n                                   :pKDSUnitprc,:pFliprc, \n                                   :pKdsRetprc,:pKdsRetprcb,:pKdsRetprcc,:pKdsRetprcd,\n                                   :pUsrid,:pPrgid,:pChangereason,:pUserRemarks,\n                                   :pRef, :pRef2, :pRef3, :pRef4,\n                                   :pRef5, :pRef6, :pRef7, :pRef8,\n                                   :pUpdAllSzeInd,:pUpdAllPackInd,:pUpdAllShpNumInd,:pUserAppRoleList)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "XX",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSeqcod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSzeseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFieldToUpdate",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "KDS_UNITPRICE",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKDSUnitprc",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.11",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFliprc",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKdsRetprc",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKdsRetprcb",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKdsRetprcc",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pKdsRetprcd",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "F",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "F",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pChangereason",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "F",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserRemarks",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "F",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef2",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef3",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef4",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef5",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef6",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef7",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef8",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllSzeInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllPackInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllShpNumInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserAppRoleList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "DETSHP_UPD_UNITPRICE",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "or207pk0ReleaseKDSPrice" : {
+    "name" : "or207pk0ReleaseKDSPrice",
+    "description" : "release KDS price",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_detshp_release_price(:pOrdnum,:pUsrid,:pPrgid,:pUserAppRoleList)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "a",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "s",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "s",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserAppRoleList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "sd",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "or207pk0ReleaseRef" : {
+    "name" : "or207pk0ReleaseRef",
+    "description" : "release references",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_detshp_release_ref(:pOrdnum,:pUsrid,:pPrgid)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "zz",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "D004",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "ff",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  },
+  "or207pk0SearchOrdRef" : {
+    "name" : "or207pk0SearchOrdRef",
+    "description" : "search orders with given references",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_search_orders_with_ref(:pClicod,:pSsn,:pClionum,:pRef,:pRef2,:pRef3,:pRef4,:pRef5,:pRef6,:pRef7,:pRef8,:pUsrid,:pPrgname,:poutOrderList)",
+    "parameters" : [ {
+      "name" : "pClicod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "TMSSCAS",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSsn",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "SS/13",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClionum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef2",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef3",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef4",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef5",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef6",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef7",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRef8",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "%",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "D004",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPrgname",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "XX",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "poutOrderList",
+      "type" : "cursor",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : null,
+      "required" : true,
+      "parameterType" : "OUT"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0searchOrdRefResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "poutOrderList",
+        "fieldName" : "poutOrderList",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "CUSTOM",
+          "typeRef" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0searchOrdRefResponsePoutOrderList",
+          "list" : true,
+          "properties" : [ {
+            "name" : "ORDNUM",
+            "fieldName" : "ordnum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SSN",
+            "fieldName" : "ssn",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "CLICOD",
+            "fieldName" : "clicod",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "ORDCLIONUM",
+            "fieldName" : "ordclionum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "SHPCLIONUM",
+            "fieldName" : "shpclionum",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF",
+            "fieldName" : "ref",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF2",
+            "fieldName" : "ref2",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF3",
+            "fieldName" : "ref3",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF4",
+            "fieldName" : "ref4",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF5",
+            "fieldName" : "ref5",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF6",
+            "fieldName" : "ref6",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF7",
+            "fieldName" : "ref7",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          }, {
+            "name" : "REF8",
+            "fieldName" : "ref8",
+            "optional" : false,
+            "fieldType" : {
+              "type" : "PRIMITIVE",
+              "typeRef" : "java.lang.String",
+              "list" : false
+            }
+          } ]
+        }
+      } ]
+    }
+  },
+  "or207pk0UpdPriceOrt207" : {
+    "name" : "or207pk0UpdPriceOrt207",
+    "description" : "post upd price ort207",
+    "version" : "V2",
+    "procedureString" : "CALL or207pk0.sproc_postupd_price_ort207(:pOrdnum ,:pPricecat,:pSeqcod, :pSzeseq, :pClionum,\n:pUnitprcAir,:pUnitprcSea,:pFliprcAir,:pFliprcSea,\n:pRetprc,:pRetprcb ,:pRetprcc, :pRetprcd,\n:pUsrid, :pProgid, :pChangereason,:pUserRemarks,\n:pUpdAllSzeInd, :pUpdAllPackInd,:pUpdAllClionumInd)",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1702581",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pPricecat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSeqcod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "A",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pSzeseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pClionum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "a",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUnitprcAir",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUnitprcSea",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFliprcAir",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pFliprcSea",
+      "type" : "double",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRetprc",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRetprcb",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRetprcc",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pRetprcd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "0.00",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "sw",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pProgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "X",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pChangereason",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "hh",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUserRemarks",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "bb",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllSzeInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllPackInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    }, {
+      "name" : "pUpdAllClionumInd",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "N",
+      "required" : false,
+      "parameterType" : "IN"
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "response" : {
+      "typeRef" : "java.lang.Void",
+      "returns" : "PRIMITIVE",
+      "responseType" : "SINGLE"
+    }
+  }
+}

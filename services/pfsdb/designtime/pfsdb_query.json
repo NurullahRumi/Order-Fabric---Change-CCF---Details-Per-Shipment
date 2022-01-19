@@ -1,0 +1,1116 @@
+{
+  "qryCCFFabDetails" : {
+    "name" : "qryCCFFabDetails",
+    "description" : "get fab details from ort120",
+    "version" : "V2",
+    "queryString" : "select fabtyp || ' '||fabwgt ||' g/m2, ' ||(case when bsffabwgt is not null then chr(10)||'BSF : '||bsffabwgt else null end) || chr(10)||'Gauge : '||mchgau || chr(10) ||'Calender/Stenter : '||calstn ||\n(case when bdsze is not null then chr(10)||'Body Size : '||bdsze else null end) fabdet,\n\n(case when str is not null then 'Str : '||str ||'-'||(select itemdes from rft850 where lovfld = 'STR' and itemcod = ort120s.str) else null end)||\n(case when stripeid is not null then chr(10)||'Stripe ID : '||stripeid else null end)||\n(case when inside is not null then chr(10)||'Fab Wrong face : '||inside else null end)||\n(case when outside is not null then chr(10)||'Fab Right face : '||outside else null end)||\n(case when enzyme is not null then chr(10)||'Enz : '||enzyme else null end)||\n(case when teflon is not null then chr(10)||'Special Finish : '||teflon else null end)||\n(case when heatsetreq is not null then chr(10)||'Heat Set : '||heatsetreq else null end)||\n(case when dccode is not null then chr(10)||'Deco Route : '||dccode else null end) fabfinishdet\n\nfrom ort120 ort120s\nwhere ort120s.ordnum = :pOrdnum\nand ort120s.fabseq = :pFabseq",
+    "countQueryString" : "select count(*) from (select fabtyp || ' '||fabwgt ||' g/m2, ' ||(case when bsffabwgt is not null then chr(10)||'BSF : '||bsffabwgt else null end) || chr(10)||'Gauge : '||mchgau || chr(10) ||'Calender/Stenter : '||calstn ||\n(case when bdsze is not null then chr(10)||'Body Size : '||bdsze else null end) fabdet,\n\n(case when str is not null then 'Str : '||str ||'-'||(select itemdes from rft850 where lovfld = 'STR' and itemcod = ort120s.str) else null end)||\n(case when stripeid is not null then chr(10)||'Stripe ID : '||stripeid else null end)||\n(case when inside is not null then chr(10)||'Fab Wrong face : '||inside else null end)||\n(case when outside is not null then chr(10)||'Fab Right face : '||outside else null end)||\n(case when enzyme is not null then chr(10)||'Enz : '||enzyme else null end)||\n(case when teflon is not null then chr(10)||'Special Finish : '||teflon else null end)||\n(case when heatsetreq is not null then chr(10)||'Heat Set : '||heatsetreq else null end)||\n(case when dccode is not null then chr(10)||'Deco Route : '||dccode else null end) fabfinishdet\n\nfrom ort120 ort120s\nwhere ort120s.ordnum = :pOrdnum\nand ort120s.fabseq = :pFabseq) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1300065A",
+      "required" : false
+    }, {
+      "name" : "pFabseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryCcffabDetailsResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "FABDET",
+        "fieldName" : "fabdet",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "FABFINISHDET",
+        "fieldName" : "fabfinishdet",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryCl565pk0FuncIsExtnetClient" : {
+    "name" : "qryCl565pk0FuncIsExtnetClient",
+    "description" : "query ordnum for an extranet Client",
+    "version" : "V2",
+    "queryString" : "SELECT :pOrdnum ordnum, cl565pk0.sfunc_is_extranet_client(:pOrdnum) isExtranetClient\nfrom dual",
+    "countQueryString" : "select count(*) from (SELECT :pOrdnum ordnum, cl565pk0.sfunc_is_extranet_client(:pOrdnum) isExtranetClient\nfrom dual) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1202111A",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryCl565pk0funcIsExtnetClientResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "ORDNUM",
+        "fieldName" : "ordnum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "ISEXTRANETCLIENT",
+        "fieldName" : "isextranetclient",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryGetChgReasonList" : {
+    "name" : "qryGetChgReasonList",
+    "description" : "list of price change reasons",
+    "version" : "V2",
+    "queryString" : "select itemcod reasonCode, upper(itemdes2) reasonCategory, itemcod|| '-' || itemdes reasonSubCategory    \t\n     from rft850\n     where lovfld = 'DISCOUNT'\n     and tab = 'ORT209'\n     and sts is null\n     and itemcod <> '00'\n     and itemdes3 = decode(:pChangeCategory,'UNITPRICE','Unit','Retail')\n     order by itemcod",
+    "countQueryString" : "select count(*) from (select itemcod reasonCode, upper(itemdes2) reasonCategory, itemcod|| '-' || itemdes reasonSubCategory    \t\n     from rft850\n     where lovfld = 'DISCOUNT'\n     and tab = 'ORT209'\n     and sts is null\n     and itemcod <> '00'\n     and itemdes3 = decode(:pChangeCategory,'UNITPRICE','Unit','Retail')\n     order by itemcod) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pChangeCategory",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "UNITPRICE",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryGetChgReasonListResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "REASONCODE",
+        "fieldName" : "reasoncode",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REASONCATEGORY",
+        "fieldName" : "reasoncategory",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REASONSUBCATEGORY",
+        "fieldName" : "reasonsubcategory",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryOr105wpk0YrnGetDefBaseyrnclr" : {
+    "name" : "qryOr105wpk0YrnGetDefBaseyrnclr",
+    "description" : "function get default base yrnclr",
+    "version" : "V2",
+    "queryString" : "select or105wpk0_yrn.sfunc_get_default_baseyrnclr(:pPrgid, upper(:pUsrid), :pYrnclr, :pBaseyrnclr) defaultbaseyrnclr\nfrom dual",
+    "countQueryString" : "select count(*) from (select or105wpk0_yrn.sfunc_get_default_baseyrnclr(:pPrgid, upper(:pUsrid), :pYrnclr, :pBaseyrnclr) defaultbaseyrnclr\nfrom dual) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR1000W15",
+      "required" : false
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true
+    }, {
+      "name" : "pYrnclr",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DD",
+      "required" : false
+    }, {
+      "name" : "pBaseyrnclr",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "%",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryOr105wpk0yrnGetDefBaseyrnclrResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "DEFAULTBASEYRNCLR",
+        "fieldName" : "defaultbaseyrnclr",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryOr207pk0UntprcAccess" : {
+    "name" : "qryOr207pk0UntprcAccess",
+    "description" : "get access to update unit price",
+    "version" : "V2",
+    "queryString" : "select or207pk0.sfunc_has_wm_access_upd_untprc(:pOrdnum,upper(:pUsrid),:pPrgid,:pUserAppRoleList) updUntprcAcs\nfrom dual",
+    "countQueryString" : "select count(*) from (select or207pk0.sfunc_has_wm_access_upd_untprc(:pOrdnum,upper(:pUsrid),:pPrgid,:pUserAppRoleList) updUntprcAcs\nfrom dual) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1702581A",
+      "required" : false
+    }, {
+      "name" : "pUsrid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "SERVER",
+      "variableName" : "USER_NAME",
+      "testValue" : "d004",
+      "required" : true
+    }, {
+      "name" : "pPrgid",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "OR196",
+      "required" : false
+    }, {
+      "name" : "pUserAppRoleList",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DETSHP_UPD_UNITPRICE",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryOr207pk0untprcAccessResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "UPDUNTPRCACS",
+        "fieldName" : "upduntprcacs",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryOrt205ShpnumLov" : {
+    "name" : "qryOrt205ShpnumLov",
+    "description" : "query to get Ort205 shpnum",
+    "version" : "V2",
+    "queryString" : "select ordnum, shpnum\nfrom ort205\nwhere ordnum = :pOrdnum",
+    "countQueryString" : "select count(*) from (select ordnum, shpnum\nfrom ort205\nwhere ordnum = :pOrdnum) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1202111A",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryOrt205shpnumLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "ORDNUM",
+        "fieldName" : "ordnum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "SHPNUM",
+        "fieldName" : "shpnum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryOrt207CurrentPrice" : {
+    "name" : "qryOrt207CurrentPrice",
+    "description" : "query current prices",
+    "version" : "V2",
+    "queryString" : "select ordnum, pricecat, seqcod, clionum, szeseq, untprc_air, untprc_sea, discountprc_air, discountprc_sea, discountcode, \n         fliprc_air, fliprc_sea, retprc, retprcb, retprcc, retprcd, (select szedes from ort150 where ort150.ordnum = ort207.ordnum and ort150.szeseq = ort207.szeseq) szedes,\n         (select pckdes from ort190 where ort190.ordnum = ort207.ordnum and ort190.pckcod = ort207.seqcod) pckdes\n  \n    from ort207\n    where ordnum = :pOrdnum\n    and pricecat = :pPricecat\n    and seqcod = :pSeqcod\n    and clionum = :pClionum\n    and szeseq = :pSzeseq",
+    "countQueryString" : "select count(*) from (select ordnum, pricecat, seqcod, clionum, szeseq, untprc_air, untprc_sea, discountprc_air, discountprc_sea, discountcode, \n         fliprc_air, fliprc_sea, retprc, retprcb, retprcc, retprcd, (select szedes from ort150 where ort150.ordnum = ort207.ordnum and ort150.szeseq = ort207.szeseq) szedes,\n         (select pckdes from ort190 where ort190.ordnum = ort207.ordnum and ort190.pckcod = ort207.seqcod) pckdes\n  \n    from ort207\n    where ordnum = :pOrdnum\n    and pricecat = :pPricecat\n    and seqcod = :pSeqcod\n    and clionum = :pClionum\n    and szeseq = :pSzeseq) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1702581A",
+      "required" : false
+    }, {
+      "name" : "pPricecat",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "CMT",
+      "required" : false
+    }, {
+      "name" : "pSeqcod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false
+    }, {
+      "name" : "pClionum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "DM8444817",
+      "required" : false
+    }, {
+      "name" : "pSzeseq",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryOrt207currentPriceResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "ORDNUM",
+        "fieldName" : "ordnum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PRICECAT",
+        "fieldName" : "pricecat",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "SEQCOD",
+        "fieldName" : "seqcod",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "CLIONUM",
+        "fieldName" : "clionum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "SZESEQ",
+        "fieldName" : "szeseq",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Byte",
+          "list" : false
+        }
+      }, {
+        "name" : "UNTPRC_AIR",
+        "fieldName" : "untprcAir",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "UNTPRC_SEA",
+        "fieldName" : "untprcSea",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "DISCOUNTPRC_AIR",
+        "fieldName" : "discountprcAir",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "DISCOUNTPRC_SEA",
+        "fieldName" : "discountprcSea",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "DISCOUNTCODE",
+        "fieldName" : "discountcode",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "FLIPRC_AIR",
+        "fieldName" : "fliprcAir",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "FLIPRC_SEA",
+        "fieldName" : "fliprcSea",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "RETPRC",
+        "fieldName" : "retprc",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "RETPRCB",
+        "fieldName" : "retprcb",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "RETPRCC",
+        "fieldName" : "retprcc",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "RETPRCD",
+        "fieldName" : "retprcd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "SZEDES",
+        "fieldName" : "szedes",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PCKDES",
+        "fieldName" : "pckdes",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryOrt209CurrentPrice" : {
+    "name" : "qryOrt209CurrentPrice",
+    "description" : "get current price from ort209",
+    "version" : "V2",
+    "queryString" : "select ort209.ordnum ordnum, ort209.shpnum shpnum, ort209.seqcod seqcod, ort209.szeseq szeseq, \n        ort209.untprc untprc, ort209.discountprc discountprc, ort209.discountcode discountcode, \n        ort209.fliprc fliprc,  ort209.retprc retprc,  \n        ort209.retprcb retprcb, ort209.retprcc retprcc,  ort209.retprcd retprcd,  \n        ort209.ref ref, ort209.ref2 ref2, ort209.ref3 ref3, ort209.ref4 ref4, \n        ort209.ref5 ref5, ort209.ref6 ref6, ort209.ref7 ref7, ort209.ref8 ref8, \n        cast (nvl(ort100.ccyrat,0) as number) ccyrat,\n        (select szedes from ort150 where ort150.ordnum = ort209.ordnum and ort150.szeseq = ort209.szeseq) szedes,\n        (select pckdes from ort190 where ort190.ordnum=ort209.ordnum and ort190.pckcod = ort209.seqcod) pckdes\n    from ort209, ort100\n    where ort209.ordnum = ort100.ordnum\n    and ort209.ordnum = :pOrdnum\n    and ort209.shpnum = :pShpnum\n    and ort209.seqcod = :pSeqcod\n    and ort209.szeseq = :pSzeseq",
+    "countQueryString" : "select count(*) from (select ort209.ordnum ordnum, ort209.shpnum shpnum, ort209.seqcod seqcod, ort209.szeseq szeseq, \n        ort209.untprc untprc, ort209.discountprc discountprc, ort209.discountcode discountcode, \n        ort209.fliprc fliprc,  ort209.retprc retprc,  \n        ort209.retprcb retprcb, ort209.retprcc retprcc,  ort209.retprcd retprcd,  \n        ort209.ref ref, ort209.ref2 ref2, ort209.ref3 ref3, ort209.ref4 ref4, \n        ort209.ref5 ref5, ort209.ref6 ref6, ort209.ref7 ref7, ort209.ref8 ref8, \n        cast (nvl(ort100.ccyrat,0) as number) ccyrat,\n        (select szedes from ort150 where ort150.ordnum = ort209.ordnum and ort150.szeseq = ort209.szeseq) szedes,\n        (select pckdes from ort190 where ort190.ordnum=ort209.ordnum and ort190.pckcod = ort209.seqcod) pckdes\n    from ort209, ort100\n    where ort209.ordnum = ort100.ordnum\n    and ort209.ordnum = :pOrdnum\n    and ort209.shpnum = :pShpnum\n    and ort209.seqcod = :pSeqcod\n    and ort209.szeseq = :pSzeseq) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1702581A",
+      "required" : false
+    }, {
+      "name" : "pShpnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false
+    }, {
+      "name" : "pSeqcod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "A",
+      "required" : false
+    }, {
+      "name" : "pSzeseq",
+      "type" : "integer",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : "",
+      "testValue" : "1",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryOrt209currentPriceResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "ORDNUM",
+        "fieldName" : "ordnum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "SHPNUM",
+        "fieldName" : "shpnum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "SEQCOD",
+        "fieldName" : "seqcod",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "SZESEQ",
+        "fieldName" : "szeseq",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Byte",
+          "list" : false
+        }
+      }, {
+        "name" : "UNTPRC",
+        "fieldName" : "untprc",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "DISCOUNTPRC",
+        "fieldName" : "discountprc",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "DISCOUNTCODE",
+        "fieldName" : "discountcode",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "FLIPRC",
+        "fieldName" : "fliprc",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "RETPRC",
+        "fieldName" : "retprc",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "RETPRCB",
+        "fieldName" : "retprcb",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "RETPRCC",
+        "fieldName" : "retprcc",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "RETPRCD",
+        "fieldName" : "retprcd",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.Double",
+          "list" : false
+        }
+      }, {
+        "name" : "REF",
+        "fieldName" : "ref",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF2",
+        "fieldName" : "ref2",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF3",
+        "fieldName" : "ref3",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF4",
+        "fieldName" : "ref4",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF5",
+        "fieldName" : "ref5",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF6",
+        "fieldName" : "ref6",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF7",
+        "fieldName" : "ref7",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF8",
+        "fieldName" : "ref8",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "CCYRAT",
+        "fieldName" : "ccyrat",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.math.BigDecimal",
+          "list" : false
+        }
+      }, {
+        "name" : "SZEDES",
+        "fieldName" : "szedes",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "PCKDES",
+        "fieldName" : "pckdes",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryOrt209RefColname" : {
+    "name" : "qryOrt209RefColname",
+    "description" : "query to get column names for ort209  clirefs",
+    "version" : "V2",
+    "queryString" : "select decode(nvl(refdes3,'-'),'-','Reference 1',refdes3) ref, \n       decode(nvl(refdes4,'-'),'-','Reference 2',refdes4) ref2, \n       decode(nvl(refdes5,'-'),'-','Reference 3',refdes5) ref3, \n       decode(nvl(refdes6,'-'),'-','Reference 4',refdes6) ref4, \n       decode(nvl(refdes7,'-'),'-','Reference 5',refdes7) ref5, \n       decode(nvl(refdes8,'-'),'-','Reference 6',refdes8) ref6, \n       decode(nvl(refdes9,'-'),'-','Reference 7',refdes9) ref7, \n       decode(nvl(refdes10,'-'),'-','Reference 8',refdes10) ref8\nfrom ort100\nwhere ordnum = :pOrdnum",
+    "countQueryString" : "select count(*) from (select decode(nvl(refdes3,'-'),'-','Reference 1',refdes3) ref, \n       decode(nvl(refdes4,'-'),'-','Reference 2',refdes4) ref2, \n       decode(nvl(refdes5,'-'),'-','Reference 3',refdes5) ref3, \n       decode(nvl(refdes6,'-'),'-','Reference 4',refdes6) ref4, \n       decode(nvl(refdes7,'-'),'-','Reference 5',refdes7) ref5, \n       decode(nvl(refdes8,'-'),'-','Reference 6',refdes8) ref6, \n       decode(nvl(refdes9,'-'),'-','Reference 7',refdes9) ref7, \n       decode(nvl(refdes10,'-'),'-','Reference 8',refdes10) ref8\nfrom ort100\nwhere ordnum = :pOrdnum) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1702581A",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryOrt209refColnameResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "REF",
+        "fieldName" : "ref",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF2",
+        "fieldName" : "ref2",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF3",
+        "fieldName" : "ref3",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF4",
+        "fieldName" : "ref4",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF5",
+        "fieldName" : "ref5",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF6",
+        "fieldName" : "ref6",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF7",
+        "fieldName" : "ref7",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF8",
+        "fieldName" : "ref8",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryRft102ClirefColname" : {
+    "name" : "qryRft102ClirefColname",
+    "description" : "get cliref column names from rft102",
+    "version" : "V2",
+    "queryString" : "select ref3 ref1,ref4 ref2,ref5 ref3,ref6 ref4, ref7 ref5, ref8 ref6, ref9 ref7, ref10 ref8\nfrom rft102, rft100\nwhere rft102.cligrp=rft100.cligrp\nand rft100.clicod = :pClicod",
+    "countQueryString" : "select count(*) from (select ref3 ref1,ref4 ref2,ref5 ref3,ref6 ref4, ref7 ref5, ref8 ref6, ref9 ref7, ref10 ref8\nfrom rft102, rft100\nwhere rft102.cligrp=rft100.cligrp\nand rft100.clicod = :pClicod) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pClicod",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "TMSSCAS",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryRft102clirefColnameResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "REF1",
+        "fieldName" : "ref1",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF2",
+        "fieldName" : "ref2",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF3",
+        "fieldName" : "ref3",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF4",
+        "fieldName" : "ref4",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF5",
+        "fieldName" : "ref5",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF6",
+        "fieldName" : "ref6",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF7",
+        "fieldName" : "ref7",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      }, {
+        "name" : "REF8",
+        "fieldName" : "ref8",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qryShpnumLov" : {
+    "name" : "qryShpnumLov",
+    "description" : "query list of ort205 shpnum",
+    "version" : "V2",
+    "queryString" : "select shpnum\nfrom ort205\nwhere ordnum = :pOrdnum\nand clionum is not null\nand dropno is not null\nunion\nselect '%' shpnum\nfrom dual",
+    "countQueryString" : "select count(*) from (select shpnum\nfrom ort205\nwhere ordnum = :pOrdnum\nand clionum is not null\nand dropno is not null\nunion\nselect '%' shpnum\nfrom dual) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOrdnum",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "1202111A",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QryShpnumLovResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "PAGINATED",
+      "properties" : [ {
+        "name" : "SHPNUM",
+        "fieldName" : "shpnum",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  },
+  "qrySy9200pk0GetUrlUpcharges" : {
+    "name" : "qrySy9200pk0GetUrlUpcharges",
+    "description" : "get URL for Upcharge screen",
+    "version" : "V2",
+    "queryString" : "select sy9200pk0.sproc_call_fmbpath('/prod/pfs/al/frm/al160oc0.fmx', :pOtherParams) progurl\nfrom dual",
+    "countQueryString" : "select count(*) from (select sy9200pk0.sproc_call_fmbpath('/prod/pfs/al/frm/al160oc0.fmx', :pOtherParams) progurl\nfrom dual) wmTempTable",
+    "nativeSql" : true,
+    "fetchCount" : true,
+    "type" : "SELECT",
+    "parameters" : [ {
+      "name" : "pOtherParams",
+      "type" : "string",
+      "list" : false,
+      "variableType" : "PROMPT",
+      "variableName" : null,
+      "testValue" : "cc",
+      "required" : false
+    } ],
+    "request" : {
+      "wrapped" : false,
+      "typeRef" : null,
+      "method" : "GET"
+    },
+    "identifiers" : [ ],
+    "response" : {
+      "typeRef" : "com.mu.cmt.pfs.pfsdb.models.query.QrySy9200pk0getUrlUpchargesResponse",
+      "returns" : "CUSTOM",
+      "responseType" : "SINGLE",
+      "properties" : [ {
+        "name" : "PROGURL",
+        "fieldName" : "progurl",
+        "optional" : false,
+        "fieldType" : {
+          "type" : "PRIMITIVE",
+          "typeRef" : "java.lang.String",
+          "list" : false
+        }
+      } ]
+    }
+  }
+}

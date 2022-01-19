@@ -1,0 +1,1029 @@
+{
+  "notifMsg" : {
+    "_id" : "wm-notifMsg-wm.NotificationVariable-1505113667702",
+    "name" : "notifMsg",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "title",
+      "value" : "bind:Variables.statPrgName.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "error",
+      "type" : "string"
+    } ],
+    "operation" : "alert"
+  },
+  "statChgReasonCategory" : {
+    "_id" : "wm-statChgReasonCategory-wm.Variable-1505113192159",
+    "name" : "statChgReasonCategory",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statDialogEditPriceTitle" : {
+    "_id" : "wm-statDialogEditPriceTitle-wm.Variable-1505910616462",
+    "name" : "statDialogEditPriceTitle",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "Update KDS Price and Client References",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statGridOrt209CurPageNum" : {
+    "_id" : "wm-statGridOrt209CurPageNum-wm.Variable-1518090511269",
+    "name" : "statGridOrt209CurPageNum",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "1",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statGridOrt209ViewOption" : {
+    "_id" : "wm-statGridOrt209ViewOption-wm.Variable-1529497036996",
+    "name" : "statGridOrt209ViewOption",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "itemcod" : "PRICE",
+      "itemdes" : "Prices only"
+    }, {
+      "itemcod" : "CLIREF",
+      "itemdes" : "Client References only"
+    }, {
+      "itemcod" : "ALL",
+      "itemdes" : "All Columns"
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "saveInPhonegap" : false
+  },
+  "statKDSFieldToUpdate" : {
+    "_id" : "wm-statKDSFieldToUpdate-wm.Variable-1507891310402",
+    "name" : "statKDSFieldToUpdate",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgid" : {
+    "_id" : "wm-statPrgid-wm.Variable-1505113360104",
+    "name" : "statPrgid",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "OR1000W07",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statPrgName" : {
+    "_id" : "wm-statPrgName-wm.Variable-1505113339211",
+    "name" : "statPrgName",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "Details Per Shipment",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "statUpdUntprcAccess" : {
+    "_id" : "wm-statUpdUntprcAccess-wm.Variable-1507631657551",
+    "name" : "statUpdUntprcAccess",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "bind:Variables.svCheckUnitPriceAccess.dataSet.upduntprcacs",
+      "type" : "string"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svCheckUnitPriceAccess" : {
+    "_id" : "wm-svCheckUnitPriceAccess-wm.ServiceVariable-1529928474627",
+    "name" : "svCheckUnitPriceAccess",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    }, {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pUserAppRoleList",
+      "value" : "bind:Variables.loggedInUser.dataSet.roles",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryOr207pk0untprcAccessResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryOr207pk0UntprcAccess",
+    "operationId" : "QueryExecutionController_executeQryOr207pk0UntprcAccess",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svGetUpchargePrgUrl" : {
+    "_id" : "wm-svGetUpchargePrgUrl-wm.ServiceVariable-1509367249874",
+    "name" : "svGetUpchargePrgUrl",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOtherParams",
+      "value" : "bind:\"p_tordnum=\"+Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QrySy9200pk0getUrlUpchargesResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQrySy9200pk0GetUrlUpcharges",
+    "operationId" : "QueryExecutionController_executeQrySy9200pk0GetUrlUpcharges",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 1,
+    "onSuccess" : "svGetUpchargePrgUrlonSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svOr1207pk0SearchOrdRef" : {
+    "_id" : "wm-svOr1207pk0SearchOrdRef-wm.ServiceVariable-1507524883600",
+    "name" : "svOr1207pk0SearchOrdRef",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0searchOrdRefResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0SearchOrdRef",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0SearchOrdRef",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0CopyRef" : {
+    "_id" : "wm-svOr207pk0CopyRef-wm.ServiceVariable-1507288718835",
+    "name" : "svOr207pk0CopyRef",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pUsrid",
+      "value" : "bind:Variables.statAppUsrid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pPrgname",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pSrcOrdnum",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pSrcOrdnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pDestOrdnum",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pDestOrdnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pSrcShpnum",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pSrcShpnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pDestShpnum",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pDestShpnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyFliprcInd",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyFliprcInd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyRetPrcInd",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyRetPrcInd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyrefInd",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyrefInd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyref2Ind",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyref2Ind.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyref3Ind",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyref3Ind.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyref4Ind",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyref4Ind.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyref5Ind",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyref5Ind.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyref6Ind",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyref6Ind.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyref7Ind",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyref7Ind.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pCopyref8Ind",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pCopyref8Ind.datavalue",
+      "type" : "string"
+    } ],
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0CopyRef",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0CopyRef",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onError" : "svOr207pk0CopyRefonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0FetchExtranetDet" : {
+    "_id" : "wm-svOr207pk0FetchExtranetDet-wm.ServiceVariable-1506687310079",
+    "name" : "svOr207pk0FetchExtranetDet",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    }, {
+      "target" : "pFromShpnum",
+      "value" : "bind:Widgets.txtFromShpnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pToShpnum",
+      "value" : "bind:Widgets.txtToShpnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pFetchUnitprcInd",
+      "value" : "bind:Widgets.chkUntprc.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pFetchRetPrcInd",
+      "value" : "bind:Widgets.chkRetprc.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pFetchBarcodeInd",
+      "value" : "bind:Widgets.chkEanno.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pFetchRatioPackInd",
+      "value" : "bind:Widgets.chkRatioPack.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pFetchStyleInd",
+      "value" : "bind:Widgets.chkStyleDes.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUsrid",
+      "value" : "bind:Variables.statAppUsrid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pPrgname",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pUserAppRoleList",
+      "value" : "bind:Variables.loggedInUser.dataSet.roles",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0fetchExtranetDetailsResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0FetchExtranetDetails",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0FetchExtranetDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svOr207pk0FetchExtranetDetonSuccess($event, $scope)",
+    "onError" : "svOr207pk0FetchExtranetDetonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0FetchPackSze" : {
+    "_id" : "wm-svOr207pk0FetchPackSze-wm.ServiceVariable-1505112920289",
+    "name" : "svOr207pk0FetchPackSze",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0FetchPackSze",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0FetchPackSze",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onError" : "svOr207pk0FetchPackSzeonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0GetOrt205" : {
+    "_id" : "wm-svOr207pk0GetOrt205-wm.ServiceVariable-1505115154271",
+    "name" : "svOr207pk0GetOrt205",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getOrt205recordResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0GetOrt205Record",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0GetOrt205Record",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svOr207pk0GetOrt205onSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0GetOrt209" : {
+    "_id" : "wm-svOr207pk0GetOrt209-wm.ServiceVariable-1505390664655",
+    "name" : "svOr207pk0GetOrt209",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.gridOrt205.selecteditem.ordnum",
+      "type" : "string"
+    }, {
+      "target" : "pShpnum",
+      "value" : "bind:Widgets.gridOrt205.selecteditem.shpnum",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getOrt209recordResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0GetOrt209Record",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0GetOrt209Record",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0GetPriceChgReason" : {
+    "_id" : "wm-svQrygetPriceChgReason-wm.ServiceVariable-1505113248977",
+    "name" : "svOr207pk0GetPriceChgReason",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getChgReasonResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0GetChgReason",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0GetChgReason",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 100,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0GetRefPricereldat" : {
+    "_id" : "wm-svOr207pk0GetRefPricereldat-wm.ServiceVariable-1505541427504",
+    "name" : "svOr207pk0GetRefPricereldat",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.procedure.Or207pk0getRefreldatesResponse",
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0GetRefreldates",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0GetRefreldates",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0PrePostUpdOrt209" : {
+    "_id" : "wm-svOr207pk0PrePostUpdOrt209-wm.ServiceVariable-1505818677198",
+    "name" : "svOr207pk0PrePostUpdOrt209",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].ordnum",
+      "type" : "string"
+    }, {
+      "target" : "pSeqcod",
+      "value" : "bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].seqcod",
+      "type" : "string"
+    }, {
+      "target" : "pSzeseq",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pSzeseq.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "pShpnum",
+      "value" : "bind:Variables.svOrt209QryCurrentPrice.dataSet[$i].shpnum",
+      "type" : "string"
+    }, {
+      "target" : "pFieldToUpdate",
+      "value" : "bind:Variables.statKDSFieldToUpdate.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pFliprc",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pFliprc.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pKdsRetprc",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pKdsRetprc.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pKdsRetprcb",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pKdsRetprcb.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pKdsRetprcc",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pKdsRetprcc.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pKdsRetprcd",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pKdsRetprcd.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pUsrid",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pUsrid.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pChangereason",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pChangereason.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUserRemarks",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pUserRemarks.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRef",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pRef.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRef2",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pRef2.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRef3",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pRef3.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRef4",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pRef4.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRef5",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pRef5.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRef6",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pRef6.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRef7",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pRef7.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRef8",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pRef8.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUpdAllSzeInd",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pUpdAllSzeInd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUpdAllPackInd",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pUpdAllPackInd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUpdAllShpNumInd",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pUpdAllShpNumInd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pKDSUnitprc",
+      "value" : "bind:Widgets.formEditKDSPriceRef.formWidgets.pKDSUnitprc.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pUserAppRoleList",
+      "value" : "bind:Variables.loggedInUser.dataSet.roles",
+      "type" : "string"
+    } ],
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0PrePostUpdOrt209",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0PrePostUpdOrt209",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svOr207pk0PrePostUpdOrt209onSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0ReleaseKDSPrice" : {
+    "_id" : "wm-svOr207pk0ReleaseKDSPrice-wm.ServiceVariable-1508846147082",
+    "name" : "svOr207pk0ReleaseKDSPrice",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    }, {
+      "target" : "pUsrid",
+      "value" : "bind:Variables.statAppUsrid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pUserAppRoleList",
+      "value" : "bind:Variables.loggedInUser.dataSet.roles",
+      "type" : "string"
+    } ],
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0ReleaseKDSPrice",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0ReleaseKDSPrice",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svOr207pk0ReleaseKDSPriceonSuccess($event, $scope)",
+    "onError" : "svOr207pk0ReleaseKDSPriceonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0ReleaseRef" : {
+    "_id" : "wm-svOr207pk0ReleaseRef-wm.ServiceVariable-1505730742722",
+    "name" : "svOr207pk0ReleaseRef",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    }, {
+      "target" : "pUsrid",
+      "value" : "bind:Variables.statAppUsrid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0ReleaseRef",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0ReleaseRef",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svOr207pk0ReleaseRefonSuccess($event, $scope)",
+    "onError" : "svOr207pk0ReleaseRefonError($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOr207pk0UpdprcOrt207" : {
+    "_id" : "wm-svOr207pk0UpdprcOrt207-wm.ServiceVariable-1505112994344",
+    "name" : "svOr207pk0UpdprcOrt207",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pOrdnum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pPricecat",
+      "value" : "CMT",
+      "type" : "string"
+    }, {
+      "target" : "pSeqcod",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pSeqcod.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pSzeseq",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pSzeseq.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "pClionum",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pClionum.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUnitprcAir",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pUnitprcAir.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pUnitprcSea",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pUnitprcSea.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pFliprcAir",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pFliprcAir.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pFliprcSea",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pFliprcSea.datavalue",
+      "type" : "number"
+    }, {
+      "target" : "pRetprc",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pRetprc.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRetprcb",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pRetprcb.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRetprcc",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pRetprcc.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pRetprcd",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pRetprcd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUsrid",
+      "value" : "bind:Variables.statAppUsrid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pProgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    }, {
+      "target" : "pChangereason",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pChangereason.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUserRemarks",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pUserRemarks.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUpdAllSzeInd",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pUpdAllSzeInd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUpdAllPackInd",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pUpdAllPackInd.datavalue",
+      "type" : "string"
+    }, {
+      "target" : "pUpdAllClionumInd",
+      "value" : "bind:Widgets.frmDialogUpdPrc.formWidgets.pUpdAllClionumInd.datavalue",
+      "type" : "string"
+    } ],
+    "service" : "pfsdb",
+    "operation" : "executeOr207pk0UpdPriceOrt207",
+    "operationId" : "ProcedureExecutionController_executeOr207pk0UpdPriceOrt207",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svOr207pk0UpdprcOrt207onSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "ProcedureExecution"
+  },
+  "svOrt207QryCurrentPrice" : {
+    "_id" : "wm-svOrt207QryCurrentPrice-wm.ServiceVariable-1505113091165",
+    "name" : "svOrt207QryCurrentPrice",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryOrt207currentPriceResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryOrt207CurrentPrice",
+    "operationId" : "QueryExecutionController_executeQryOrt207CurrentPrice",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "onSuccess" : "svOrt207QryCurrentPriceonSuccess($event, $scope)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svOrt209QryCurrentPrice" : {
+    "_id" : "wm-svOrt209QryCurrentPrice-wm.ServiceVariable-1505887964494",
+    "name" : "svOrt209QryCurrentPrice",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryOrt209currentPriceResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryOrt209CurrentPrice",
+    "operationId" : "QueryExecutionController_executeQryOrt209CurrentPrice",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svQryCL565pk0FuncIsExtnetClient" : {
+    "_id" : "wm-svQryCL565pk0FuncIsExtnetClient-wm.ServiceVariable-1507281022536",
+    "name" : "svQryCL565pk0FuncIsExtnetClient",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryCl565pk0funcIsExtnetClientResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryCl565pk0FuncIsExtnetClient",
+    "operationId" : "QueryExecutionController_executeQryCl565pk0FuncIsExtnetClient",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svQryOr207pk0UpdUnitpriceAccess" : {
+    "_id" : "wm-svQryOr207pk0UpdUnitpriceAccess-wm.ServiceVariable-1507630185542",
+    "name" : "svQryOr207pk0UpdUnitpriceAccess",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    }, {
+      "target" : "pUserAppRoleList",
+      "value" : "bind:Variables.loggedInUser.dataSet.roles",
+      "type" : "string"
+    }, {
+      "target" : "pPrgid",
+      "value" : "bind:Variables.statPrgid.dataSet.dataValue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryOr207pk0untprcAccessResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryOr207pk0UntprcAccess",
+    "operationId" : "QueryExecutionController_executeQryOr207pk0UntprcAccess",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svQryOr207pk0UpdUnitpriceAccessonBeforeUpdate($event, $scope)",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svQryOrt205ShpnumLov" : {
+    "_id" : "wm-svQryOrt205ShpnumLov-wm.ServiceVariable-1507292259569",
+    "name" : "svQryOrt205ShpnumLov",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pSrcOrdnum.datavalue.toUpperCase()",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryOrt205shpnumLovResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryOrt205ShpnumLov",
+    "operationId" : "QueryExecutionController_executeQryOrt205ShpnumLov",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 100,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svQryOrt209RefColname" : {
+    "_id" : "wm-svQryOrt209RefColname-wm.ServiceVariable-1507291929469",
+    "name" : "svQryOrt209RefColname",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.formCopyRef.formWidgets.pSrcOrdnum.datavalue.toUpperCase()",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryOrt209refColnameResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryOrt209RefColname",
+    "operationId" : "QueryExecutionController_executeQryOrt209RefColname",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svQryRft102DetShpRefColname" : {
+    "_id" : "wm-svQryRft102DetShpRefColname-wm.ServiceVariable-1507532039409",
+    "name" : "svQryRft102DetShpRefColname",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pClicod",
+      "value" : "bind:Widgets.formSearchOrdref.formWidgets.pClicod.datavalue",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryRft102clirefColnameResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryRft102ClirefColname",
+    "operationId" : "QueryExecutionController_executeQryRft102ClirefColname",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  },
+  "svQryShpnumLov" : {
+    "_id" : "wm-svQryShpnumLov-wm.ServiceVariable-1506416098339",
+    "name" : "svQryShpnumLov",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "pOrdnum",
+      "value" : "bind:Widgets.panelOr100Header.Widgets.lblOrdnum.caption",
+      "type" : "string"
+    } ],
+    "type" : "com.mu.cmt.pfs.pfsdb.models.query.QryShpnumLovResponse",
+    "service" : "pfsdb",
+    "operation" : "executeQryShpnumLov",
+    "operationId" : "QueryExecutionController_executeQryShpnumLov",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 100,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "QueryExecution"
+  }
+}

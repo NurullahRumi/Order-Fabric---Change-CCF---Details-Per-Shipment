@@ -1,0 +1,31 @@
+[ {
+  "urlPattern" : "/pages/DetailsPerShipment/**",
+  "permission" : "Role",
+  "roles" : [ "DETSHP_VIEWPAGE" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Login/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Main/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/OrderFabric/**",
+  "permission" : "Role",
+  "roles" : [ "VIEW_COPYFAB" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/YarnChangeCcf/**",
+  "permission" : "Role",
+  "roles" : [ "CHANGECCF_VIEWPAGE" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/**",
+  "permission" : "Authenticated",
+  "roles" : null,
+  "httpMethod" : null
+} ]

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <sql-query name="qryOrt209CurrentPrice">
+        <![CDATA[
+        select ort209.ordnum ordnum, ort209.shpnum shpnum, ort209.seqcod seqcod, ort209.szeseq szeseq, 
+        ort209.untprc untprc, ort209.discountprc discountprc, ort209.discountcode discountcode, 
+        ort209.fliprc fliprc,  ort209.retprc retprc,  
+        ort209.retprcb retprcb, ort209.retprcc retprcc,  ort209.retprcd retprcd,  
+        ort209.ref ref, ort209.ref2 ref2, ort209.ref3 ref3, ort209.ref4 ref4, 
+        ort209.ref5 ref5, ort209.ref6 ref6, ort209.ref7 ref7, ort209.ref8 ref8, 
+        cast (nvl(ort100.ccyrat,0) as number) ccyrat,
+        (select szedes from ort150 where ort150.ordnum = ort209.ordnum and ort150.szeseq = ort209.szeseq) szedes,
+        (select pckdes from ort190 where ort190.ordnum=ort209.ordnum and ort190.pckcod = ort209.seqcod) pckdes
+    from ort209, ort100
+    where ort209.ordnum = ort100.ordnum
+    and ort209.ordnum = :pOrdnum
+    and ort209.shpnum = :pShpnum
+    and ort209.seqcod = :pSeqcod
+    and ort209.szeseq = :pSzeseq
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    <query-param name="pShpnum" type="java.lang.String"/>
+    <query-param name="pSeqcod" type="java.lang.String"/>
+    <query-param name="pSzeseq" type="java.lang.Integer"/>
+    </sql-query>
+
+    <sql-query name="qryOrt209CurrentPrice__count">
+        <![CDATA[
+        select count(*) from (select ort209.ordnum ordnum, ort209.shpnum shpnum, ort209.seqcod seqcod, ort209.szeseq szeseq, 
+        ort209.untprc untprc, ort209.discountprc discountprc, ort209.discountcode discountcode, 
+        ort209.fliprc fliprc,  ort209.retprc retprc,  
+        ort209.retprcb retprcb, ort209.retprcc retprcc,  ort209.retprcd retprcd,  
+        ort209.ref ref, ort209.ref2 ref2, ort209.ref3 ref3, ort209.ref4 ref4, 
+        ort209.ref5 ref5, ort209.ref6 ref6, ort209.ref7 ref7, ort209.ref8 ref8, 
+        cast (nvl(ort100.ccyrat,0) as number) ccyrat,
+        (select szedes from ort150 where ort150.ordnum = ort209.ordnum and ort150.szeseq = ort209.szeseq) szedes,
+        (select pckdes from ort190 where ort190.ordnum=ort209.ordnum and ort190.pckcod = ort209.seqcod) pckdes
+    from ort209, ort100
+    where ort209.ordnum = ort100.ordnum
+    and ort209.ordnum = :pOrdnum
+    and ort209.shpnum = :pShpnum
+    and ort209.seqcod = :pSeqcod
+    and ort209.szeseq = :pSzeseq) wmTempTable
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    <query-param name="pShpnum" type="java.lang.String"/>
+    <query-param name="pSeqcod" type="java.lang.String"/>
+    <query-param name="pSzeseq" type="java.lang.Integer"/>
+    </sql-query>
+
+    <sql-query name="qryOr207pk0UntprcAccess">
+        <![CDATA[
+        select or207pk0.sfunc_has_wm_access_upd_untprc(:pOrdnum,upper(:SERVER__USER_NAME__pUsrid),:pPrgid,:pUserAppRoleList) updUntprcAcs
+from dual
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    <query-param name="SERVER__USER_NAME__pUsrid" type="java.lang.String"/>
+    <query-param name="pPrgid" type="java.lang.String"/>
+    <query-param name="pUserAppRoleList" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOr207pk0UntprcAccess__count">
+        <![CDATA[
+        select count(*) from (select or207pk0.sfunc_has_wm_access_upd_untprc(:pOrdnum,upper(:SERVER__USER_NAME__pUsrid),:pPrgid,:pUserAppRoleList) updUntprcAcs
+from dual) wmTempTable
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    <query-param name="SERVER__USER_NAME__pUsrid" type="java.lang.String"/>
+    <query-param name="pPrgid" type="java.lang.String"/>
+    <query-param name="pUserAppRoleList" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOrt205ShpnumLov">
+        <![CDATA[
+        select ordnum, shpnum
+from ort205
+where ordnum = :pOrdnum
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOrt205ShpnumLov__count">
+        <![CDATA[
+        select count(*) from (select ordnum, shpnum
+from ort205
+where ordnum = :pOrdnum) wmTempTable
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryCl565pk0FuncIsExtnetClient">
+        <![CDATA[
+        SELECT :pOrdnum ordnum, cl565pk0.sfunc_is_extranet_client(:pOrdnum) isExtranetClient
+from dual
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryCl565pk0FuncIsExtnetClient__count">
+        <![CDATA[
+        select count(*) from (SELECT :pOrdnum ordnum, cl565pk0.sfunc_is_extranet_client(:pOrdnum) isExtranetClient
+from dual) wmTempTable
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryGetChgReasonList">
+        <![CDATA[
+        select itemcod reasonCode, upper(itemdes2) reasonCategory, itemcod|| '-' || itemdes reasonSubCategory    	
+     from rft850
+     where lovfld = 'DISCOUNT'
+     and tab = 'ORT209'
+     and sts is null
+     and itemcod <> '00'
+     and itemdes3 = decode(:pChangeCategory,'UNITPRICE','Unit','Retail')
+     order by itemcod
+        ]]>
+    <query-param name="pChangeCategory" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryGetChgReasonList__count">
+        <![CDATA[
+        select count(*) from (select itemcod reasonCode, upper(itemdes2) reasonCategory, itemcod|| '-' || itemdes reasonSubCategory    	
+     from rft850
+     where lovfld = 'DISCOUNT'
+     and tab = 'ORT209'
+     and sts is null
+     and itemcod <> '00'
+     and itemdes3 = decode(:pChangeCategory,'UNITPRICE','Unit','Retail')
+     order by itemcod) wmTempTable
+        ]]>
+    <query-param name="pChangeCategory" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOrt209RefColname">
+        <![CDATA[
+        select decode(nvl(refdes3,'-'),'-','Reference 1',refdes3) ref, 
+       decode(nvl(refdes4,'-'),'-','Reference 2',refdes4) ref2, 
+       decode(nvl(refdes5,'-'),'-','Reference 3',refdes5) ref3, 
+       decode(nvl(refdes6,'-'),'-','Reference 4',refdes6) ref4, 
+       decode(nvl(refdes7,'-'),'-','Reference 5',refdes7) ref5, 
+       decode(nvl(refdes8,'-'),'-','Reference 6',refdes8) ref6, 
+       decode(nvl(refdes9,'-'),'-','Reference 7',refdes9) ref7, 
+       decode(nvl(refdes10,'-'),'-','Reference 8',refdes10) ref8
+from ort100
+where ordnum = :pOrdnum
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOrt209RefColname__count">
+        <![CDATA[
+        select count(*) from (select decode(nvl(refdes3,'-'),'-','Reference 1',refdes3) ref, 
+       decode(nvl(refdes4,'-'),'-','Reference 2',refdes4) ref2, 
+       decode(nvl(refdes5,'-'),'-','Reference 3',refdes5) ref3, 
+       decode(nvl(refdes6,'-'),'-','Reference 4',refdes6) ref4, 
+       decode(nvl(refdes7,'-'),'-','Reference 5',refdes7) ref5, 
+       decode(nvl(refdes8,'-'),'-','Reference 6',refdes8) ref6, 
+       decode(nvl(refdes9,'-'),'-','Reference 7',refdes9) ref7, 
+       decode(nvl(refdes10,'-'),'-','Reference 8',refdes10) ref8
+from ort100
+where ordnum = :pOrdnum) wmTempTable
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryShpnumLov">
+        <![CDATA[
+        select shpnum
+from ort205
+where ordnum = :pOrdnum
+and clionum is not null
+and dropno is not null
+union
+select '%' shpnum
+from dual
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryShpnumLov__count">
+        <![CDATA[
+        select count(*) from (select shpnum
+from ort205
+where ordnum = :pOrdnum
+and clionum is not null
+and dropno is not null
+union
+select '%' shpnum
+from dual) wmTempTable
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOr105wpk0YrnGetDefBaseyrnclr">
+        <![CDATA[
+        select or105wpk0_yrn.sfunc_get_default_baseyrnclr(:pPrgid, upper(:SERVER__USER_NAME__pUsrid), :pYrnclr, :pBaseyrnclr) defaultbaseyrnclr
+from dual
+        ]]>
+    <query-param name="pPrgid" type="java.lang.String"/>
+    <query-param name="SERVER__USER_NAME__pUsrid" type="java.lang.String"/>
+    <query-param name="pYrnclr" type="java.lang.String"/>
+    <query-param name="pBaseyrnclr" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOr105wpk0YrnGetDefBaseyrnclr__count">
+        <![CDATA[
+        select count(*) from (select or105wpk0_yrn.sfunc_get_default_baseyrnclr(:pPrgid, upper(:SERVER__USER_NAME__pUsrid), :pYrnclr, :pBaseyrnclr) defaultbaseyrnclr
+from dual) wmTempTable
+        ]]>
+    <query-param name="pPrgid" type="java.lang.String"/>
+    <query-param name="SERVER__USER_NAME__pUsrid" type="java.lang.String"/>
+    <query-param name="pYrnclr" type="java.lang.String"/>
+    <query-param name="pBaseyrnclr" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryRft102ClirefColname">
+        <![CDATA[
+        select ref3 ref1,ref4 ref2,ref5 ref3,ref6 ref4, ref7 ref5, ref8 ref6, ref9 ref7, ref10 ref8
+from rft102, rft100
+where rft102.cligrp=rft100.cligrp
+and rft100.clicod = :pClicod
+        ]]>
+    <query-param name="pClicod" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryRft102ClirefColname__count">
+        <![CDATA[
+        select count(*) from (select ref3 ref1,ref4 ref2,ref5 ref3,ref6 ref4, ref7 ref5, ref8 ref6, ref9 ref7, ref10 ref8
+from rft102, rft100
+where rft102.cligrp=rft100.cligrp
+and rft100.clicod = :pClicod) wmTempTable
+        ]]>
+    <query-param name="pClicod" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qrySy9200pk0GetUrlUpcharges">
+        <![CDATA[
+        select sy9200pk0.sproc_call_fmbpath('/prod/pfs/al/frm/al160oc0.fmx', :pOtherParams) progurl
+from dual
+        ]]>
+    <query-param name="pOtherParams" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qrySy9200pk0GetUrlUpcharges__count">
+        <![CDATA[
+        select count(*) from (select sy9200pk0.sproc_call_fmbpath('/prod/pfs/al/frm/al160oc0.fmx', :pOtherParams) progurl
+from dual) wmTempTable
+        ]]>
+    <query-param name="pOtherParams" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOrt207CurrentPrice">
+        <![CDATA[
+        select ordnum, pricecat, seqcod, clionum, szeseq, untprc_air, untprc_sea, discountprc_air, discountprc_sea, discountcode, 
+         fliprc_air, fliprc_sea, retprc, retprcb, retprcc, retprcd, (select szedes from ort150 where ort150.ordnum = ort207.ordnum and ort150.szeseq = ort207.szeseq) szedes,
+         (select pckdes from ort190 where ort190.ordnum = ort207.ordnum and ort190.pckcod = ort207.seqcod) pckdes
+  
+    from ort207
+    where ordnum = :pOrdnum
+    and pricecat = :pPricecat
+    and seqcod = :pSeqcod
+    and clionum = :pClionum
+    and szeseq = :pSzeseq
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    <query-param name="pPricecat" type="java.lang.String"/>
+    <query-param name="pSeqcod" type="java.lang.String"/>
+    <query-param name="pClionum" type="java.lang.String"/>
+    <query-param name="pSzeseq" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryOrt207CurrentPrice__count">
+        <![CDATA[
+        select count(*) from (select ordnum, pricecat, seqcod, clionum, szeseq, untprc_air, untprc_sea, discountprc_air, discountprc_sea, discountcode, 
+         fliprc_air, fliprc_sea, retprc, retprcb, retprcc, retprcd, (select szedes from ort150 where ort150.ordnum = ort207.ordnum and ort150.szeseq = ort207.szeseq) szedes,
+         (select pckdes from ort190 where ort190.ordnum = ort207.ordnum and ort190.pckcod = ort207.seqcod) pckdes
+  
+    from ort207
+    where ordnum = :pOrdnum
+    and pricecat = :pPricecat
+    and seqcod = :pSeqcod
+    and clionum = :pClionum
+    and szeseq = :pSzeseq) wmTempTable
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    <query-param name="pPricecat" type="java.lang.String"/>
+    <query-param name="pSeqcod" type="java.lang.String"/>
+    <query-param name="pClionum" type="java.lang.String"/>
+    <query-param name="pSzeseq" type="java.lang.String"/>
+    </sql-query>
+
+    <sql-query name="qryCCFFabDetails">
+        <![CDATA[
+        select fabtyp || ' '||fabwgt ||' g/m2, ' ||(case when bsffabwgt is not null then chr(10)||'BSF : '||bsffabwgt else null end) || chr(10)||'Gauge : '||mchgau || chr(10) ||'Calender/Stenter : '||calstn ||
+(case when bdsze is not null then chr(10)||'Body Size : '||bdsze else null end) fabdet,
+
+(case when str is not null then 'Str : '||str ||'-'||(select itemdes from rft850 where lovfld = 'STR' and itemcod = ort120s.str) else null end)||
+(case when stripeid is not null then chr(10)||'Stripe ID : '||stripeid else null end)||
+(case when inside is not null then chr(10)||'Fab Wrong face : '||inside else null end)||
+(case when outside is not null then chr(10)||'Fab Right face : '||outside else null end)||
+(case when enzyme is not null then chr(10)||'Enz : '||enzyme else null end)||
+(case when teflon is not null then chr(10)||'Special Finish : '||teflon else null end)||
+(case when heatsetreq is not null then chr(10)||'Heat Set : '||heatsetreq else null end)||
+(case when dccode is not null then chr(10)||'Deco Route : '||dccode else null end) fabfinishdet
+
+from ort120 ort120s
+where ort120s.ordnum = :pOrdnum
+and ort120s.fabseq = :pFabseq
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    <query-param name="pFabseq" type="java.lang.Integer"/>
+    </sql-query>
+
+    <sql-query name="qryCCFFabDetails__count">
+        <![CDATA[
+        select count(*) from (select fabtyp || ' '||fabwgt ||' g/m2, ' ||(case when bsffabwgt is not null then chr(10)||'BSF : '||bsffabwgt else null end) || chr(10)||'Gauge : '||mchgau || chr(10) ||'Calender/Stenter : '||calstn ||
+(case when bdsze is not null then chr(10)||'Body Size : '||bdsze else null end) fabdet,
+
+(case when str is not null then 'Str : '||str ||'-'||(select itemdes from rft850 where lovfld = 'STR' and itemcod = ort120s.str) else null end)||
+(case when stripeid is not null then chr(10)||'Stripe ID : '||stripeid else null end)||
+(case when inside is not null then chr(10)||'Fab Wrong face : '||inside else null end)||
+(case when outside is not null then chr(10)||'Fab Right face : '||outside else null end)||
+(case when enzyme is not null then chr(10)||'Enz : '||enzyme else null end)||
+(case when teflon is not null then chr(10)||'Special Finish : '||teflon else null end)||
+(case when heatsetreq is not null then chr(10)||'Heat Set : '||heatsetreq else null end)||
+(case when dccode is not null then chr(10)||'Deco Route : '||dccode else null end) fabfinishdet
+
+from ort120 ort120s
+where ort120s.ordnum = :pOrdnum
+and ort120s.fabseq = :pFabseq) wmTempTable
+        ]]>
+    <query-param name="pOrdnum" type="java.lang.String"/>
+    <query-param name="pFabseq" type="java.lang.Integer"/>
+    </sql-query>
+</hibernate-mapping>

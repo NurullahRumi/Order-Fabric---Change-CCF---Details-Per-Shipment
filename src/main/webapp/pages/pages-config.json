@@ -1,0 +1,98 @@
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "DetailsPerShipment",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pParam1",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "OrderFabric",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pOrderno",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "YarnChangeCcf",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "pParamlist",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ {
+    "name" : "pTitle",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "partOrdYarn",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "pParamList",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "partialCmtPriceHist",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "pOrdnum",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "partialCopyFab",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "pDestOrdnum",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "partialKDSPriceHist",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "pOrdnum",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "partialOrderDetHeader",
+  "type" : "PARTIAL",
+  "params" : [ {
+    "name" : "pOrdnum",
+    "type" : "string"
+  }, {
+    "name" : "pShowPreReleases",
+    "type" : "string"
+  }, {
+    "name" : "pShowPayTerms",
+    "type" : "string"
+  } ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+} ]
